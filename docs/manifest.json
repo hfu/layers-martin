@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-06-26T18:46:24Z",
+  "generator": "gsi-layers-to-static-martin",
+  "generator_version": "0.1.0",
+  "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
+  "output_layout": "martin-static-docs-id-and-json",
+  "included_extensions": [
+    ".png",
+    ".jpg",
+    ".jpeg",
+    ".webp",
+    ".pbf",
+    ".mvt"
+  ],
+  "excluded_extensions": [
+    ".geojson",
+    ".topojson",
+    ".txt",
+    ".kml"
+  ],
+  "fetched_files": 1,
+  "layers_seen": 0,
+  "tiles_included": 0,
+  "layers_excluded": 0,
+  "warnings": 0
+}

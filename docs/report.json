@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
+    "visited_urls": 11,
+    "fetched_files": 1,
+    "groups_seen": 0,
+    "layers_seen": 0,
+    "tiles_included": 0,
+    "layers_excluded": 0,
+    "warnings": 0,
+    "failures": 10
+  },
+  "fetched_files": [
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers.txt",
+      "bytes": 376
+    }
+  ],
+  "excluded": [
+
+  ],
+  "warnings": [
+
+  ],
+  "id_changes": [
+
+  ],
+  "failures": [
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20250815rain.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20240923rain.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20240102noto.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers4.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "error": "Encoding::CompatibilityError",
+      "message": "incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT string)"
+    }
+  ]
+}
