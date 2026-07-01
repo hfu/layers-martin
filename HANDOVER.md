@@ -32,15 +32,18 @@ Library       カタログメタデータと地理空間リソースを公開す
 
 staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタログ（`martin`, `layers_txt`）に対して **TileJSON 3.0 (collection) を正準の消費モデル**とすることを定めており、`spec/layers_txt_to_tilejson.md` は本プロジェクトが行っている `layers.txt → TileJSON` 変換とほぼ同内容の変換ガイドを示している。両者は独立に収束したものであり、方針の一致は意図的なものとして扱ってよい。
 
-具体的な設計判断とその理由は [DECISIONS.md](DECISIONS.md) を参照。
+具体的な設計判断とその理由は [DECISIONS.md](DECISIONS.md) を参照。Staff がこのカタログを実際に解決に使う際の使い方(既知の欠落への対処を含む)は [STAFF_PROMPT.md](STAFF_PROMPT.md) を参照。
 
 ## 現在の状態(2026-07-02 時点)
 
 - 実装は `build_catalog.rb`(単一 Ruby スクリプト)。`docs/` に生成物一式を出力し、GitHub Actions(`build-catalog.yml`)が毎日 cron で再生成・コミットする。
 - 主カタログは **1,874 件**。実データの候補レイヤー 13,924 件のうち、拡張子除外・干渉SAR抑制([D9](DECISIONS.md#d9-干渉sarスナップショットレイヤーを主カタログから抑制する))・重複URL抑制([D10](DECISIONS.md#d10-同一タイルurlの重複参照を抑制する))を経てこの件数になっている。除外理由の内訳は `docs/report.json` の `summary.excluded_by_reason` を参照。
 - GitHub Actions の成功判定は `validate_outputs.rb`([D11](DECISIONS.md#d11-actions-の成功判定を出力内容の検証に基づかせる))でカタログ内容そのものを検証するようになっている(ファイル存在確認だけだった旧版では、実質空のカタログでも success 表示になっていた)。
-- 既知のバックログ:
-  - D10 で見送った「重複レイヤーの統合」(文脈依存の `html` をどう扱うか。LLMによる統合も将来検討し得るが Actions 上での実行コストとのトレードオフが未検討)。
+- 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
+  - D10 で見送った「重複レイヤーの統合」。
+  - `std`(標準地図)がカタログに存在しない(GSI の `layers.txt` 自体に無いため)。
+  - `attribution` が1割程度のレイヤーにしか無く、簡易な既定値付与案には反例が見つかっている。
+  - `bounds`/`center` が過半数のレイヤーで欠落している。
 
 ## 参照情報
 
