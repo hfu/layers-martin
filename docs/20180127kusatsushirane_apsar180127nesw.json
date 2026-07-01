@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "2018/1/27観測（北東から南西) ",
+  "name": "2018/1/27観測（北東から南西)",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127nesw/{z}/{x}/{y}.png"
   ],

@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "急傾斜地の崩壊<br>(黄は警戒区域、赤は特別警戒区域)",
+  "name": "急傾斜地の崩壊 (黄は警戒区域、赤は特別警戒区域)",
   "tiles": [
     "https://disaportaldata.gsi.go.jp/raster/05_kyukeishakeikaikuiki/{z}/{x}/{y}.png"
   ],

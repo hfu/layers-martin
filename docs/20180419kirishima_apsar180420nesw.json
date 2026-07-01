@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "2018/4/20観測（北東から観測した画像) ",
+  "name": "2018/4/20観測（北東から観測した画像)",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/20180419kirishima_apsar180420nesw/{z}/{x}/{y}.png"
   ],

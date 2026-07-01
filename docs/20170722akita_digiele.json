@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "デジタル標高地形図<br>【雄物川周辺】",
+  "name": "デジタル標高地形図 【雄物川周辺】",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/20170722akita_digiele/{z}/{x}/{y}.png"
   ],

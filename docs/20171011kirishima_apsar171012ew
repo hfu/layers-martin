@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "2017/10/12観測（東から西) ",
+  "name": "2017/10/12観測（東から西)",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar171012ew/{z}/{x}/{y}.png"
   ],

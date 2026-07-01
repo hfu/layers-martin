@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "北海道地区_被災前の人工衛星画像<br>(Landsat8)",
+  "name": "北海道地区_被災前の人工衛星画像 (Landsat8)",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/20160830typhoon10_lndst_h160824/{z}/{x}/{y}.png"
   ],

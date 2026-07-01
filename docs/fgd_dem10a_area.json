@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "10mメッシュDEM（火山基本図）の<br>提供地域",
+  "name": "10mメッシュDEM（火山基本図）の 提供地域",
   "tiles": [
     "https://maps.gsi.go.jp/xyz/fgd_dem10a_area/{z}/{x}/{y}.png"
   ],

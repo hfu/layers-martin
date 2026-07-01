@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "地すべり<br>(黄は警戒区域、赤は特別警戒区域)",
+  "name": "地すべり (黄は警戒区域、赤は特別警戒区域)",
   "tiles": [
     "https://disaportaldata.gsi.go.jp/raster/05_jisuberikeikaikuiki/{z}/{x}/{y}.png"
   ],

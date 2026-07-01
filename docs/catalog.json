@@ -13,15 +13,15 @@
       "content_type": "image/png"
     },
     "05_dosekiryukeikaikuiki": {
-      "name": "土石流<br>(黄は警戒区域、赤は特別警戒区域)",
+      "name": "土石流 (黄は警戒区域、赤は特別警戒区域)",
       "content_type": "image/png"
     },
     "05_jisuberikeikaikuiki": {
-      "name": "地すべり<br>(黄は警戒区域、赤は特別警戒区域)",
+      "name": "地すべり (黄は警戒区域、赤は特別警戒区域)",
       "content_type": "image/png"
     },
     "05_kyukeishakeikaikuiki": {
-      "name": "急傾斜地の崩壊<br>(黄は警戒区域、赤は特別警戒区域)",
+      "name": "急傾斜地の崩壊 (黄は警戒区域、赤は特別警戒区域)",
       "content_type": "image/png"
     },
     "1509typhoon18_photo_shibuigawa_150911_1": {
@@ -781,11 +781,11 @@
       "content_type": "image/png"
     },
     "20160830typhoon10_lndst_h160824": {
-      "name": "北海道地区_被災前の人工衛星画像<br>(Landsat8)",
+      "name": "北海道地区_被災前の人工衛星画像 (Landsat8)",
       "content_type": "image/png"
     },
     "20160830typhoon10_lndst_t160808": {
-      "name": "東北地区_被災前の人工衛星画像<br>(Landsat8)",
+      "name": "東北地区_被災前の人工衛星画像 (Landsat8)",
       "content_type": "image/png"
     },
     "20161021tottori_1022dol": {
@@ -853,11 +853,11 @@
       "content_type": "image/png"
     },
     "20170705typhoon3_digiele": {
-      "name": "デジタル標高地形図<br>【東峰村及び久大本線橋脚流出箇所周辺】",
+      "name": "デジタル標高地形図 【東峰村及び久大本線橋脚流出箇所周辺】",
       "content_type": "image/png"
     },
     "20170722akita_digiele": {
-      "name": "デジタル標高地形図<br>【雄物川周辺】",
+      "name": "デジタル標高地形図 【雄物川周辺】",
       "content_type": "image/png"
     },
     "20171011kirishima_apsar141105ew": {
@@ -869,11 +869,11 @@
       "content_type": "image/png"
     },
     "20171011kirishima_apsar171012ew": {
-      "name": "2017/10/12観測（東から西) ",
+      "name": "2017/10/12観測（東から西)",
       "content_type": "image/png"
     },
     "20171011kirishima_apsar171012we": {
-      "name": "2017/10/12観測（西から東) ",
+      "name": "2017/10/12観測（西から東)",
       "content_type": "image/png"
     },
     "20180117dol": {
@@ -885,7 +885,7 @@
       "content_type": "image/png"
     },
     "20180127kusatsushirane_apsar180127nesw": {
-      "name": "2018/1/27観測（北東から南西) ",
+      "name": "2018/1/27観測（北東から南西)",
       "content_type": "image/png"
     },
     "20180127kusatsushirane_apsar180127sn": {
@@ -905,11 +905,11 @@
       "content_type": "image/png"
     },
     "20180328kirishima_apsar180327ew": {
-      "name": "2018/3/27観測（東から西) ",
+      "name": "2018/3/27観測（東から西)",
       "content_type": "image/png"
     },
     "20180328kirishima_apsar180327we": {
-      "name": "2018/3/27観測（西から東) ",
+      "name": "2018/3/27観測（西から東)",
       "content_type": "image/png"
     },
     "20180411_ooita_dosha": {
@@ -917,19 +917,19 @@
       "content_type": "image/png"
     },
     "20180419kirishima_apsar180226nesw": {
-      "name": "2018/2/26観測（北東から観測した画像) ",
+      "name": "2018/2/26観測（北東から観測した画像)",
       "content_type": "image/png"
     },
     "20180419kirishima_apsar180226swne": {
-      "name": "2018/2/26観測（南西から観測した画像) ",
+      "name": "2018/2/26観測（南西から観測した画像)",
       "content_type": "image/png"
     },
     "20180419kirishima_apsar180420nesw": {
-      "name": "2018/4/20観測（北東から観測した画像) ",
+      "name": "2018/4/20観測（北東から観測した画像)",
       "content_type": "image/png"
     },
     "20180419kirishima_apsar180420swne": {
-      "name": "2018/4/20観測（南西から観測した画像) ",
+      "name": "2018/4/20観測（南西から観測した画像)",
       "content_type": "image/png"
     },
     "20180622_asama_c1": {
@@ -1357,15 +1357,15 @@
       "content_type": "image/png"
     },
     "20210705oame_hyoukou_2019-2009": {
-      "name": "2009年の標高に対する<br>2019年の標高の変化",
+      "name": "2009年の標高に対する 2019年の標高の変化",
       "content_type": "image/png"
     },
     "20210705oame_hyoukou_2021-2009": {
-      "name": "2009年の標高に対する<br>2021年（発災後）の標高の変化",
+      "name": "2009年の標高に対する 2021年（発災後）の標高の変化",
       "content_type": "image/png"
     },
     "20210705oame_hyoukou_2021-2019": {
-      "name": "2019年の標高に対する<br>2021年（発災後）の標高の変化",
+      "name": "2019年の標高に対する 2021年（発災後）の標高の変化",
       "content_type": "image/png"
     },
     "20210815oame_0815dansaizu": {
@@ -2725,7 +2725,7 @@
       "content_type": "image/png"
     },
     "fgd_dem10a_area": {
-      "name": "10mメッシュDEM（火山基本図）の<br>提供地域",
+      "name": "10mメッシュDEM（火山基本図）の 提供地域",
       "content_type": "image/png"
     },
     "fgd_update_2014_10": {
@@ -7497,10 +7497,7 @@
       "content_type": "image/png"
     }
   },
-  "sprites": {
-  },
-  "fonts": {
-  },
-  "styles": {
-  }
+  "sprites": {},
+  "fonts": {},
+  "styles": {}
 }

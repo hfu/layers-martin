@@ -136,7 +136,7 @@ class GsiLayersToStaticMartin
 
       tile_records << {
         id: source_id,
-        name: layer['title'] || source_id,
+        name: tilejson['name'],
         content_type: content_type,
         tilejson: tilejson
       }
@@ -407,10 +407,28 @@ class GsiLayersToStaticMartin
     Digest::SHA1.hexdigest(value.to_s)[0, 8]
   end
 
+  # TileJSON's "name" is a standard field meant to be a plain display label,
+  # distinct from "html"/"description"/"attribution" (D4: kept as raw HTML on
+  # purpose) and from "title" (D5: raw GSI key passed through verbatim). Some
+  # GSI titles embed markup (e.g. "土石流<br>(黄は警戒区域、赤は特別警戒区域)"),
+  # which would otherwise leak literal tags into "name". Strip tags/entities
+  # here; the original markup is still available in "title" and "html".
+  def plain_text_name(title, fallback)
+    text = title.to_s
+              .gsub(/<[^>]*>/, ' ')
+              .gsub('&nbsp;', ' ')
+              .gsub('&amp;', '&')
+              .gsub('&lt;', '<')
+              .gsub('&gt;', '>')
+              .gsub(/\s+/, ' ')
+              .strip
+    text.empty? ? fallback : text
+  end
+
   def build_tilejson(source_id, layer, url, record)
     tilejson = {
       'tilejson' => '3.0.0',
-      'name' => layer['title'] || source_id,
+      'name' => plain_text_name(layer['title'], source_id),
       'tiles' => [url],
       'scheme' => 'xyz'
     }

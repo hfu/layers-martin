@@ -1,6 +1,6 @@
 {
   "tilejson": "3.0.0",
-  "name": "土石流<br>(黄は警戒区域、赤は特別警戒区域)",
+  "name": "土石流 (黄は警戒区域、赤は特別警戒区域)",
   "tiles": [
     "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png"
   ],
