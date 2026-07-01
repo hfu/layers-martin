@@ -1,0 +1,33 @@
+{
+  "tilejson": "3.0.0",
+  "name": "日南地区（8/9撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20240809hyuganada_nichinan_0809do_sokuho/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240808_hyuganada_earthquake_00001.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "center": [
+    131.416397,
+    31.678219,
+    14
+  ],
+  "id": "20240809hyuganada_nichinan_0809do_sokuho",
+  "title": "日南地区（8/9撮影）",
+  "maxZoom": 18,
+  "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240808_hyuganada_earthquake_00001.html\" target=\"_blank\">こちら</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "area": {
+    "lat": 31.678219,
+    "lng": 131.416397,
+    "zoom": 14
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240809hyuganada.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "令和6年宮崎県日向灘を震源とする地震",
+    "正射画像（速報）"
+  ]
+}

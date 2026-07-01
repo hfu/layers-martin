@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "鼠入地区正射画像（10/7撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20160830typhoon10_1007dol2/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20160830typhoon10_1007dol2",
+  "title": "鼠入地区正射画像（10/7撮影）",
+  "maxZoom": 18,
+  "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "平成28年台風第10号",
+    "小本川（岩手県岩泉町）"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "tilejson": "3.0.0",
+  "name": "穴水地区（1/5撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20240102_noto_anamizu_0105do/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "center": [
+    137.066116,
+    37.256293,
+    14
+  ],
+  "id": "20240102_noto_anamizu_0105do",
+  "title": "穴水地区（1/5撮影）",
+  "maxZoom": 18,
+  "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html\" target=\"_blank\">こちら</a></div>",
+  "cocotile": true,
+  "area": {
+    "lat": 37.256293,
+    "lng": 137.066116,
+    "zoom": 14
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+  "path": [
+    "令和6年(2024年)能登半島地震",
+    "正射画像",
+    "穴水地区"
+  ]
+}

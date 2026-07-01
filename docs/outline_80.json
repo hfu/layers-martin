@@ -1,0 +1,28 @@
+{
+  "tilejson": "3.0.0",
+  "name": "災害履歴図（浸水）範囲",
+  "tiles": [
+    "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/outline_80_add24/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "attribution": "",
+  "description": "国土交通省政策統括官付地理空間情報課が整備する土地分類基本調査（土地履歴調査）の災害履歴図（浸水）について、三大都市圏とその周辺の情報を災害毎に集約した範囲を枠線で表したものです。",
+  "minzoom": 7,
+  "maxzoom": 16,
+  "id": "outline_80",
+  "title": "災害履歴図（浸水）範囲",
+  "maxZoom": 16,
+  "maxNativeZoom": 15,
+  "legendUrl": "",
+  "iconUrl": "",
+  "html": "国土交通省政策統括官付地理空間情報課が整備する土地分類基本調査（土地履歴調査）の災害履歴図（浸水）について、三大都市圏とその周辺の情報を災害毎に集約した範囲を枠線で表したものです。",
+  "cocotile": false,
+  "errorTileUrl": "",
+  "subdomains": "",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_tochibunrui.txt",
+  "path": [
+    "土地の成り立ち・土地利用",
+    "土地分類基本調査（土地履歴調査）（国土交通省政策統括官）",
+    "災害履歴図（水害 災害毎（三大都市圏周辺））"
+  ]
+}

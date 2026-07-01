@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "1:250,000　南極衛星画像図（標高版）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/southpole_satellite_250000_2/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "",
+  "id": "southpole_satellite_250000_2",
+  "title": "1:250,000　南極衛星画像図（標高版）",
+  "html": "",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "南極",
+    "1:250,000　南極衛星画像図（標高版）"
+  ]
+}

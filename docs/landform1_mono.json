@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "自然地形（白黒）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/landform1_mono/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'><p>地形分類（自然地形）を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/landform1_mono_legend.pdf\">凡例を表示</a></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/gsimaps_BWmap.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 5,
+  "maxzoom": 16,
+  "id": "landform1_mono",
+  "title": "自然地形（白黒）",
+  "maxZoom": 16,
+  "html": "<div class='layer_text'><p>地形分類（自然地形）を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/landform1_mono_legend.pdf\">凡例を表示</a></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/gsimaps_BWmap.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "防災・地理教育支援",
+    "地形分類（白黒）"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "tilejson": "3.0.0",
+  "name": "5万分の1地質図幅「丸瀬布北部」",
+  "tiles": [
+    "https://tiles.gsj.jp/tiles/geomap/G50_01_023maruseppu-n/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">5万分の1地質図幅「丸瀬布北部」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G50_01_023maruseppu-n.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+  "minzoom": 2,
+  "maxzoom": 15,
+  "bounds": [
+    [
+      44.00238,
+      143.246
+    ],
+    [
+      44.16906,
+      143.49602
+    ]
+  ],
+  "id": "gsjGeomap_G50_01_023maruseppu-n",
+  "title": "5万分の1地質図幅「丸瀬布北部」",
+  "maxZoom": 15,
+  "maxNativeZoom": 15,
+  "legendUrl": "https://gbank.gsj.jp/geonavi/docdata/data/pict_data/orgsize_101_legend_144.jpg",
+  "html": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">5万分の1地質図幅「丸瀬布北部」（1988年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G50_01_023maruseppu-n.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_gsj_G50K.txt",
+  "path": [
+    "その他",
+    "他機関の情報",
+    "地質図（産総研地質調査総合センター）",
+    "5万分の1地質図幅",
+    "網走地域"
+  ]
+}

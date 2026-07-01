@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "東北地区_被災前の人工衛星画像<br>(Landsat8)",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20160830typhoon10_lndst_t160808/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "（2016/8/8観測）<br>本タイル画像を利用する場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>「国土地理院コンテンツ利用規約」</a>で定める方法での出所明示に加え、 以下の出所も合わせて明示してください。<br>データソース：Landsat8画像　courtesy of the U.S. Geological Survey",
+  "maxzoom": 18,
+  "id": "20160830typhoon10_lndst_t160808",
+  "title": "東北地区_被災前の人工衛星画像<br>(Landsat8)",
+  "maxZoom": 18,
+  "maxNativeZoom": 14,
+  "html": "（2016/8/8観測）<br>本タイル画像を利用する場合は、<a target='_blank' href='http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html'>「国土地理院コンテンツ利用規約」</a>で定める方法での出所明示に加え、 以下の出所も合わせて明示してください。<br>データソース：Landsat8画像　courtesy of the U.S. Geological Survey",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "平成28年台風第10号"
+  ]
+}

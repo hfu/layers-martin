@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "標高補正パラメータ",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20160414kumamoto_hyoko_param/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "茶色に塗られた領域が平成28年熊本地震に伴う標高補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/patchjgd_h/download/index.html\">「ダウンロードページ」</a>から入手できます。",
+  "minzoom": 10,
+  "maxzoom": 14,
+  "id": "20160414kumamoto_hyoko_param",
+  "title": "標高補正パラメータ",
+  "maxZoom": 14,
+  "html": "茶色に塗られた領域が平成28年熊本地震に伴う標高補正パラメータの適用範囲となります。<br>補正量の分布については<a target=\"_blank\" href=\"http://www.gsi.go.jp/sokuchikijun/H28-kumamoto-earthquake-seika.html#d2\">「基準点成果公表停止と再開に関するサイト」</a>、適用範囲の詳細については<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/surveycalc/patchjgd/kumamoto_check.html\">「パラメータの提供地域確認サイト」</a>で調べることができます。<br>また本パラメータ・ファイルは<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/patchjgd_h/download/index.html\">「ダウンロードページ」</a>から入手できます。",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成28年熊本地震",
+    "変動補正パラメータ"
+  ]
+}

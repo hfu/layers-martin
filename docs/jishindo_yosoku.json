@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "確率論的地震動予測地図（今後30年間に震度6弱以上の揺れに見舞われる確率）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/jishindo_yosoku/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">確率論的地震動予測地図</div><div class=\"gsi_layerinfo_kaisetu\"><p>　防災科学技術研究所の地震ハザードステーション（J-SHIS）が提供する全国地震動予測地図を表示します。<br> 　本サイトの地図は、地震ハザードステーションの250mメッシュ区画を単位とした公開GISデータにより国土政策局が作成し公開しているもので、以下の条件により作成された地図を表示しています（ズームレベル12～17で表示）。</p><p>　「確率論的地震動予測地図」（令和3年3月26日公表）<br>　　　今後30年間に震度６弱以上の揺れに見舞われる確率<br>　　　基準年：2020年（地震発生確率の評価基準日：2020/01/01）<br>　　　地震種別：全ての地震<br>　　　確率ケース：平均ケース<br>　確率論的地震動予測地図の詳細は、<a href=\"https://www.j-shis.bosai.go.jp/shm\" target=\"_blank\">地震ハザードステーション（J-SHIS）</a>をご確認ください。</p><p><span style=\"font-weight:bold\">　凡例</span><br><span style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/jishindo_yosoku.png\" width=300 alt=\"凡例\"></span></p></div>",
+  "minzoom": 2,
+  "maxzoom": 17,
+  "id": "jishindo_yosoku",
+  "title": "確率論的地震動予測地図（今後30年間に震度6弱以上の揺れに見舞われる確率）",
+  "maxZoom": 17,
+  "maxNativeZoom": 15,
+  "legendUrl": "",
+  "html": "<div class=\"gsi_layerinfo_title\">確率論的地震動予測地図</div><div class=\"gsi_layerinfo_kaisetu\"><p>　防災科学技術研究所の地震ハザードステーション（J-SHIS）が提供する全国地震動予測地図を表示します。<br> 　本サイトの地図は、地震ハザードステーションの250mメッシュ区画を単位とした公開GISデータにより国土政策局が作成し公開しているもので、以下の条件により作成された地図を表示しています（ズームレベル12～17で表示）。</p><p>　「確率論的地震動予測地図」（令和3年3月26日公表）<br>　　　今後30年間に震度６弱以上の揺れに見舞われる確率<br>　　　基準年：2020年（地震発生確率の評価基準日：2020/01/01）<br>　　　地震種別：全ての地震<br>　　　確率ケース：平均ケース<br>　確率論的地震動予測地図の詳細は、<a href=\"https://www.j-shis.bosai.go.jp/shm\" target=\"_blank\">地震ハザードステーション（J-SHIS）</a>をご確認ください。</p><p><span style=\"font-weight:bold\">　凡例</span><br><span style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/jishindo_yosoku.png\" width=300 alt=\"凡例\"></span></p></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "他機関の情報",
+    "災害リスク情報（防災科学技術研究所）"
+  ]
+}

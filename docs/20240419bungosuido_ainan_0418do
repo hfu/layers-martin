@@ -1,0 +1,34 @@
+{
+  "tilejson": "3.0.0",
+  "name": "愛南地区（4/18撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20240419bungosuido_ainan_0418do/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240418_bungo_earthquake.html\" target=\"_blank\">こちら</a></div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "center": [
+    132.535973,
+    32.984476,
+    14
+  ],
+  "id": "20240419bungosuido_ainan_0418do",
+  "title": "愛南地区（4/18撮影）",
+  "maxZoom": 18,
+  "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。<div class=\"gsi_layerinfo_kaisetu\">防災のページは<a href=\"https://www.gsi.go.jp/BOUSAI/20240418_bungo_earthquake.html\" target=\"_blank\">こちら</a></div>",
+  "cocotile": true,
+  "area": {
+    "lat": 32.984476,
+    "lng": 132.535973,
+    "zoom": 14
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240419bungosuido.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "令和6年豊後水道の地震",
+    "正射画像",
+    "愛南地区"
+  ]
+}

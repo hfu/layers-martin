@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "浸水推定段彩図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20190828_kyusyu_0828dansaizu/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul>この地図は、8月28日15時頃に国土交通省災害対策用ヘリコプターが撮影した画像を使用し、浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。<br>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20190828_kyusyu_0828dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "minzoom": 2,
+  "maxzoom": 16,
+  "id": "20190828_kyusyu_0828dansaizu",
+  "title": "浸水推定段彩図",
+  "maxZoom": 16,
+  "html": "<table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul>この地図は、8月28日15時頃に国土交通省災害対策用ヘリコプターが撮影した画像を使用し、浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。<br>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20190828_kyusyu_0828dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190828kyusyu.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "令和元年8月の前線に伴う大雨",
+    "浸水推定段彩図"
+  ]
+}

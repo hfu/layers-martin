@@ -1,0 +1,28 @@
+{
+  "tilejson": "3.0.0",
+  "name": "北陸地区（長岡）　長岡地震、新潟県中越地震",
+  "tiles": [
+    "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_quake/hokuriku3/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "attribution": "",
+  "description": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>\nご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br>\n<div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（長岡）　長岡地震、新潟県中越地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（長岡）.pdf\">凡例を表示</a>）</div>\n<div class=\"gsi_layerinfo_kaisetu\">\n<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>\n&nbsp;\n</div>\n<div class=\"gsi_layerinfo_copy\">(c)国土交通省政策統括官付地理空間情報課</div>",
+  "minzoom": 2,
+  "maxzoom": 16,
+  "id": "DisasterHist_quake_hokuriku3",
+  "title": "北陸地区（長岡）　長岡地震、新潟県中越地震",
+  "maxZoom": 16,
+  "maxNativeZoom": 16,
+  "legendUrl": "",
+  "iconUrl": "",
+  "html": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>\nご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br>\n<div class=\"gsi_layerinfo_title\">災害履歴図（地震）北陸地区（長岡）　長岡地震、新潟県中越地震（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_quake/災害履歴_地震災害_北陸地区（長岡）.pdf\">凡例を表示</a>）</div>\n<div class=\"gsi_layerinfo_kaisetu\">\n<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>\n&nbsp;\n</div>\n<div class=\"gsi_layerinfo_copy\">(c)国土交通省政策統括官付地理空間情報課</div>",
+  "cocotile": false,
+  "errorTileUrl": "",
+  "subdomains": "",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_tochibunrui.txt",
+  "path": [
+    "土地の成り立ち・土地利用",
+    "土地分類基本調査（土地履歴調査）（国土交通省政策統括官）",
+    "災害履歴図（地震災害）"
+  ]
+}

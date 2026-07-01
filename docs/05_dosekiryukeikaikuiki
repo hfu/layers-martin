@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "土石流<br>(黄は警戒区域、赤は特別警戒区域)",
+  "tiles": [
+    "https://disaportaldata.gsi.go.jp/raster/05_dosekiryukeikaikuiki/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">土石流</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">山腹が崩壊して生じた土石等又は渓流の土石等が一体となって流下する自然現象<br><a href=\"https://www.mlit.go.jp/mizukokudo/sabo/dosekiryuu_taisaku.html\" target=\"_blank\">土石流の詳細はこちら</a></div><div style=\"border-bottom:1px dotted #2c6983;\"><span style=\"font-weight:bold;\">凡例</span><br/><img src='https://disaportal.gsi.go.jp/hazardmap/maps/image/legend/keikai_dosekiryu.png'/><br/></a>（点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。）<br><a href=\"https://www.mlit.go.jp/river/sabo/sinpoupdf/gaiyou.pdf\" target=\"_blank\">土砂災害警戒区域の詳細はこちら</a></div><div style=\"font-weight:bold;\">注意事項</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href='https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2023.html' target='_blank'><span>「国土数値情報　土砂災害警戒区域データ」利用時の注意事項</span></a></div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmapportal/hazardmap/copyright/copyright_data.html\" target=\"_blank\">データについて</a></div>",
+  "minzoom": 2,
+  "maxzoom": 17,
+  "id": "05_dosekiryukeikaikuiki",
+  "title": "土石流<br>(黄は警戒区域、赤は特別警戒区域)",
+  "maxZoom": 17,
+  "iconUrl": "https://disaportal.gsi.go.jp/maps/image/skin/dosha_keikai_dosekiryu.png",
+  "html": "<div class=\"gsi_layerinfo_title\">土石流</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">山腹が崩壊して生じた土石等又は渓流の土石等が一体となって流下する自然現象<br><a href=\"https://www.mlit.go.jp/mizukokudo/sabo/dosekiryuu_taisaku.html\" target=\"_blank\">土石流の詳細はこちら</a></div><div style=\"border-bottom:1px dotted #2c6983;\"><span style=\"font-weight:bold;\">凡例</span><br/><img src='https://disaportal.gsi.go.jp/hazardmap/maps/image/legend/keikai_dosekiryu.png'/><br/></a>（点線で囲まれた区域は、警戒区域もしくは特別警戒区域として指定予定であることを示す。）<br><a href=\"https://www.mlit.go.jp/river/sabo/sinpoupdf/gaiyou.pdf\" target=\"_blank\">土砂災害警戒区域の詳細はこちら</a></div><div style=\"font-weight:bold;\">注意事項</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href='https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-A33-2023.html' target='_blank'><span>「国土数値情報　土砂災害警戒区域データ」利用時の注意事項</span></a></div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmapportal/hazardmap/copyright/copyright_data.html\" target=\"_blank\">データについて</a></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
+  "path": [
+    "その他",
+    "他機関の情報",
+    "災害リスク情報（重ねるハザードマップ）",
+    "土砂災害警戒区域等"
+  ]
+}

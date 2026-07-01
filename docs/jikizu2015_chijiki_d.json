@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "磁気図（偏角）／偏角一覧図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/jikizu2015_chijiki_d/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">磁気図（偏角）2015.0年値／偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における偏角（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br>ズームレベル9～13まで拡大すると2次メッシュに対応した偏角値が表示されます（偏角一覧図）。<br><br>※偏角：真北と磁北のなす角度（西偏○度）<br><br><凡例><br>黒線：1度ごと<br>白線：10分ごと<br><br>【参考】<br>偏角の電子データ（二次メッシュ）が欲しい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/menu03_magnetic_chart.html#menu02\">地磁気データ提供サービス</a>へ<br>任意の地点の偏角を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 4,
+  "maxzoom": 13,
+  "id": "jikizu2015_chijiki_d",
+  "title": "磁気図（偏角）／偏角一覧図",
+  "maxZoom": 13,
+  "html": "<div class=\"gsi_layerinfo_title\">磁気図（偏角）2015.0年値／偏角一覧図</div><div class=\"gsi_layerinfo_kaisetu\">2015年1月1日0時（協定世界時）における偏角（※）の分布を図に表したものです。<br>ズームレベル4～8において表示しています。<br>ズームレベル9～13まで拡大すると2次メッシュに対応した偏角値が表示されます（偏角一覧図）。<br><br>※偏角：真北と磁北のなす角度（西偏○度）<br><br><凡例><br>黒線：1度ごと<br>白線：10分ごと<br><br>【参考】<br>偏角の電子データ（二次メッシュ）が欲しい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/menu03_magnetic_chart.html#menu02\">地磁気データ提供サービス</a>へ<br>任意の地点の偏角を求めたい方<br>　　→　<a target=\"_blank\" href=\"http://vldb.gsi.go.jp/sokuchi/geomag/menu_04/index.html\">地磁気計算サービス</a>へ<br>国土地理院の地磁気測量を知りたい方<br>　　→　<a target=\"_blank\" href=\"http://www.gsi.go.jp/buturisokuchi/geomag_index.html\">地磁気測量HP</a>へ</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers4.txt",
+  "path": [
+    "基準点・地磁気・地殻変動",
+    "磁気図",
+    "磁気図2015.0年値"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "デジタル標高地形図<br>【雄物川周辺】",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20170722akita_digiele/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "基盤地図情報の数値標高モデルを使用して作成",
+  "minzoom": 3,
+  "maxzoom": 16,
+  "id": "20170722akita_digiele",
+  "title": "デジタル標高地形図<br>【雄物川周辺】",
+  "maxZoom": 16,
+  "legendUrl": "https://maps.gsi.go.jp/legend/saigai_0725_legend.jpg",
+  "html": "基盤地図情報の数値標高モデルを使用して作成",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170722akita.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "平成29年7月22日からの梅雨前線に伴う大雨"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "世界衛星モザイク画像",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/modis/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'><p>MODIS衛星から撮影した全世界の写真です。</p></div>データソース：<br>MODIS8日間コンポジット画像<br>※MODISデータ欠損域は灰色で示しています",
+  "minzoom": 2,
+  "maxzoom": 10,
+  "id": "modis",
+  "title": "世界衛星モザイク画像",
+  "maxZoom": 10,
+  "maxNativeZoom": 8,
+  "html": "<div class='layer_text'><p>MODIS衛星から撮影した全世界の写真です。</p></div>データソース：<br>MODIS8日間コンポジット画像<br>※MODISデータ欠損域は灰色で示しています",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+  "path": [
+    "年代別の写真"
+  ]
+}

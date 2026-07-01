@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2018/6/22観測（北から観測した画像）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20180622_asama_c2/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22))<br>レーダー照射方向は北から南方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20180622_asama_c2",
+  "title": "2018/6/22観測（北から観測した画像）",
+  "maxZoom": 18,
+  "html": "<div class=\"gsi_layerinfo_title\">浅間山噴火活動-航空機SAR画像(2018/6/22))<br>レーダー照射方向は北から南方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "浅間山",
+    "航空機SAR画像",
+    "2018/6/22観測"
+  ]
+}

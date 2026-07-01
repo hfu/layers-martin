@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "久慈川水系（久慈川）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20191012typhoon19_kuji_1014dansaizu/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_kuji_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "minzoom": 2,
+  "maxzoom": 16,
+  "id": "20191012typhoon19_kuji_1014dansaizu",
+  "title": "久慈川水系（久慈川）",
+  "maxZoom": 16,
+  "maxNativeZoom": 15,
+  "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日1時時点で国土地理院が収集した情報と標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_kuji_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20191012typhoon19.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "令和元年東日本台風",
+    "浸水推定段彩図"
+  ]
+}

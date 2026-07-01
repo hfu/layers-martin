@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "正射画像（12/29撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20161228ibaraki_1229dol/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20161228ibaraki_1229dol",
+  "title": "正射画像（12/29撮影）",
+  "maxZoom": 18,
+  "html": "<div>▲を押すと透過率が上がります。<br>▼を押すと透過率が下がります。</div>",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20161228ibaraki.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成28年茨城県北部の地震"
+  ]
+}

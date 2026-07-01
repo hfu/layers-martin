@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "筑後川水系巨瀬川周辺",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20190828kyusyu_kose_digital/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "デジタル標高地形図<br>2019年8月作成<br>（c）国土地理院",
+  "minzoom": 2,
+  "maxzoom": 16,
+  "id": "20190828kyusyu_kose_digital",
+  "title": "筑後川水系巨瀬川周辺",
+  "maxZoom": 16,
+  "html": "デジタル標高地形図<br>2019年8月作成<br>（c）国土地理院",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190828kyusyu.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "令和元年8月の前線に伴う大雨",
+    "デジタル標高地形図"
+  ]
+}

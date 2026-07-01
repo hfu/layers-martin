@@ -48,6 +48,14 @@ class GsiLayersToStaticMartin
     '.mvt' => 'application/x-protobuf'
   }.freeze
 
+  # Layers sourced from https://maps.gsi.go.jp/sar/... are per-event, per-observation-date-pair
+  # InSAR (ALOS/ALOS-2/ALOS-4) interferogram snapshots. They are not stable base layers and
+  # currently make up ~80% of all candidate layers (~10,500 of ~12,600), which would overwhelm
+  # a Staff/Cartographer catalog consumer. Suppress them from the main catalog but keep every
+  # one recorded in report.json (reason: sar_observation_snapshot) so the policy stays auditable
+  # and reversible. See HANDOVER.md "レイヤー抑制方針" for the full rationale.
+  SAR_SOURCE_PREFIX = 'https://maps.gsi.go.jp/sar/'
+
   MARTIN_RESERVED_IDS = Set.new(%w[
     _ catalog config font health help index manifest metrics refresh reload sprite status
   ]).freeze
@@ -91,6 +99,11 @@ class GsiLayersToStaticMartin
 
       unless tile_template?(url)
         @excluded << exclusion_record(record, url, 'not_xyz_tile_template', ext)
+        next
+      end
+
+      if record[:source_url].to_s.start_with?(SAR_SOURCE_PREFIX)
+        @excluded << exclusion_record(record, url, 'sar_observation_snapshot', ext)
         next
       end
 
@@ -203,7 +216,7 @@ class GsiLayersToStaticMartin
 
       case response
       when Net::HTTPSuccess
-        response.body
+        response.body.dup.force_encoding('UTF-8')
       when Net::HTTPRedirection
         location = response['location']
         raise "redirect without Location: #{url}" unless location
@@ -239,7 +252,9 @@ class GsiLayersToStaticMartin
   end
 
   def absolute_http_url?(url)
-    uri = URI.parse(url)
+    # URI.parse rejects tile templates like {z}/{x}/{y} as invalid URIs,
+    # so validate scheme/host against a placeholder-substituted copy.
+    uri = URI.parse(url.gsub(/\{[^}]*\}/, 'x'))
     %w[http https].include?(uri.scheme) && uri.host
   rescue URI::InvalidURIError
     false
@@ -442,6 +457,9 @@ class GsiLayersToStaticMartin
   end
 
   def build_report(tile_records)
+    excluded_by_reason = Hash.new(0)
+    @excluded.each { |e| excluded_by_reason[e[:reason].to_s] += 1 }
+
     {
       'summary' => {
         'input_root' => @root_url,
@@ -451,6 +469,7 @@ class GsiLayersToStaticMartin
         'layers_seen' => @layers.length,
         'tiles_included' => tile_records.length,
         'layers_excluded' => @excluded.length,
+        'excluded_by_reason' => excluded_by_reason,
         'warnings' => @warnings.length,
         'failures' => @failures.length
       },

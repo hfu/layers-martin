@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "高梁川（岡山県倉敷市など）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_dansaizu/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月9日から18日にかけて撮影した空中写真を使用し、土砂等の痕跡から浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>空中写真の撮影範囲外は7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水範囲を推定し、同様に深さごとに色別に表現しています。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "minzoom": 6,
+  "maxzoom": 16,
+  "id": "201807H3007gouu_takahashigawa_dansaizu",
+  "title": "高梁川（岡山県倉敷市など）",
+  "maxZoom": 16,
+  "html": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月9日から18日にかけて撮影した空中写真を使用し、土砂等の痕跡から浸水した範囲を判読し、標高データを用いて浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>空中写真の撮影範囲外は7月7日の映像等の情報から浸水した範囲の端の地点を確認し、その地点の高さから標高データを用いて浸水範囲を推定し、同様に深さごとに色別に表現しています。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "平成30年7月豪雨",
+    "浸水推定段彩図",
+    "空中写真判読版"
+  ]
+}

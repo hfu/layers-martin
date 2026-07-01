@@ -1,0 +1,28 @@
+{
+  "tilejson": "3.0.0",
+  "name": "1999（平成11）年 7月 梅雨前線豪雨",
+  "tiles": [
+    "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1999_07_h11/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "attribution": "",
+  "description": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果です（ズームレベル13～16で表示されます）。調査範囲内の情報のみ表示されてます。\n\nご利用にあたっては『土地履歴調査成果公開サイト』をご確認ください。",
+  "minzoom": 7,
+  "maxzoom": 16,
+  "id": "1999_07_h11",
+  "title": "1999（平成11）年 7月 梅雨前線豪雨",
+  "maxZoom": 16,
+  "maxNativeZoom": 16,
+  "legendUrl": "",
+  "iconUrl": "",
+  "html": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果です（ズームレベル13～16で表示されます）。調査範囲内の情報のみ表示されてます。\n\nご利用にあたっては『土地履歴調査成果公開サイト』をご確認ください。",
+  "cocotile": false,
+  "errorTileUrl": "",
+  "subdomains": "",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_tochibunrui.txt",
+  "path": [
+    "土地の成り立ち・土地利用",
+    "土地分類基本調査（土地履歴調査）（国土交通省政策統括官）",
+    "災害履歴図（水害 災害毎（三大都市圏周辺））"
+  ]
+}

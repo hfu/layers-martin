@@ -1,0 +1,20 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2008年",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/nendophoto2008/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "minzoom": 14,
+  "maxzoom": 18,
+  "id": "nendophoto2008",
+  "title": "2008年",
+  "maxZoom": 18,
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+  "path": [
+    "年代別の写真",
+    "年度別写真（2007年以降）",
+    "2008年"
+  ]
+}

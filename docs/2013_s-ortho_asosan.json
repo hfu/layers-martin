@@ -1,0 +1,17 @@
+{
+  "tilejson": "3.0.0",
+  "name": "過去の簡易空中写真（2013年）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/2013_s-ortho_asosan/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "id": "2013_s-ortho_asosan",
+  "title": "過去の簡易空中写真（2013年）",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "阿蘇山"
+  ]
+}

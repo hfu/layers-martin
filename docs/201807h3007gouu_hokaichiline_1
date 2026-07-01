@@ -1,0 +1,25 @@
+{
+  "tilejson": "3.0.0",
+  "name": "崩壊地等分布図（ライン）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/201807H3007gouu_hokaichiline_1/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichiline_legend/201807H3007gouu_hokaichiline_legend_v2.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月9日から19日にかけて撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない場合や、平成30年7月豪雨による崩壊地以外の箇所を表示している場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所の始点から到達地点を表現しています。崩壊地等は、長さがおおむね50m以上のものを表しています。確認できた地形変化発生箇所の始点付近を丸で表しており、地形変化範囲を線で表現しています<br>3.崩壊地等の位置を把握するための資料で、人家等に被害の無い箇所も表示しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+  "minzoom": 2,
+  "maxzoom": 17,
+  "id": "201807H3007gouu_hokaichiline_1",
+  "title": "崩壊地等分布図（ライン）",
+  "maxZoom": 17,
+  "maxNativeZoom": 16,
+  "legendUrl": "",
+  "html": "</div><div style=\"text-align:center;\"><img src=\"https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichiline_legend/201807H3007gouu_hokaichiline_legend_v2.png\" alt=\"凡例\"></div><div class=\"gsi_layerinfo_kaisetu\">1.この情報は、国土地理院が7月9日から19日にかけて撮影した空中写真から、平成30年7月豪雨で生じたと考えられる崩壊地等を判読したものです。現地踏査は実施していないことから、実際に崩壊等のあった箇所でも表示できていない場合や、平成30年7月豪雨による崩壊地以外の箇所を表示している場合があり得ます。<br>2.崩壊地等は、崩壊地や土石流で生じた地形変化発生箇所の始点から到達地点を表現しています。崩壊地等は、長さがおおむね50m以上のものを表しています。確認できた地形変化発生箇所の始点付近を丸で表しており、地形変化範囲を線で表現しています<br>3.崩壊地等の位置を把握するための資料で、人家等に被害の無い箇所も表示しています。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "平成30年7月豪雨",
+    "崩壊地等分布図"
+  ]
+}

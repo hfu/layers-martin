@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "活断層図（都市圏活断層図）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "maxzoom": 16,
+  "id": "_afm20160414",
+  "title": "活断層図（都市圏活断層図）",
+  "maxZoom": 16,
+  "legendUrl": "http://www.gsi.go.jp/common/000084060.pdf",
+  "html": "<div class=\"gsi_layerinfo_title\">活断層図（都市圏活断層図）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/guidebook.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/common/000146274.pdf\">利用の手引</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成28年熊本地震",
+    "活断層図"
+  ]
+}

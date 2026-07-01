@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "デジタル標高地形図（全球版）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/earthdegital/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'>標高に応じて色分けした世界地図です。地球地図全球版標高第2版データから算出しています。</div><img src='https://maps.gsi.go.jp/legend/legend_earthdegital.JPG' alt='' width='50%' height='50%'>",
+  "minzoom": 0,
+  "maxzoom": 18,
+  "id": "earthdegital",
+  "title": "デジタル標高地形図（全球版）",
+  "maxZoom": 18,
+  "maxNativeZoom": 8,
+  "legendUrl": "",
+  "html": "<div class='layer_text'>標高に応じて色分けした世界地図です。地球地図全球版標高第2版データから算出しています。</div><img src='https://maps.gsi.go.jp/legend/legend_earthdegital.JPG' alt='' width='50%' height='50%'>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
+  "path": [
+    "標高・土地の凹凸"
+  ]
+}

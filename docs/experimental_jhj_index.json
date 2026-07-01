@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "┗住居表示住所の提供範囲",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/experimental_jhj_area/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "ズーム5～18で表示します。<br>ピンク色で塗りつぶされた部分以外には住居表示住所データはございません。<br>なお、この住居表示住所データの範囲は目安であり厳密なデータ範囲とは一致しませんのでご留意ください。",
+  "minzoom": 5,
+  "id": "experimental_jhj_index",
+  "title": "┗住居表示住所の提供範囲",
+  "html": "ズーム5～18で表示します。<br>ピンク色で塗りつぶされた部分以外には住居表示住所データはございません。<br>なお、この住居表示住所データの範囲は目安であり厳密なデータ範囲とは一致しませんのでご留意ください。",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "ベクトルタイル提供実験"
+  ]
+}

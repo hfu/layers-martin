@@ -1,0 +1,34 @@
+{
+  "tilejson": "3.0.0",
+  "name": "最上川水系最上川（2020年7月29日12時作成）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20200729rain_mogamigawa_0729dansaizu/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月29日12時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "minzoom": 2,
+  "maxzoom": 16,
+  "center": [
+    140.35886,
+    38.472776,
+    12
+  ],
+  "id": "20200729rain_mogamigawa_0729dansaizu",
+  "title": "最上川水系最上川（2020年7月29日12時作成）",
+  "maxZoom": 16,
+  "maxNativeZoom": 15,
+  "html": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月29日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月29日12時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
+  "cocotile": true,
+  "area": {
+    "lat": 38.472776,
+    "lng": 140.35886,
+    "zoom": 12
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20200703oame.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "令和2年7月豪雨",
+    "浸水推定図"
+  ]
+}

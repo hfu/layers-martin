@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "津波浸水想定（想定最大規模）",
+  "tiles": [
+    "https://disaportaldata.gsi.go.jp/raster/04_tsunami_newlegend_data/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">津波浸水想定（想定最大規模）</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">津波が発生した際に浸水が想定される区域と水深</div><div style=\"font-weight:bold;\">凡例</div><div style=\"border-bottom:1px dotted #2c6983;\"><img src=\"https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png\" alt=\"凡例\"></div><div style=\"font-weight:bold;\">注意点</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">このシミュレーションは現在の科学的知見を基に設定したものであり、この浸水域外で浸水する場合や浸水深がさらに大きくなる可能性がないというものでありません。</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/tsunami_sinsui.html\" target=\"_blank\">データの掲載状況一覧</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>",
+  "minzoom": 2,
+  "maxzoom": 17,
+  "id": "04_tsunami_newlegend_data",
+  "title": "津波浸水想定（想定最大規模）",
+  "maxZoom": 17,
+  "html": "<div class=\"gsi_layerinfo_title\">津波浸水想定（想定最大規模）</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">津波が発生した際に浸水が想定される区域と水深</div><div style=\"font-weight:bold;\">凡例</div><div style=\"border-bottom:1px dotted #2c6983;\"><img src=\"https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png\" alt=\"凡例\"></div><div style=\"font-weight:bold;\">注意点</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\">このシミュレーションは現在の科学的知見を基に設定したものであり、この浸水域外で浸水する場合や浸水深がさらに大きくなる可能性がないというものでありません。</div><div class=\"gsi_layerinfo_kaisetu\" style=\"border-bottom:1px dotted #2c6983;\"><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/tsunami_sinsui.html\" target=\"_blank\">データの掲載状況一覧</a><br><a href=\"https://disaportal.gsi.go.jp/hazardmap/copyright/copyright.html\" target=\"_blank\">データについて</a></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
+  "path": [
+    "その他",
+    "他機関の情報",
+    "災害リスク情報（重ねるハザードマップ）"
+  ]
+}

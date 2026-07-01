@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "1961年～1969年",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'><p>1961年～1969年に撮影された空中写真です。<br>撮影時期の違いにより、構造物等の不連続等が発生している箇所があります。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。",
+  "minzoom": 2,
+  "maxzoom": 18,
+  "id": "ort_old10",
+  "title": "1961年～1969年",
+  "maxZoom": 18,
+  "maxNativeZoom": 17,
+  "iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/670.png",
+  "html": "<div class='layer_text'><p>1961年～1969年に撮影された空中写真です。<br>撮影時期の違いにより、構造物等の不連続等が発生している箇所があります。</p></div><br>撮影年月日等、写真の詳細な情報については、<a target=\"_blank\" href=\"https://github.com/gsi-cyberjapan/gsimaps/issues/68\">こちら</a>を御覧ください。",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+  "path": [
+    "年代別の写真"
+  ]
+}

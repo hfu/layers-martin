@@ -1,0 +1,26 @@
+{
+  "tilejson": "3.0.0",
+  "name": "建物被害",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_earthquake_niigata/bld/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "attribution": "",
+  "description": "<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 11,
+  "maxzoom": 15,
+  "id": "niigata_bld",
+  "title": "建物被害",
+  "maxZoom": 15,
+  "legendUrl": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
+  "html": "<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "防災・地理教育支援",
+    "イラストで学ぶ過去の災害と地形",
+    "地震編",
+    "新潟地震"
+  ]
+}

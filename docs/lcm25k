@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "初期整備版",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "maxzoom": 16,
+  "id": "lcm25k",
+  "title": "初期整備版",
+  "maxZoom": 16,
+  "legendUrl": "",
+  "html": "<div class=\"gsi_layerinfo_title\">土地条件図 - 初期整備版</div><div class=\"gsi_layerinfo_kaisetu\">凡例は初期整備版諸元情報でご確認ください。<br><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_report.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
+  "path": [
+    "土地の成り立ち・土地利用",
+    "土地条件図"
+  ]
+}

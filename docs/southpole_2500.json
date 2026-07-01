@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "1:2,500　南極地形図（標高版）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/southpole_2500/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "",
+  "id": "_southpole_2500",
+  "title": "1:2,500　南極地形図（標高版）",
+  "html": "",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "南極",
+    "1:2,500　南極地形図（標高版）"
+  ]
+}

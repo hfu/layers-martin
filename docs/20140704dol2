@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2014/7/4（無人航空機（UAV）撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20140704dol2/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.7.4(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.7.4 と合わせてご覧下さい。</font></div>",
+  "minzoom": 14,
+  "id": "20140704dol2",
+  "title": "2014/7/4（無人航空機（UAV）撮影）",
+  "html": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2014.7.4(無人航空機(UAV)撮影))</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2014.7.4 と合わせてご覧下さい。</font></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_nishinoshima.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "西之島付近",
+    "（上載）地形判読図"
+  ]
+}

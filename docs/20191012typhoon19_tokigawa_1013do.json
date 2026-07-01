@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "都幾川地区（10/13撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20191012typhoon19_tokigawa_1013do/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20191012typhoon19_tokigawa_1013do",
+  "title": "都幾川地区（10/13撮影）",
+  "maxZoom": 18,
+  "html": "写真から自動処理したものなので、構造物等の歪み、不連続等が発生している箇所があります。また、雲の影響により地上が見えにくい場合があります。",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20191012typhoon19.txt",
+  "path": [
+    "近年の災害",
+    "台風・豪雨等",
+    "令和元年東日本台風",
+    "正射画像",
+    "都幾川地区（埼玉県川越市、東松山市、坂戸市、嵐山町、川島町）"
+  ]
+}

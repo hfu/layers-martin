@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "自分で作る色別標高図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "attribution": "",
+  "description": "<div class='layer_text'><p>自由に色分けできる標高地図です。低地の細かい標高の変化もよくわかります。</p></div><div class=\"gsi_layerinfo_kaisetu\">データ作成方法の違いにより水部とその周辺等で不自然な標高差が生じる場合がありますのでご注意ください。</div>",
+  "maxzoom": 18,
+  "id": "relief_free",
+  "title": "自分で作る色別標高図",
+  "maxZoom": 18,
+  "maxNativeZoom": 15,
+  "legendUrl": "",
+  "iconUrl": "",
+  "html": "<div class='layer_text'><p>自由に色分けできる標高地図です。低地の細かい標高の変化もよくわかります。</p></div><div class=\"gsi_layerinfo_kaisetu\">データ作成方法の違いにより水部とその周辺等で不自然な標高差が生じる場合がありますのでご注意ください。</div>",
+  "cocotile": false,
+  "subdomains": "",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
+  "path": [
+    "標高・土地の凹凸"
+  ]
+}

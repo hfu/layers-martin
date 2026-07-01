@@ -1,0 +1,32 @@
+{
+  "tilejson": "3.0.0",
+  "name": "岩手山",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/vlcd_iwate/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「岩手山」（平成23・24年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>",
+  "minzoom": 10,
+  "maxzoom": 16,
+  "center": [
+    140.997677,
+    39.849601,
+    13
+  ],
+  "id": "vlcd_iwate",
+  "title": "岩手山",
+  "maxZoom": 16,
+  "html": "<div class='layer_text'><p>火山土地条件図　数値データ（火山地形分類）「岩手山」（平成23・24年調査）の自然地形分類データです。地図上をクリックすると地形分類の説明が表示されます。人工地形分類データ及び一部の自然地形分類データは表示されない点にご留意ください。</p></div>",
+  "cocotile": true,
+  "area": {
+    "lat": 39.849601,
+    "lng": 140.997677,
+    "zoom": 13
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
+  "path": [
+    "土地の成り立ち・土地利用",
+    "火山土地条件図",
+    "火山土地条件図　数値データ（火山地形分類）"
+  ]
+}

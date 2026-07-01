@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "札幌市清田地区（9/13撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913do/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20180906hokkaido_kiyota_0913do",
+  "title": "札幌市清田地区（9/13撮影）",
+  "maxZoom": 18,
+  "html": "簡易的な方法で作成しているため、局所的に位置ずれ、構造物等の歪み等が発生している箇所があります。",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成30年北海道胆振東部地震",
+    "正射画像",
+    "統合版"
+  ]
+}

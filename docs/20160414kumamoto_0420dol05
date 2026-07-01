@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "八代地区正射画像（4/20撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20160414kumamoto_0420dol05",
+  "title": "八代地区正射画像（4/20撮影）",
+  "maxZoom": 18,
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成28年熊本地震",
+    "写真",
+    "正射画像(まとめ)"
+  ]
+}

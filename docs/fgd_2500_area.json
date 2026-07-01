@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "縮尺2500分1相当以上の概ねの範囲",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/fgd_2500_area/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">基盤地図情報の提供地域のうち、縮尺2500分1相当以上の概ねの範囲を表示します。<br>なお、縮尺2500分1相当以上と5000分1相当のデータを一体として整備している地域が一部ございます。</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
+  "minzoom": 4,
+  "maxzoom": 12,
+  "id": "fgd_2500_area",
+  "title": "縮尺2500分1相当以上の概ねの範囲",
+  "maxZoom": 12,
+  "html": "<div class=\"gsi_layerinfo_title\">基盤地図情報の提供地域</div><div class=\"gsi_layerinfo_subtitle\">基盤地図情報の提供地域のうち、縮尺2500分1相当以上の概ねの範囲を表示します。<br>なお、縮尺2500分1相当以上と5000分1相当のデータを一体として整備している地域が一部ございます。</div><div class=\"gsi_layerinfo_kaisetu\"><div></div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kiban/index.html\">基盤地図情報サイト</a></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "地図の更新情報や提供地域",
+    "基盤地図情報基本項目の更新情報"
+  ]
+}

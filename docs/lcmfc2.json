@@ -1,0 +1,20 @@
+{
+  "tilejson": "3.0.0",
+  "name": "治水地形分類図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg\">凡例を表示</a></div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 5,
+  "maxzoom": 16,
+  "id": "lcmfc2",
+  "title": "治水地形分類図",
+  "maxZoom": 16,
+  "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図</div><div class='layer_text'><p>一級河川を対象として、地形分類（扇状地、自然堤防、旧河道、後背湿地など）や堤防などを示した地図です。</p></div><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg\">凡例を表示</a></div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
+  "path": [
+    "土地の成り立ち・土地利用"
+  ]
+}

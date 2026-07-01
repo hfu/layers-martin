@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2017/10/12観測（西から東) ",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20171011kirishima_apsar171012we/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2017/10/12)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は西から東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20171011kirishima_apsar171012we",
+  "title": "2017/10/12観測（西から東) ",
+  "maxZoom": 18,
+  "html": "<div class=\"gsi_layerinfo_title\">霧島山（新燃岳）噴火活動-航空機SAR画像(2017/10/12)</div><div class=\"gsi_layerinfo_kaisetu\">レーダー照射方向は西から東方向</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "霧島山",
+    "航空機SAR（新燃岳）"
+  ]
+}

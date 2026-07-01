@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "アナグリフ（カラー）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/anaglyphmap_color/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class='layer_text'>3Dメガネ（赤青めがね）を通すと立体的に見える地図です（カラー）。</div><p>凡例</p><img src='https://maps.gsi.go.jp/legend/anaglyph.jpg' alt='' width='25%' height='25%'><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/anaglyphmap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>",
+  "minzoom": 2,
+  "maxzoom": 18,
+  "id": "anaglyphmap_color",
+  "title": "アナグリフ（カラー）",
+  "maxZoom": 18,
+  "maxNativeZoom": 16,
+  "html": "<div class='layer_text'>3Dメガネ（赤青めがね）を通すと立体的に見える地図です（カラー）。</div><p>凡例</p><img src='https://maps.gsi.go.jp/legend/anaglyph.jpg' alt='' width='25%' height='25%'><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/anaglyphmap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
+  "path": [
+    "標高・土地の凹凸"
+  ]
+}

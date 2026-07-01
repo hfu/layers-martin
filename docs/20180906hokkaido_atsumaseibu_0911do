@@ -1,0 +1,24 @@
+{
+  "tilejson": "3.0.0",
+  "name": "安平・厚真西部地区（9/11撮影）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911do/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。",
+  "minzoom": 10,
+  "maxzoom": 18,
+  "id": "20180906hokkaido_atsumaseibu_0911do",
+  "title": "安平・厚真西部地区（9/11撮影）",
+  "maxZoom": 18,
+  "html": "簡易的な方法でオルソ画像を作成しているため、局所的に位置ずれが生じている場合があります。",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+  "path": [
+    "近年の災害",
+    "地震",
+    "平成30年北海道胆振東部地震",
+    "正射画像",
+    "統合版"
+  ]
+}

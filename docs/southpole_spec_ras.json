@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "南極の地理空間情報（整備範囲）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/southpole_spec_ras/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "",
+  "id": "southpole_spec_ras",
+  "title": "南極の地理空間情報（整備範囲）",
+  "html": "",
+  "cocotile": false,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "南極",
+    "南極の地理空間情報（整備範囲）"
+  ]
+}

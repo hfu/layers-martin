@@ -1,0 +1,23 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2015/6/5",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20150605lsi/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.6.5)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>",
+  "minzoom": 8,
+  "maxzoom": 16,
+  "id": "20150605lsi",
+  "title": "2015/6/5",
+  "maxZoom": 16,
+  "html": "<div class=\"gsi_layerinfo_title\">衛星画像</div><div class=\"gsi_layerinfo_subtitle\">(2015.6.5)</div><div class=\"gsi_layerinfo_kaisetu\">Landsat8画像(Source of Landsat8 data: U.S. Geological Survey)</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_nishinoshima.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "西之島付近",
+    "衛星画像"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "1月更新",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/fgd_update_2024_01/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "minzoom": 4,
+  "maxzoom": 12,
+  "id": "fgd_update_2024_01",
+  "title": "1月更新",
+  "maxZoom": 12,
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+  "path": [
+    "その他",
+    "地図の更新情報や提供地域",
+    "基盤地図情報基本項目の更新情報",
+    "2024年更新情報"
+  ]
+}

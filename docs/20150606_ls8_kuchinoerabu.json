@@ -1,0 +1,25 @@
+{
+  "tilejson": "3.0.0",
+  "name": "2015/6/6",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/20150606_ls8_kuchinoerabu/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">Landsat8</div><div class=\"gsi_layerinfo_subtitle\">(2015.6.6)</div><div class=\"gsi_layerinfo_kaisetu\">Image produced by GSI. Source of Landsat 8 data: U.S. Geological Survey.</div>",
+  "minzoom": 8,
+  "maxzoom": 15,
+  "id": "20150606_ls8_kuchinoerabu",
+  "title": "2015/6/6",
+  "maxZoom": 15,
+  "maxNativeZoom": 16,
+  "html": "<div class=\"gsi_layerinfo_title\">Landsat8</div><div class=\"gsi_layerinfo_subtitle\">(2015.6.6)</div><div class=\"gsi_layerinfo_kaisetu\">Image produced by GSI. Source of Landsat 8 data: U.S. Geological Survey.</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190117kuchinoerabu.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "口永良部島",
+    "2015年5月～",
+    "Landsat8観測画像"
+  ]
+}

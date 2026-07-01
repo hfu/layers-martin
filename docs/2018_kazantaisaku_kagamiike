@@ -1,0 +1,21 @@
+{
+  "tilejson": "3.0.0",
+  "name": "火山災害対策用図（鏡池周辺）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/2018_kazantaisaku_kagamiike/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "minzoom": 3,
+  "maxzoom": 18,
+  "id": "2018_kazantaisaku_kagamiike",
+  "title": "火山災害対策用図（鏡池周辺）",
+  "maxZoom": 18,
+  "legendUrl": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kagamiike.jpg",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+  "path": [
+    "近年の災害",
+    "火山",
+    "草津白根山"
+  ]
+}

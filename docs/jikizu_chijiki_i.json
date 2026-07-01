@@ -1,0 +1,22 @@
+{
+  "tilejson": "3.0.0",
+  "name": "磁気図（伏角）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/jikizu_chijikii/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">磁気図（伏角）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br><br>＜凡例＞<br>黒線 ： 1度ごと<br>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 4,
+  "maxzoom": 7,
+  "id": "jikizu_chijiki_i",
+  "title": "磁気図（伏角）",
+  "maxZoom": 7,
+  "html": "<div class=\"gsi_layerinfo_title\">磁気図（伏角）2010.0年値</div><div class=\"gsi_layerinfo_kaisetu\">2010年1月1日における、伏角の分布を図に表したものです。<br><br>＜凡例＞<br>黒線 ： 1度ごと<br>白線 ： 12分ごと</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "cocotile": true,
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers4.txt",
+  "path": [
+    "基準点・地磁気・地殻変動",
+    "磁気図",
+    "磁気図2010.0年値"
+  ]
+}
