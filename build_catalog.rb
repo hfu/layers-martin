@@ -85,9 +85,11 @@ class GsiLayersToStaticMartin
     FileUtils.rm_rf(@out_dir)
     FileUtils.mkdir_p(@out_dir)
 
+    canonical_index_by_url = compute_canonical_index_by_url
+
     tile_records = []
 
-    @layers.each do |record|
+    @layers.each_with_index do |record, index|
       layer = record[:layer]
       url = normalize_tile_url(layer['url'].to_s)
       ext = extension_for(url)
@@ -104,6 +106,12 @@ class GsiLayersToStaticMartin
 
       if record[:source_url].to_s.start_with?(SAR_SOURCE_PREFIX)
         @excluded << exclusion_record(record, url, 'sar_observation_snapshot', ext)
+        next
+      end
+
+      canonical_index = canonical_index_by_url[url]
+      if canonical_index && canonical_index != index
+        @excluded << exclusion_record(record, url, 'duplicate_url_reference', ext)
         next
       end
 
@@ -149,6 +157,43 @@ class GsiLayersToStaticMartin
 
   def log(message)
     warn message if @verbose
+  end
+
+  # layers.txt commonly re-lists the same tile source (identical normalized
+  # tiles URL) under multiple LayerGroup branches, sometimes under a
+  # disaster-context alias id (conventionally prefixed with "_", e.g.
+  # "_relief_20160830" aliasing "relief") or a UI-variant id unrelated to the
+  # tile's own name (e.g. "gsi-compare-photo", a time-series-slider view of
+  # the "seamlessphoto" tiles). These are the same rendered tile source, not
+  # distinct layers, so only one canonical occurrence is kept in the catalog;
+  # the rest are recorded in report.json as "duplicate_url_reference".
+  #
+  # Canonical selection, in order: (1) not a disaster-context alias id,
+  # (2) id matches the tile's own /xyz/{id}/ URL segment, since that is the
+  # name the tile source declares for itself independent of which menu it is
+  # listed under, (3) first-seen order as a deterministic tiebreak.
+  def compute_canonical_index_by_url
+    groups = Hash.new { |h, k| h[k] = [] }
+    @layers.each_with_index do |record, index|
+      url = normalize_tile_url(record[:layer]['url'].to_s)
+      groups[url] << index
+    end
+
+    canonical_index_by_url = {}
+    groups.each do |url, indices|
+      next if indices.length <= 1
+
+      xyz_id = xyz_id_from_url(url)
+      canonical_index_by_url[url] = indices.min_by { |i| canonical_rank(@layers[i][:layer], xyz_id, i) }
+    end
+    canonical_index_by_url
+  end
+
+  def canonical_rank(layer, xyz_id, index)
+    id = layer['id'].to_s
+    alias_rank = id.start_with?('_') ? 1 : 0
+    xyz_match_rank = (xyz_id && id == xyz_id) ? 0 : 1
+    [alias_rank, xyz_match_rank, index]
   end
 
   def read_document(url, path)

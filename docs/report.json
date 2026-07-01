@@ -5,11 +5,12 @@
     "fetched_files": 182,
     "groups_seen": 858,
     "layers_seen": 13924,
-    "tiles_included": 2065,
-    "layers_excluded": 11859,
+    "tiles_included": 1874,
+    "layers_excluded": 12050,
     "excluded_by_reason": {
       "unsupported_extension": 1321,
-      "sar_observation_snapshot": 10538
+      "sar_observation_snapshot": 10538,
+      "duplicate_url_reference": 191
     },
     "warnings": 0,
     "failures": 0
@@ -1877,6 +1878,17 @@
       ]
     },
     {
+      "id": "gsi-compare-photo",
+      "title": "時系列表示（ZL14以上で表示）",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+      "path": [
+        "年代別の写真"
+      ]
+    },
+    {
       "id": "seamlessphoto_spec",
       "title": "┗撮影期間",
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
@@ -2141,6 +2153,17 @@
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
       "path": [
         "年代別の写真"
+      ]
+    },
+    {
+      "id": "relief_free",
+      "title": "自分で作る色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
+      "path": [
+        "標高・土地の凹凸"
       ]
     },
     {
@@ -154648,6 +154671,66 @@
       ]
     },
     {
+      "id": "toho1",
+      "title": "2011年3月～2011年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "path": [
+        "災害伝承・避難場所等",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho2",
+      "title": "2011年5月～2012年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "path": [
+        "災害伝承・避難場所等",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho3",
+      "title": "2012年10月～2013年5月",
+      "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "path": [
+        "災害伝承・避難場所等",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho4",
+      "title": "2013年9月～2013年12月",
+      "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "path": [
+        "災害伝承・避難場所等",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers5.txt",
+      "path": [
+        "災害伝承・避難場所等",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
       "id": "sikoku_suigai",
       "title": "水害",
       "url": "https://maps.gsi.go.jp/xyz/sikoku_suigai/{z}/{x}/{y}.geojson",
@@ -154952,6 +155035,126 @@
       ]
     },
     {
+      "id": "20180906hokkaido_atsuma_0906do",
+      "title": "厚真川地区（9/6撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_atsuma_0911do",
+      "title": "厚真川地区（9/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0911do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "厚真川地区（北海道夕張市・勇払郡厚真町・安平町・むかわ町など）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_atsumachiku_0906do",
+      "title": "厚真地区（9/6,8撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumachiku_0906do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "厚真地区（北海道勇払郡厚真町・安平町・むかわ町）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_atsumaseibu_0911do",
+      "title": "安平・厚真西部地区（9/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumaseibu_0911do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "安平・厚真西部地区（北海道千歳市・苫小牧市など）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_atsumtoubu_0911do",
+      "title": "厚真東部地区（9/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsumatoubu_0911do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "厚真東部地区（北海道勇払郡厚真町・むかわ町、沙流郡平取町）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_kiyota_0912do",
+      "title": "札幌市清田地区（9/12撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0912do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "札幌市清田地区（北海道札幌市清田区・厚別区、北広島市）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_kiyota_0913do",
+      "title": "札幌市清田地区（9/13撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_kiyota_0913do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "札幌市清田地区（北海道札幌市清田区・厚別区、北広島市）"
+      ]
+    },
+    {
+      "id": "20180906hokkaido_abira_0911do",
+      "title": "安平地区（9/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_abira_0911do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震",
+        "正射画像",
+        "安平地区（北海道勇払郡安平町・厚真町など）"
+      ]
+    },
+    {
       "id": "20180906hokkaido_atsuma_0906suichoku",
       "title": "厚真川地区（9/6撮影）",
       "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_atsuma_0906suichoku/{z}/{x}/{y}.geojson",
@@ -155057,6 +155260,19 @@
       ]
     },
     {
+      "id": "seamlessphoto1",
+      "title": "被災前最新写真",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180906hokkaido.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年北海道胆振東部地震"
+      ]
+    },
+    {
       "id": "20180906hokkaido_epicenter",
       "title": "震央",
       "url": "https://maps.gsi.go.jp/xyz/20180906hokkaido_epicenter/Iburi2018EQepi.geojson",
@@ -155126,6 +155342,20 @@
       ]
     },
     {
+      "id": "_afm20160414",
+      "title": "活断層図（都市圏活断層図）",
+      "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180618osaka.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年大阪府北部を震源とする地震",
+        "活断層図"
+      ]
+    },
+    {
       "id": "_afm_spec20160414",
       "title": "諸元情報",
       "url": "https://maps.gsi.go.jp/xyz/afm_spec/{z}/{x}/{y}.geojson",
@@ -155137,6 +155367,48 @@
         "地震",
         "平成30年大阪府北部を震源とする地震",
         "活断層図"
+      ]
+    },
+    {
+      "id": "_lcmfc2",
+      "title": "更新版(2007～2016年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180618osaka.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年大阪府北部を震源とする地震",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_lcmfc1",
+      "title": "初版(1976～1978年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180618osaka.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年大阪府北部を震源とする地震",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_d1-no845",
+      "title": "大阪_2015年11月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no845/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180618osaka.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成30年大阪府北部を震源とする地震",
+        "デジタル標高地形図"
       ]
     },
     {
@@ -155568,6 +155840,441 @@
         "地震",
         "平成28年熊本地震",
         "電子基準点による地殻変動"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0724dol",
+      "title": "熊本2地区正射画像（7/5～24撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0724dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0705dol",
+      "title": "阿蘇3地区正射画像（7/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0705dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0531dol",
+      "title": "南阿蘇河陽地区正射画像（5/31撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0531dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0530dol",
+      "title": "益城・西原地区正射画像（5/30撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0530dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0429dol1",
+      "title": "熊本断層地区A正射画像（4/29撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0429dol2",
+      "title": "熊本断層地区B正射画像（4/29撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0429dol2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol01",
+      "title": "西原2地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol01/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol02",
+      "title": "阿蘇2地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol02/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol03",
+      "title": "南阿蘇2地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol03/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol04",
+      "title": "御船地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol04/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol05",
+      "title": "八代地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol05/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol06",
+      "title": "天草地区正射画像（4/19,4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol06/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol07",
+      "title": "玉名地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol07/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol08",
+      "title": "山鹿地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol08/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol09",
+      "title": "菊池地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol09/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol10",
+      "title": "竹田地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol10/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0420dol11",
+      "title": "湯布院地区正射画像（4/20撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0420dol11/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0419dol2",
+      "title": "南阿蘇2地区正射画像（4/19撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0419dol6",
+      "title": "小国地区正射画像（4/19撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0419dol6/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol1",
+      "title": "熊本地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol2",
+      "title": "宇土地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol3",
+      "title": "合志地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol3/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol4",
+      "title": "西原地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol4/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol5",
+      "title": "阿蘇地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol5/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol6",
+      "title": "南阿蘇地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol6/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0416dol7",
+      "title": "別府地区正射画像（4/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0416dol7/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0415dol1",
+      "title": "益城地区正射画像（4/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0415dol2",
+      "title": "熊本南地区正射画像（4/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20160414kumamoto_0415dol3",
+      "title": "宇城地区正射画像（4/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_0415dol3/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真",
+        "正射画像"
       ]
     },
     {
@@ -156081,6 +156788,34 @@
       ]
     },
     {
+      "id": "_ort20160414",
+      "title": "写真（2007年～）",
+      "url": "https://maps.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真"
+      ]
+    },
+    {
+      "id": "_airphoto20160417",
+      "title": "簡易空中写真（2004年～）",
+      "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "写真"
+      ]
+    },
+    {
       "id": "20160414kumamoto_handoku2",
       "title": "土砂崩壊地分布図（7月撮影分）",
       "url": "https://maps.gsi.go.jp/xyz/20160414kumamoto_handoku2/{z}/{x}/{y}.geojson",
@@ -156146,6 +156881,20 @@
         "近年の災害",
         "地震",
         "平成28年熊本地震"
+      ]
+    },
+    {
+      "id": "_afm20160414",
+      "title": "活断層図（都市圏活断層図）",
+      "url": "https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160414kumamoto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成28年熊本地震",
+        "活断層図"
       ]
     },
     {
@@ -156882,6 +157631,75 @@
         "地震",
         "平成23年東北地方太平洋沖地震",
         "地殻変動量"
+      ]
+    },
+    {
+      "id": "fukkokizu",
+      "title": "災害復興計画基図",
+      "url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成23年東北地方太平洋沖地震"
+      ]
+    },
+    {
+      "id": "toho4",
+      "title": "2013年9月～2013年12月",
+      "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成23年東北地方太平洋沖地震",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "toho3",
+      "title": "2012年10月～2013年5月",
+      "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成23年東北地方太平洋沖地震",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "toho2",
+      "title": "2011年5月～2012年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成23年東北地方太平洋沖地震",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "toho1",
+      "title": "2011年3月～2011年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "平成23年東北地方太平洋沖地震",
+        "正射画像"
       ]
     },
     {
@@ -159288,6 +160106,276 @@
       ]
     },
     {
+      "id": "201807H3007gouu_takahashigawa_0709do",
+      "title": "高梁川地区（7/9撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "高梁川地区（岡山県倉敷市・総社市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_takahashigawa_0711do",
+      "title": "高梁川地区（7/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0711do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "高梁川地区（岡山県倉敷市・総社市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_takahashigawa_0712do",
+      "title": "高梁川地区（7/12撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0712do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "高梁川地区（岡山県倉敷市・総社市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_fukuyamahokubu_0718do",
+      "title": "福山北部地区（7/18撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyamahokubu_0718do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "福山北部地区（広島県福山市・岡山県井原市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_fukuyama_0713do",
+      "title": "福山地区（7/13,16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_fukuyama_0713do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "福山地区（広島県福山市）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_miharahokubu_0715do",
+      "title": "三原北部地区（7/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharahokubu_0715do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "三原北部地区（広島県三原市・府中市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_miharaonomichi_0713do",
+      "title": "三原尾道地区（7/13撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0713do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "三原尾道地区（広島県三原市・尾道市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_miharaonomichi_0715do",
+      "title": "三原尾道地区（7/15,16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_miharaonomichi_0715do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "三原尾道地区（広島県三原市・尾道市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_takeharamihara_0712do",
+      "title": "竹原三原地区（7/10,11,12撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takeharamihara_0712do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "竹原三原地区（広島県竹原市・三原市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_higashihiroshima_0710do",
+      "title": "東広島地区（7/10,11,14撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_higashihiroshima_0710do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "東広島地区（広島県広島市安芸区・東広島市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_kuretoubu_0713do",
+      "title": "呉東部地区（7/13撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0713do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "呉東部地区（広島県呉市・東広島市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_kuretoubu_0715do",
+      "title": "呉東部地区（7/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_kuretoubu_0715do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "呉東部地区（広島県呉市・東広島市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_sakachou_0711do",
+      "title": "広島坂町地区（7/9,11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_sakachou_0711do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "広島坂町地区（広島県広島市・坂町など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_etajima_0716do",
+      "title": "江田島地区（7/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_etajima_0716do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "江田島地区（広島県江田島市）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_iwakuni_0719do",
+      "title": "岩国地区（7/19撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_iwakuni_0719do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "岩国地区（山口県岩国市・周南市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_ozu_0711do",
+      "title": "大洲地区（7/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_ozu_0711do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "大洲地区（愛媛県大洲市・西予市など）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_hijikawa_0718do",
+      "title": "肱川地区（7/18撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_hijikawa_0718do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "肱川地区（愛媛県大洲市）"
+      ]
+    },
+    {
+      "id": "201807H3007gouu_uwajima_0711do",
+      "title": "宇和島地区（7/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_uwajima_0711do/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "正射画像",
+        "宇和島地区（愛媛県宇和島市など）"
+      ]
+    },
+    {
       "id": "201807H3007gouu_takahashigawa_0709suichoku",
       "title": "高梁川地区（7/9撮影）",
       "url": "https://maps.gsi.go.jp/xyz/201807H3007gouu_takahashigawa_0709suichoku/{z}/{x}/{y}.geojson",
@@ -159824,6 +160912,62 @@
       ]
     },
     {
+      "id": "_lcmfc2",
+      "title": "更新版(2007～2016年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_lcmfc1",
+      "title": "初版(1976～1978年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_lcm25k_2012",
+      "title": "数値地図25000（土地条件）",
+      "url": "https://maps.gsi.go.jp/xyz/lcm25k_2012/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "土地条件図"
+      ]
+    },
+    {
+      "id": "_lcm25k",
+      "title": "初期整備版",
+      "url": "https://maps.gsi.go.jp/xyz/lcm25k/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180709typhoon7.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成30年7月豪雨",
+        "土地条件図"
+      ]
+    },
+    {
       "id": "_lcm25k_spec",
       "title": "初期整備版 諸元情報",
       "url": "https://maps.gsi.go.jp/xyz/lcm25k_spec/{z}/{x}/{y}.geojson",
@@ -159865,6 +161009,19 @@
       ]
     },
     {
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170722akita.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月22日からの梅雨前線に伴う大雨"
+      ]
+    },
+    {
       "id": "seamlessphoto_spec",
       "title": "┗全国最新写真（シームレス）撮影期間",
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
@@ -159875,6 +161032,20 @@
         "近年の災害",
         "台風・豪雨等",
         "平成29年7月22日からの梅雨前線に伴う大雨"
+      ]
+    },
+    {
+      "id": "lcmfc2",
+      "title": "更新版(2007～2014年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170722akita.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月22日からの梅雨前線に伴う大雨",
+        "治水地形分類図"
       ]
     },
     {
@@ -159890,6 +161061,76 @@
         "平成29年7月九州北部豪雨",
         "正射画像",
         "統合版"
+      ]
+    },
+    {
+      "id": "20170705typhoon3_0713dol2",
+      "title": "空中写真（東峰地区）（7/13撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20170705typhoon3_0713dol1",
+      "title": "空中写真（朝倉地区）（7/13撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0713dol1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20170705typhoon3_0710dol",
+      "title": "ヘリ撮影画像（7/10撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0710dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20170705typhoon3_0708dol1",
+      "title": "ヘリ撮影画像（7/8撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0708dol1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "正射画像"
+      ]
+    },
+    {
+      "id": "20170705typhoon3_0707dol",
+      "title": "ヘリ撮影画像（7/7撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20170705typhoon3_0707dol/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "正射画像"
       ]
     },
     {
@@ -160147,6 +161388,19 @@
       ]
     },
     {
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨"
+      ]
+    },
+    {
       "id": "seamlessphoto_spec",
       "title": "┗全国最新写真（シームレス）撮影期間",
       "url": "https://maps.gsi.go.jp/xyz/seamlessphoto_spec/{z}/{x}/{y}.geojson",
@@ -160170,6 +161424,34 @@
         "近年の災害",
         "台風・豪雨等",
         "平成29年7月九州北部豪雨"
+      ]
+    },
+    {
+      "id": "lcmfc2",
+      "title": "更新版(2007～2014年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "lcmfc1",
+      "title": "初版(1976～1978年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170705typhoon3.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成29年7月九州北部豪雨",
+        "治水地形分類図"
       ]
     },
     {
@@ -160592,6 +161874,47 @@
       ]
     },
     {
+      "id": "_relief_20160830",
+      "title": "色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第10号"
+      ]
+    },
+    {
+      "id": "_lcmfc2_20160830",
+      "title": "更新版(2007～2014年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第10号",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_lcmfc1_20160830",
+      "title": "初版(1976～1978年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160830typhoon10.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第10号",
+        "治水地形分類図"
+      ]
+    },
+    {
       "id": "20160820typhoon11_9_0825suichokul",
       "title": "常呂川_垂直写真（8/25撮影）",
       "url": "https://maps.gsi.go.jp/xyz/20160820typhoon11_9_0825suichokul/{z}/{x}/{y}.geojson",
@@ -160693,6 +162016,60 @@
         "近年の災害",
         "台風・豪雨等",
         "平成28年台風第11号及び第9号"
+      ]
+    },
+    {
+      "id": "__airphoto_20160820",
+      "title": "簡易空中写真（2004年～）",
+      "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第11号及び第9号"
+      ]
+    },
+    {
+      "id": "_relief_20160820",
+      "title": "色別標高図",
+      "url": "https://maps.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第11号及び第9号"
+      ]
+    },
+    {
+      "id": "_lcmfc2_20160820",
+      "title": "更新版(2007～2014年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc2/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第11号及び第9号",
+        "治水地形分類図"
+      ]
+    },
+    {
+      "id": "_lcmfc1_20160820",
+      "title": "初版(1976～1978年)",
+      "url": "https://maps.gsi.go.jp/xyz/lcmfc1/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20160820typhoon11_9.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成28年台風第11号及び第9号",
+        "治水地形分類図"
       ]
     },
     {
@@ -161483,6 +162860,19 @@
       ]
     },
     {
+      "id": "_airphoto_2013_10",
+      "title": "正射画像（H24.4）",
+      "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成25年台風第26号及び第27号による大雨"
+      ]
+    },
+    {
       "id": "seisyazukaku1310typhoon27",
       "title": "正射画像_図郭版（10/28）",
       "url": "https://maps.gsi.go.jp/overlay/1310typhoon26/seisyazukaku1310typhoon27.kml",
@@ -161501,6 +162891,32 @@
       "url": "https://maps.gsi.go.jp/overlay/1310typhoon26/seisyazukaku1310typhoon26.kml",
       "reason": "unsupported_extension",
       "extension": ".kml",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成25年台風第26号及び第27号による大雨"
+      ]
+    },
+    {
+      "id": "_vlcd_2013_10",
+      "title": "火山土地条件図",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "平成25年台風第26号及び第27号による大雨"
+      ]
+    },
+    {
+      "id": "_vbm_2013_10",
+      "title": "火山基本図",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
       "path": [
         "近年の災害",
@@ -162298,6 +163714,60 @@
       ]
     },
     {
+      "id": "_vbm_2018-1",
+      "title": "火山基本図「十勝岳」",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "十勝岳",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2018-1",
+      "title": "火山土地条件図「十勝岳」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "十勝岳"
+      ]
+    },
+    {
+      "id": "vbm",
+      "title": "火山基本図",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "樽前山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vlcd",
+      "title": "火山土地条件図",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "樽前山"
+      ]
+    },
+    {
       "id": "urgent_volcano_azumayama_20171017_20180918_u06r",
       "title": "2017/10/17～2018/09/18_AR",
       "url": "https://insarmap.gsi.go.jp/xyz/clip_volcano_azumayama_urgent_volcano_azumayama_20171017_20180918_u06r/{z}/{x}/{y}.png",
@@ -162354,6 +163824,48 @@
       ]
     },
     {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "吾妻山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "吾妻山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "吾妻山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
       "id": "urgent_volcano_kusatsushiranesan_20180127_spt_mag_1look",
       "title": "2018/01/27_DL_PWR",
       "url": "https://insarmap.gsi.go.jp/xyz/urgent_volcano_kusatsushiranesan_20180127_spt_mag_1look/{z}/{x}/{y}.png",
@@ -162401,6 +163913,61 @@
       "url": "https://maps.gsi.go.jp/xyz/20180226_kusatsushiranesan_suiteikakouichi/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山"
+      ]
+    },
+    {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2018-3",
+      "title": "火山土地条件図「草津白根山」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
       "path": [
         "近年の災害",
@@ -162504,6 +164071,20 @@
         "火山",
         "浅間山",
         "SAR解析結果(ALOS-2)"
+      ]
+    },
+    {
+      "id": "_vbm_2018-5",
+      "title": "火山基本図「浅間山」",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "火山基本図・火山基本図データ"
       ]
     },
     {
@@ -162622,6 +164203,33 @@
       "url": "https://maps.gsi.go.jp/overlay/1409ontake_l/sar1409ontake.kml",
       "reason": "unsupported_extension",
       "extension": ".kml",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "御嶽山"
+      ]
+    },
+    {
+      "id": "_vbm_2014_09",
+      "title": "火山基本図「御嶽山」",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "御嶽山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2014_09",
+      "title": "火山土地条件図「御嶽山」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
       "path": [
         "近年の災害",
@@ -163173,6 +164781,61 @@
         "火山",
         "箱根山",
         "SAR解析結果(ALOS-2)"
+      ]
+    },
+    {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "箱根山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbm",
+      "title": "火山基本図",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "伊豆大島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vlcd",
+      "title": "火山土地条件図",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "伊豆大島"
+      ]
+    },
+    {
+      "id": "vbm",
+      "title": "火山基本図",
+      "url": "https://maps.gsi.go.jp/xyz/vbm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "三宅島",
+        "火山基本図・火山基本図データ"
       ]
     },
     {
@@ -168439,6 +170102,48 @@
       ]
     },
     {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_nishinoshima.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "西之島付近",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_nishinoshima.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "西之島付近",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_nishinoshima.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "西之島付近",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
       "id": "20150907_20150921_u07r_sar_asosan",
       "title": "2015/09/07-2015/09/21_DR",
       "url": "https://insarmap.gsi.go.jp/xyz/20150907_20150921_u07r_sar_asosan/{z}/{x}/{y}.png",
@@ -168506,6 +170211,61 @@
         "火山",
         "阿蘇山",
         "SAR解析結果(ALOS-2)"
+      ]
+    },
+    {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "阿蘇山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "阿蘇山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "阿蘇山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2018-2",
+      "title": "火山土地条件図「阿蘇山」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "阿蘇山"
       ]
     },
     {
@@ -169196,6 +170956,61 @@
       ]
     },
     {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "霧島山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "霧島山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "霧島山",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2018-6",
+      "title": "火山土地条件図「霧島山」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "霧島山"
+      ]
+    },
+    {
       "id": "20151130_20160208_sar_sakurajima",
       "title": "2015/11/30～2016/02/08_DR",
       "url": "https://insarmap.gsi.go.jp/xyz/20151130_20160208_sar_sakurajima/{z}/{x}/{y}.png",
@@ -169466,6 +171281,61 @@
       "url": "https://maps.gsi.go.jp/overlay/1508sakurajima/suichoku1508sakurajima_400dpi_2006.kml",
       "reason": "unsupported_extension",
       "extension": ".kml",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "桜島"
+      ]
+    },
+    {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "桜島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "桜島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "桜島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "_vlcd_2015_08",
+      "title": "火山土地条件図「桜島」",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
       "path": [
         "近年の災害",
@@ -169907,6 +171777,61 @@
       ]
     },
     {
+      "id": "_airphoto_2015_05",
+      "title": "過去の簡易空中写真（2016/4）",
+      "url": "https://maps.gsi.go.jp/xyz/airphoto/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190117kuchinoerabu.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "口永良部島"
+      ]
+    },
+    {
+      "id": "vbmd_bm",
+      "title": "火山基本図データ（基図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_bm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190117kuchinoerabu.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "口永良部島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_colorrel",
+      "title": "火山基本図データ（陰影段彩図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_colorrel/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190117kuchinoerabu.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "口永良部島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
+      "id": "vbmd_pm",
+      "title": "火山基本図データ（写真地図）",
+      "url": "https://maps.gsi.go.jp/xyz/vbmd_pm/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20190117kuchinoerabu.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "口永良部島",
+        "火山基本図・火山基本図データ"
+      ]
+    },
+    {
       "id": "geography_flood",
       "title": "水害編",
       "url": "https://maps.gsi.go.jp/xyz/chirikyouiku/geography_flood/{z}/{x}/{y}.geojson",
@@ -170034,6 +171959,617 @@
         "その他",
         "防災・地理教育支援",
         "被災状況の空中写真・UAVによる動画"
+      ]
+    },
+    {
+      "id": "d1-no943",
+      "title": "北海道_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no943/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no944",
+      "title": "青森県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no944/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no945",
+      "title": "岩手県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no945/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no946",
+      "title": "宮城県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no946/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no947",
+      "title": "秋田県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no947/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no948",
+      "title": "山形県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no948/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no949",
+      "title": "福島県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no949/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no950",
+      "title": "茨城県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no950/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no951",
+      "title": "栃木県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no951/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no952",
+      "title": "群馬県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no952/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no953",
+      "title": "埼玉県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no953/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no954",
+      "title": "千葉県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no954/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no955",
+      "title": "東京都_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no955/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no956",
+      "title": "神奈川県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no956/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no957",
+      "title": "新潟県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no957/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no958",
+      "title": "富山県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no958/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no959",
+      "title": "石川県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no959/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no960",
+      "title": "福井県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no960/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no961",
+      "title": "山梨県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no961/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no962",
+      "title": "長野県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no962/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no963",
+      "title": "岐阜県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no963/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no964",
+      "title": "静岡県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no964/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no965",
+      "title": "愛知県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no965/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no966",
+      "title": "三重県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no966/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no967",
+      "title": "滋賀県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no967/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no968",
+      "title": "京都府_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no968/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no969",
+      "title": "大阪府_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no969/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no970",
+      "title": "兵庫県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no970/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no971",
+      "title": "奈良県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no971/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no972",
+      "title": "和歌山県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no972/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no973",
+      "title": "鳥取県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no973/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no974",
+      "title": "島根県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no974/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no975",
+      "title": "岡山県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no975/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no976",
+      "title": "広島県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no976/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no977",
+      "title": "山口県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no977/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no978",
+      "title": "徳島県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no978/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no979",
+      "title": "香川県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no979/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no980",
+      "title": "愛媛県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no980/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no981",
+      "title": "高知県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no981/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no982",
+      "title": "福岡県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no982/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no983",
+      "title": "佐賀県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no983/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no984",
+      "title": "長崎県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no984/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no985",
+      "title": "熊本県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no985/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no986",
+      "title": "大分県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no986/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no987",
+      "title": "宮崎県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no987/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no988",
+      "title": "鹿児島県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no988/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
+      ]
+    },
+    {
+      "id": "d1-no989",
+      "title": "沖縄県_2019年6月",
+      "url": "https://maps.gsi.go.jp/xyz/d1-no989/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "防災・地理教育支援",
+        "都道府県の地形（デジタル標高地形図）"
       ]
     },
     {
@@ -170191,6 +172727,84 @@
       ]
     },
     {
+      "id": "toho1",
+      "title": "2011年3月～2011年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho1/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho2",
+      "title": "2011年5月～2012年4月",
+      "url": "https://maps.gsi.go.jp/xyz/toho2/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho3",
+      "title": "2012年10月～2013年5月",
+      "url": "https://maps.gsi.go.jp/xyz/toho3/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "toho4",
+      "title": "2013年9月～2013年12月",
+      "url": "https://maps.gsi.go.jp/xyz/toho4/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "seamlessphoto",
+      "title": "全国最新写真（シームレス）",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
+      "id": "fukkokizu",
+      "title": "災害復興計画基図",
+      "url": "https://maps.gsi.go.jp/xyz/fukkokizu/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "震災伝承施設（東北地整）"
+      ]
+    },
+    {
       "id": "kunijiban",
       "title": "地盤情報（KuniJiban）",
       "url": "https://maps.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson",
@@ -170220,6 +172834,30 @@
       "url": "https://maps.gsi.go.jp/xyz/active_fault/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報"
+      ]
+    },
+    {
+      "id": "rinya",
+      "title": "森林（国有林）の空中写真（林野庁）",
+      "url": "https://maps.gsi.go.jp/xyz/rinya/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報"
+      ]
+    },
+    {
+      "id": "rinya_m",
+      "title": "森林（民有林）の空中写真",
+      "url": "https://maps.gsi.go.jp/xyz/rinya_m/{z}/{x}/{y}.png",
+      "reason": "duplicate_url_reference",
+      "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
       "path": [
         "その他",
@@ -176506,832 +179144,6 @@
     }
   ],
   "warnings": [],
-  "id_changes": [
-    {
-      "original": "toho1",
-      "resolved": "toho1_b287364f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho2",
-      "resolved": "toho2_6f96514a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho3",
-      "resolved": "toho3_62d4278c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho4",
-      "resolved": "toho4_95fa75df",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "seamlessphoto",
-      "resolved": "seamlessphoto_b81b4f06",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_atsuma_0906do",
-      "resolved": "20180906hokkaido_atsuma_0906do_897c6e2a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_atsuma_0911do",
-      "resolved": "20180906hokkaido_atsuma_0911do_627a1055",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_atsumachiku_0906do",
-      "resolved": "20180906hokkaido_atsumachiku_0906do_e67143cf",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_atsumaseibu_0911do",
-      "resolved": "20180906hokkaido_atsumaseibu_0911do_b756bc5f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_atsumtoubu_0911do",
-      "resolved": "20180906hokkaido_atsumtoubu_0911do_650c9001",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_kiyota_0912do",
-      "resolved": "20180906hokkaido_kiyota_0912do_f92f6d83",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_kiyota_0913do",
-      "resolved": "20180906hokkaido_kiyota_0913do_eec85d2b",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20180906hokkaido_abira_0911do",
-      "resolved": "20180906hokkaido_abira_0911do_5176ca01",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc2",
-      "resolved": "lcmfc2_710000df",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no845",
-      "resolved": "d1-no845_1f47a6df",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0724dol",
-      "resolved": "20160414kumamoto_0724dol_f19c185f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0705dol",
-      "resolved": "20160414kumamoto_0705dol_77067b56",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0531dol",
-      "resolved": "20160414kumamoto_0531dol_440a915f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0530dol",
-      "resolved": "20160414kumamoto_0530dol_bbfd96ec",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0429dol1",
-      "resolved": "20160414kumamoto_0429dol1_bf5cfd74",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0429dol2",
-      "resolved": "20160414kumamoto_0429dol2_589fd860",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol01",
-      "resolved": "20160414kumamoto_0420dol01_975ee856",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol02",
-      "resolved": "20160414kumamoto_0420dol02_deab382a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol03",
-      "resolved": "20160414kumamoto_0420dol03_b2eb7117",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol04",
-      "resolved": "20160414kumamoto_0420dol04_0b63c5e0",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol05",
-      "resolved": "20160414kumamoto_0420dol05_452525e6",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol06",
-      "resolved": "20160414kumamoto_0420dol06_b30028e6",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol07",
-      "resolved": "20160414kumamoto_0420dol07_ecba0ad5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol08",
-      "resolved": "20160414kumamoto_0420dol08_cae24830",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol09",
-      "resolved": "20160414kumamoto_0420dol09_d9e91444",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol10",
-      "resolved": "20160414kumamoto_0420dol10_efb83b7c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0420dol11",
-      "resolved": "20160414kumamoto_0420dol11_b8ca3a0f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0419dol2",
-      "resolved": "20160414kumamoto_0419dol2_24151288",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0419dol6",
-      "resolved": "20160414kumamoto_0419dol6_f9ad01c1",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol1",
-      "resolved": "20160414kumamoto_0416dol1_5f056f67",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol2",
-      "resolved": "20160414kumamoto_0416dol2_564d83a8",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol3",
-      "resolved": "20160414kumamoto_0416dol3_315edb7b",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol4",
-      "resolved": "20160414kumamoto_0416dol4_82b70b45",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol5",
-      "resolved": "20160414kumamoto_0416dol5_ce831ce0",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol6",
-      "resolved": "20160414kumamoto_0416dol6_a7e1ad89",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0416dol7",
-      "resolved": "20160414kumamoto_0416dol7_ab11912e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0415dol1",
-      "resolved": "20160414kumamoto_0415dol1_9b09d21c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0415dol2",
-      "resolved": "20160414kumamoto_0415dol2_f23eb7a0",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20160414kumamoto_0415dol3",
-      "resolved": "20160414kumamoto_0415dol3_09a99472",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "afm20160414",
-      "resolved": "afm20160414_03379419",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "fukkokizu",
-      "resolved": "fukkokizu_48e00247",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho4",
-      "resolved": "toho4_4935df2e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho3",
-      "resolved": "toho3_2dbdd508",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho2",
-      "resolved": "toho2_3e2628ee",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho1",
-      "resolved": "toho1_cb5627df",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_takahashigawa_0709do",
-      "resolved": "201807h3007gouu_takahashigawa_0709do_15484d64",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_takahashigawa_0711do",
-      "resolved": "201807h3007gouu_takahashigawa_0711do_0316a1f0",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_takahashigawa_0712do",
-      "resolved": "201807h3007gouu_takahashigawa_0712do_5ac4e6da",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_fukuyamahokubu_0718do",
-      "resolved": "201807h3007gouu_fukuyamahokubu_0718do_4664ab3a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_fukuyama_0713do",
-      "resolved": "201807h3007gouu_fukuyama_0713do_f73cedd4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_miharahokubu_0715do",
-      "resolved": "201807h3007gouu_miharahokubu_0715do_f738869b",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_miharaonomichi_0713do",
-      "resolved": "201807h3007gouu_miharaonomichi_0713do_04104a40",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_miharaonomichi_0715do",
-      "resolved": "201807h3007gouu_miharaonomichi_0715do_a4e01847",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_takeharamihara_0712do",
-      "resolved": "201807h3007gouu_takeharamihara_0712do_a58a9705",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_higashihiroshima_0710do",
-      "resolved": "201807h3007gouu_higashihiroshima_0710do_4f8879be",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_kuretoubu_0713do",
-      "resolved": "201807h3007gouu_kuretoubu_0713do_303b6897",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_kuretoubu_0715do",
-      "resolved": "201807h3007gouu_kuretoubu_0715do_ac9bbb49",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_sakachou_0711do",
-      "resolved": "201807h3007gouu_sakachou_0711do_eb9756fb",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_etajima_0716do",
-      "resolved": "201807h3007gouu_etajima_0716do_b7eac299",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_iwakuni_0719do",
-      "resolved": "201807h3007gouu_iwakuni_0719do_e789da38",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_ozu_0711do",
-      "resolved": "201807h3007gouu_ozu_0711do_59ab5908",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_hijikawa_0718do",
-      "resolved": "201807h3007gouu_hijikawa_0718do_78c4a83c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "201807h3007gouu_uwajima_0711do",
-      "resolved": "201807h3007gouu_uwajima_0711do_f2f45993",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc2",
-      "resolved": "lcmfc2_07a5efba",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc1",
-      "resolved": "lcmfc1_d5e62792",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcm25k_2012",
-      "resolved": "lcm25k_2012_de077558",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcm25k",
-      "resolved": "lcm25k_959439dc",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "seamlessphoto",
-      "resolved": "seamlessphoto_672f39d1",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc2",
-      "resolved": "lcmfc2_e0bedac5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc1",
-      "resolved": "lcmfc1_1d27bd24",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20170705typhoon3_0713dol2",
-      "resolved": "20170705typhoon3_0713dol2_b6091263",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20170705typhoon3_0713dol1",
-      "resolved": "20170705typhoon3_0713dol1_4279d4f3",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20170705typhoon3_0710dol",
-      "resolved": "20170705typhoon3_0710dol_434556a3",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20170705typhoon3_0708dol1",
-      "resolved": "20170705typhoon3_0708dol1_8c0fec39",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "20170705typhoon3_0707dol",
-      "resolved": "20170705typhoon3_0707dol_e1700df8",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "seamlessphoto",
-      "resolved": "seamlessphoto_d50c0349",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc2",
-      "resolved": "lcmfc2_d98b79c1",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "lcmfc1",
-      "resolved": "lcmfc1_2285e6b5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbm",
-      "resolved": "vbm_2ee996a7",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vlcd",
-      "resolved": "vlcd_4a1175b4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_4e413a17",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_2e08cfcd",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_2e78c9d9",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_34205f35",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_26ae0aea",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_905e9eaf",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_bb0e9ef1",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbm",
-      "resolved": "vbm_6b5e8662",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vlcd",
-      "resolved": "vlcd_9ce108c2",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbm",
-      "resolved": "vbm_9a0a92a2",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_0f6c28aa",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_a85c5cab",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_f9a7053d",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_4be435e4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_5eee9604",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_455f2c83",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_9e78af8e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_1d42655a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_dfebf4cb",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_889cc34e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_a53c775c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_6060db20",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_bm",
-      "resolved": "vbmd_bm_a903f33a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_colorrel",
-      "resolved": "vbmd_colorrel_d92fbf16",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "vbmd_pm",
-      "resolved": "vbmd_pm_858fa9ca",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no943",
-      "resolved": "d1-no943_7ee5dd23",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no944",
-      "resolved": "d1-no944_37c101d4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no945",
-      "resolved": "d1-no945_b427fb73",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no946",
-      "resolved": "d1-no946_253929ba",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no947",
-      "resolved": "d1-no947_8d8ed211",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no948",
-      "resolved": "d1-no948_b37ccc8a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no949",
-      "resolved": "d1-no949_ef49246e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no950",
-      "resolved": "d1-no950_cfb6fe57",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no951",
-      "resolved": "d1-no951_769003de",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no952",
-      "resolved": "d1-no952_a768c0f4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no953",
-      "resolved": "d1-no953_4db279f3",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no954",
-      "resolved": "d1-no954_95539e8c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no955",
-      "resolved": "d1-no955_81aa02c6",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no956",
-      "resolved": "d1-no956_e7165e72",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no957",
-      "resolved": "d1-no957_bd946a61",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no958",
-      "resolved": "d1-no958_2a1f484c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no959",
-      "resolved": "d1-no959_738768a0",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no960",
-      "resolved": "d1-no960_f284503c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no961",
-      "resolved": "d1-no961_fe6462d6",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no962",
-      "resolved": "d1-no962_1cd105c4",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no963",
-      "resolved": "d1-no963_d2873ccd",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no964",
-      "resolved": "d1-no964_cdb47aa3",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no965",
-      "resolved": "d1-no965_a9376e68",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no966",
-      "resolved": "d1-no966_ebbc0840",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no967",
-      "resolved": "d1-no967_d5821d01",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no968",
-      "resolved": "d1-no968_af8dff2d",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no969",
-      "resolved": "d1-no969_c708719d",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no970",
-      "resolved": "d1-no970_bf71e87b",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no971",
-      "resolved": "d1-no971_c67a65a6",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no972",
-      "resolved": "d1-no972_661a3fa5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no973",
-      "resolved": "d1-no973_f1254c77",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no974",
-      "resolved": "d1-no974_fb2456e9",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no975",
-      "resolved": "d1-no975_8376e390",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no976",
-      "resolved": "d1-no976_1e223238",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no977",
-      "resolved": "d1-no977_600f204e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no978",
-      "resolved": "d1-no978_9c07f7b5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no979",
-      "resolved": "d1-no979_c55bd54f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no980",
-      "resolved": "d1-no980_4a2dade5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no981",
-      "resolved": "d1-no981_456e099e",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no982",
-      "resolved": "d1-no982_365122cf",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no983",
-      "resolved": "d1-no983_21812c8a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no984",
-      "resolved": "d1-no984_feec94d9",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no985",
-      "resolved": "d1-no985_69594ae5",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no986",
-      "resolved": "d1-no986_f1d94534",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no987",
-      "resolved": "d1-no987_1539c17f",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no988",
-      "resolved": "d1-no988_adcd4a00",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "d1-no989",
-      "resolved": "d1-no989_7b7bd19a",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho1",
-      "resolved": "toho1_9401634b",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho2",
-      "resolved": "toho2_86dfe346",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho3",
-      "resolved": "toho3_d521156c",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "toho4",
-      "resolved": "toho4_da3a8fd1",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "seamlessphoto",
-      "resolved": "seamlessphoto_336a0d49",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "fukkokizu",
-      "resolved": "fukkokizu_0facdb50",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "rinya",
-      "resolved": "rinya_3e00c386",
-      "reason": "duplicate_id"
-    },
-    {
-      "original": "rinya_m",
-      "resolved": "rinya_m_171dd245",
-      "reason": "duplicate_id"
-    }
-  ],
+  "id_changes": [],
   "failures": []
 }

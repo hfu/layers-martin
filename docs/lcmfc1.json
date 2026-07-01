@@ -8,17 +8,17 @@
   "description": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 2,
   "maxzoom": 16,
-  "id": "_lcmfc1",
+  "id": "lcmfc1",
   "title": "初版(1976～1978年)",
   "maxZoom": 16,
   "legendUrl": "https://maps.gsi.go.jp/legend/lcmfc1_legend.gif",
   "html": "<div class=\"gsi_layerinfo_title\">治水地形分類図-初版(1976～1978年)</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/fc_index.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "cocotile": true,
-  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180618osaka.txt",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20170722akita.txt",
   "path": [
     "近年の災害",
-    "地震",
-    "平成30年大阪府北部を震源とする地震",
+    "台風・豪雨等",
+    "平成29年7月22日からの梅雨前線に伴う大雨",
     "治水地形分類図"
   ]
 }
