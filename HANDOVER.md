@@ -13,6 +13,31 @@ GSI `layers.txt` を Martin 互換の静的カタログ／TileJSON 群へ変換�
 
 GitHub Pages では Martin サーバを動かさず、`docs/` 配下に静的ファイルとして配置する。タイル実体は GSI 等の既存タイル URL を参照し、このプロジェクトではカタログおよび TileJSON メタデータのみを生成する。
 
+## 上位構想: Staccato アーキテクチャにおける位置づけ
+
+`layers-martin` は単独のツールではなく、`unopengis/staccato-spec` が定義する Staff-Cartographer アーキテクチャの一部として構想されている（`UNopenGIS/7#936` が親issue、`UNopenGIS/7#938` が本プロジェクトのissue）。
+
+Staccato は次の 4 者モデルを定義する。
+
+```text
+User          問いを投げる
+Staff         エンタープライズ内で動作し、問いを解釈して Map Intent (YAML) を生成する
+Cartographer  インターネット側で動作し、Map Intent を受け取って MapLibre GL JS で描画する
+Library       カタログメタデータと地理空間リソースを公開する
+```
+
+`layers-martin` は、この **Library** 役割の最初の実装である。Staff は起動時に設定されたカタログからしかレイヤーを解決してはならず、Cartographer は Map Intent だけから確定的に描画できなければならない。そのため Library が出す情報は、GSI `layers.txt` の忠実な複製である必要はなく、Staff・Cartographer が扱いやすい形に正規化されている必要がある。
+
+staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタログ（`martin`, `layers_txt`）に対して **TileJSON 3.0 (collection) を正準の消費モデル**とすることを定めており、`spec/layers_txt_to_tilejson.md` は本プロジェクトが行っている `layers.txt → TileJSON` 変換とほぼ同内容の変換ガイドを示している。両者は独立に収束したものであり、方針の一致は意図的なものとして扱ってよい。
+
+### 設計方針への反映
+
+この位置づけから、本プロジェクトの変換方針は次のスタンスを取る。
+
+- 元データへの忠実性は優先するが、絶対条件ではない。GSI `layers.txt` の語彙・`html`・`attribution` は可能な限り原文保持する（下記「確定した初期方針」参照）。
+- 一方で、Martin/TileJSON 互換性を壊すもの（予約語 ID との衝突、`{s}` や空白混入など不正な URL、Martin が扱えない拡張子）は、無条件に温存せず、正すか除外する。
+- 何を正した／除外したかは必ず `report.json` に記録し、追跡可能にする。「忠実性を保ちつつ、直すべきものは直す」というキュレーションの妥当性は、この記録可能性によって担保される。
+
 ## 参照情報
 
 - GSI Maps のルート `layers.txt` は `https://maps.gsi.go.jp/layers_txt/layers.txt`。
