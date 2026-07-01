@@ -16,13 +16,15 @@ jobs:
         with:
           ruby-version: "3.3"
       - run: ruby build_catalog.rb --root https://maps.gsi.go.jp/layers_txt/layers.txt --out docs
-      - run: test -f docs/catalog
-      - run: test -f docs/catalog.json
-      - run: git diff -- docs
+      - run: ruby validate_outputs.rb --docs docs --min-tiles 1000
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs
-          git commit -m "Update static Martin catalog" || exit 0
-          git push
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "Update static Martin catalog"
+            git push
+          fi

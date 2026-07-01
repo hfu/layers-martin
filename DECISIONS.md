@@ -25,6 +25,7 @@
 | [D8](#d8-source_id-の決定順位とmartin予約語の回避) | source_id の決定順位と Martin 予約語の回避 | Accepted | 2026-06-26 |
 | [D9](#d9-干渉sarスナップショットレイヤーを主カタログから抑制する) | 干渉SARスナップショットレイヤーを主カタログから抑制する | Accepted | 2026-07-02 |
 | [D10](#d10-同一タイルurlの重複参照を抑制する) | 同一タイルURLの重複参照を抑制する | Accepted | 2026-07-02 |
+| [D11](#d11-actions-の成功判定を出力内容の検証に基づかせる) | Actions の成功判定を出力内容の検証に基づかせる | Accepted | 2026-07-02 |
 
 ---
 
@@ -154,3 +155,24 @@
   3. 上記で決まらない場合は、木構造を辿った際の最初の出現を採用する。
 
 **Consequences**: カタログは 2,065 件 → 1,874 件に縮小した。ルール2は実装時に必要になった。単純な「先着順」だけだと、`seamlessphoto` グループで `gsi-compare-photo`(時系列比較スライダー用のUI変種)が本体より先に出現するため誤って代表に選ばれてしまうケースがあり、URL自身が declare する id を優先することで解決した。この教訓(「メニュー上の出現順は信頼できるcanonical選定基準にならない」)は、今後同種の判断をする際にも当てはまる。
+
+## D11: Actions の成功判定を出力内容の検証に基づかせる
+
+**Status**: Accepted
+
+**Context**: D9 着手前の調査で判明した通り、`build_catalog.rb` は個々のレイヤーの取得・処理失敗を例外で止めず `report.json` に記録して処理を続ける設計になっている(意図的な挙動。1レイヤーの失敗で全体を止めないため)。ところが GitHub Actions 側は `test -f docs/catalog`(ファイルの存在確認のみ)と `git commit ... || exit 0`(コミット失敗を無条件に握りつぶす)しかチェックしておらず、レイヤーがほぼ0件しか取得できていない壊れた状態でも workflow は success 表示になっていた。実際、エンコーディングバグにより 10/11 の `layers*.txt` 取得が失敗し続けていた期間も、cron は毎日 "success" のまま空カタログをコミットし続けていた(2026-06-26〜2026-07-01)。
+
+**Decision**: `validate_outputs.rb` を新設し、`build_catalog.rb` の後に実行する。ファイル存在確認だけでなく、次の内容を検証する。
+
+- `docs/catalog` と `docs/catalog.json` の内容一致
+- `report.json` の `summary.tiles_included` が閾値(デフォルト1000件)を下回っていないか
+- `report.json` の `failures` が0件か
+- catalog の tiles 件数と `summary.tiles_included` の一致
+- catalog キーに Martin 予約語が含まれていないか
+- 各 `docs/{id}` と `docs/{id}.json` の内容一致
+- 各 TileJSON が `tilejson: "3.0.0"`、絶対URL、`{z}/{x}/{y}` を持つか
+- 同一 tiles URL を持つ catalog エントリが複数存在しないか(D10 の抑制が機能しているかの回帰チェック)
+
+いずれか1つでも失敗すれば non-zero で終了し、workflow を失敗させる。あわせて、コミット手順の `git commit ... || exit 0` は `git diff --cached --quiet` によるチェックに置き換え、「変更なし」(正常系)と「commit自体の失敗」(異常系)を区別できるようにした。
+
+**Consequences**: `min-tiles` の閾値(デフォルト1000)は 2026-07-02 時点の実件数(1,874)に対する安全マージンであり、意図的な抑制強化(D9/D10 のようなもの)で件数が大きく減る場合は、この閾値もあわせて見直す必要がある。`failures` を1件でも許容しない設定は厳しすぎる可能性があり、実運用で頻発するようなら閾値化を検討する。

@@ -38,8 +38,8 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 
 - 実装は `build_catalog.rb`(単一 Ruby スクリプト)。`docs/` に生成物一式を出力し、GitHub Actions(`build-catalog.yml`)が毎日 cron で再生成・コミットする。
 - 主カタログは **1,874 件**。実データの候補レイヤー 13,924 件のうち、拡張子除外・干渉SAR抑制([D9](DECISIONS.md#d9-干渉sarスナップショットレイヤーを主カタログから抑制する))・重複URL抑制([D10](DECISIONS.md#d10-同一タイルurlの重複参照を抑制する))を経てこの件数になっている。除外理由の内訳は `docs/report.json` の `summary.excluded_by_reason` を参照。
+- GitHub Actions の成功判定は `validate_outputs.rb`([D11](DECISIONS.md#d11-actions-の成功判定を出力内容の検証に基づかせる))でカタログ内容そのものを検証するようになっている(ファイル存在確認だけだった旧版では、実質空のカタログでも success 表示になっていた)。
 - 既知のバックログ:
-  - GitHub Actions の成功判定が形だけになっている(`build_catalog.rb` が例外を `report.json` に握りつぶして正常終了するため、実質空のカタログを生成しても workflow は success 表示になる)。次の作業として改善予定。
   - D10 で見送った「重複レイヤーの統合」(文脈依存の `html` をどう扱うか。LLMによる統合も将来検討し得るが Actions 上での実行コストとのトレードオフが未検討)。
 
 ## 参照情報
