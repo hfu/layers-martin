@@ -5,7 +5,7 @@
     "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/outline_80_add24/{z}/{x}/{y}.png"
   ],
   "scheme": "xyz",
-  "attribution": "",
+  "attribution": "国土交通省",
   "description": "国土交通省政策統括官付地理空間情報課が整備する土地分類基本調査（土地履歴調査）の災害履歴図（浸水）について、三大都市圏とその周辺の情報を災害毎に集約した範囲を枠線で表したものです。",
   "minzoom": 7,
   "maxzoom": 16,

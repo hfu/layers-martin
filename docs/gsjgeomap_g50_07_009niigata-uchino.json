@@ -5,6 +5,7 @@
     "https://tiles.gsj.jp/tiles/geomap/G50_07_009niigata-uchino/{z}/{x}/{y}.png"
   ],
   "scheme": "xyz",
+  "attribution": "産業技術総合研究所地質調査総合センター",
   "description": "産業技術総合研究所地質調査総合センターが提供する地質図です。<a target=\"_blank\" href=\"https://www.gsj.jp/license/license.html\">産総研地質調査総合センターウェブサイト利用規約</a>に従ってご利用いただけます。<br><div class=\"gsi_layerinfo_title\">5万分の1地質図幅「新潟及び内野」（2016年発行）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://gbank.gsj.jp/geonavi/docdata/mapinfo/G50_07_009niigata-uchino.html\">凡例・解説を表示</a></div><div class=\"gsi_layerinfo_copy\">産総研地質調査総合センター</div>",
   "minzoom": 2,
   "maxzoom": 14,

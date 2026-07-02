@@ -37,11 +37,12 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 ## 現在の状態(2026-07-02 時点)
 
 - 実装は `build_catalog.rb`(単一 Ruby スクリプト)。`docs/` に生成物一式を出力し、GitHub Actions(`build-catalog.yml`)が毎日 cron で再生成・コミットする。
-- 主カタログは **1,878 件**。ルート `layers.txt` に加え `layers0.txt`([D13](DECISIONS.md#d13-layers0txt-を明示的に読み込む)、`std`/`pale`/`blank`/`english` 等の背景地図の在処)も読み込んでいる。拡張子除外・干渉SAR抑制([D9](DECISIONS.md#d9-干渉sarスナップショットレイヤーを主カタログから抑制する))・重複URL抑制([D10](DECISIONS.md#d10-同一タイルurlの重複参照を抑制する))を経てこの件数になっている。除外理由の内訳は `docs/report.json` の `summary.excluded_by_reason` を参照。
+- 主カタログは **1,861 件**。ルート `layers.txt` に加え `layers0.txt`([D13](DECISIONS.md#d13-layers0txt-を明示的に読み込む)、`std`/`pale`/`blank`/`english` 等の背景地図の在処)も読み込んでいる。拡張子除外・干渉SAR抑制([D9](DECISIONS.md#d9-干渉sarスナップショットレイヤーを主カタログから抑制する))・航空機SAR抑制([D15](DECISIONS.md#d15-航空機sar画像スナップショットも同じ原則で抑制する))・重複URL抑制([D10](DECISIONS.md#d10-同一タイルurlの重複参照を抑制する))を経てこの件数になっている。除外理由の内訳は `docs/report.json` の `summary.excluded_by_reason` を参照。
+- `attribution` は約56%のレイヤーに自動付与されている([D16](DECISIONS.md#d16-ホスト名の完全一致テーブルでattributionを補う)、検証済みホストのみの完全一致テーブルによる)。
 - GitHub Actions の成功判定は `validate_outputs.rb`([D11](DECISIONS.md#d11-actions-の成功判定を出力内容の検証に基づかせる))でカタログ内容そのものを検証するようになっている(ファイル存在確認だけだった旧版では、実質空のカタログでも success 表示になっていた)。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
-  - `attribution` が1割程度のレイヤーにしか無く、簡易な既定値付与案には反例が見つかっている。
+  - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。
   - `bounds`/`center` が過半数のレイヤーで欠落している。
 
 ## 参照情報

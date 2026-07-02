@@ -30,6 +30,7 @@
 | [D13](#d13-layers0txt-を明示的に読み込む) | `layers0.txt` を明示的に読み込む | Accepted | 2026-07-02 |
 | [D14](#d14-staff-プロンプトの置き場所とmap-intent-vnextへの準拠) | Staff プロンプトの置き場所と map-intent-vnext への準拠 | Accepted | 2026-07-02 |
 | [D15](#d15-航空機sar画像スナップショットも同じ原則で抑制する) | 航空機SAR画像スナップショットも同じ原則で抑制する | Accepted | 2026-07-02 |
+| [D16](#d16-ホスト名の完全一致テーブルでattributionを補う) | ホスト名の完全一致テーブルで `attribution` を補う | Accepted | 2026-07-02 |
 
 ---
 
@@ -231,10 +232,31 @@
 
 **Consequences**: カタログは 1,878 件 → 1,861 件に縮小した。件数としては小さいが、「規模の大小にかかわらず、単発観測スナップショットは同じ扱いにする」という一貫性を優先した(ユーザーの言葉で「平等に抑制」)。将来また別のホスト・別の `path` 表記で同種の単発観測データが見つかった場合、同じ原則(URL プレフィックスまたは `path` プレフィックスによる判定)を適用して都度追加していく想定。
 
+## D16: ホスト名の完全一致テーブルで `attribution` を補う
+
+**Status**: Accepted
+
+**Context**: `attribution` バックログ項目を調べ直したところ、実態はより深刻だった。`layer['attribution']` は1,861件中193件で**キー自体は存在する**が、**非空の値を持つものは0件**(すべて空文字列)。つまり `layers.txt` 由来の `attribution` は実質使い物にならない。
+
+以前提案された「tiles URL のホストが `gsi.go.jp` ならGSIを既定値にする」案には、`disaportaldata.gsi.go.jp`(国土交通省の砂防・国土数値情報データ)という反例があった。調べ直すと、カタログ全体で実際に使われているタイルのホストはわずか7種類しかなく(`tiles.gsj.jp` 865, `maps.gsi.go.jp` 804, `nlftp.mlit.go.jp` 183, `disaportaldata.gsi.go.jp` 6, `cyberjapandata.gsi.go.jp` 1, `gbank.gsj.jp` 1, `www.j-shis.bosai.go.jp` 1)、各ホストの `html` 本文を読むと出典組織をほぼ確認できた。ただし `maps.gsi.go.jp` 自体にも罠があり、`rinya`(森林（国有林）の空中写真、出典は林野庁)のように**GSIの主ホスト上で他省庁のデータが1.9%程度混在**していることが分かった。
+
+**Decision**: ホスト名の部分一致(`*.gsi.go.jp` など)ではなく、**個別に確認した完全一致のみ**をテーブル化して既定値を補う。
+
+```text
+tiles.gsj.jp              -> 産業技術総合研究所地質調査総合センター
+gbank.gsj.jp               -> 産業技術総合研究所地質調査総合センター
+nlftp.mlit.go.jp           -> 国土交通省
+www.j-shis.bosai.go.jp     -> 防災科学技術研究所
+```
+
+`maps.gsi.go.jp`・`cyberjapandata.gsi.go.jp`・`disaportaldata.gsi.go.jp` は、他機関のデータが混在することが確認されているため、テーブルに**含めない**(既定値を付けない)。`layer['attribution']` が空でない場合は既定値で上書きしない。付与した件数・対象idは `report.json` の `attribution_defaults`(および `summary.attribution_defaults`)に記録する。
+
+**Consequences**: 1,861件中 **1,050件(56.4%)** に確度の高い `attribution` が付与された。残り811件(`maps.gsi.go.jp` 系804件・`cyberjapandata.gsi.go.jp` 1件・`disaportaldata.gsi.go.jp` 6件)は既定値なしのままで、これは意図的な保留である(誤帰属より無帰属の方が安全という判断)。`maps.gsi.go.jp` 配下だけでも大半(804件中789件、約98%)はGSI自身のデータだが、`html` 本文の文字列解析で他機関を判定するような追加のヒューリスティックは、今回は実装しない(検出漏れ・誤判定のリスクと実装複雑性が見合わないと判断)。将来 `maps.gsi.go.jp` 配下の対応を進めるなら、ホスト単位ではなく `path`/`html` の内容ベースでの判定(D15 で `path` ベースの判定を既に導入した前例あり)を検討する。
+
 ## バックログ(未決定・保留)
 
 Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で見つかったが、まだ決定していない項目。
 
-- **`attribution` が1,878件中193件(10.3%)にしか無い**。「tiles URL のホストが `gsi.go.jp` なら `attribution` に国土地理院を補う」という案が出たが、`disaportaldata.gsi.go.jp` 配下でも実際の出典は国土交通省(砂防・国土数値情報)であるなど、ホスト名だけでは出典元を正しく推定できない反例が見つかっている。ホスト名ベースの単純な既定値付与は誤帰属のリスクがあるため、実装するなら別の判定方法が要る。
+- **`maps.gsi.go.jp`/`cyberjapandata.gsi.go.jp`/`disaportaldata.gsi.go.jp` 配下(811件)の `attribution` 欠落**。D16 で意図的に保留(上記参照)。
 - **`bounds`(46.2%)/`center`(4.6%)の欠落**。地理的カバレッジで足切りや自動フィットができない。対応は保留。
 - **重複レイヤーの統合**(D10 で見送り済み)。

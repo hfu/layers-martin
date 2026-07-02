@@ -63,6 +63,22 @@ class GsiLayersToStaticMartin
   # (~17 layers) but suppressed on the same principle. See DECISIONS.md D15.
   AIRCRAFT_SAR_PATH_PREFIX = '航空機SAR画像'
 
+  # layers.txt's own "attribution" field is essentially always absent or an
+  # empty string (0 of 1,861 layers had a non-empty value as of 2026-07-02).
+  # A per-tile-host default is used to fill it in, but only for hosts
+  # confirmed (by reading their "html" field) to serve a single organization's
+  # data. "maps.gsi.go.jp" and "disaportaldata.gsi.go.jp" are deliberately
+  # excluded: both were found to also host other agencies' data under the
+  # same host (e.g. "rinya", forest photos credited to 林野庁, on
+  # maps.gsi.go.jp), so a host-based default there would misattribute ~2% of
+  # entries. See DECISIONS.md D16.
+  TILE_HOST_ATTRIBUTION = {
+    'tiles.gsj.jp' => '産業技術総合研究所地質調査総合センター',
+    'gbank.gsj.jp' => '産業技術総合研究所地質調査総合センター',
+    'nlftp.mlit.go.jp' => '国土交通省',
+    'www.j-shis.bosai.go.jp' => '防災科学技術研究所'
+  }.freeze
+
   MARTIN_RESERVED_IDS = Set.new(%w[
     _ catalog config font health help index manifest metrics refresh reload sprite status
   ]).freeze
@@ -82,6 +98,7 @@ class GsiLayersToStaticMartin
     @excluded = []
     @warnings = []
     @id_changes = []
+    @attribution_defaults = []
     @used_ids = {}
   end
 
@@ -427,6 +444,17 @@ class GsiLayersToStaticMartin
     Digest::SHA1.hexdigest(value.to_s)[0, 8]
   end
 
+  def default_attribution_for(source_id, url)
+    host = URI.parse(url.gsub(/\{[^}]*\}/, 'x')).host
+    attribution = TILE_HOST_ATTRIBUTION[host]
+    return nil unless attribution
+
+    @attribution_defaults << { id: source_id, host: host, attribution: attribution }
+    attribution
+  rescue URI::InvalidURIError
+    nil
+  end
+
   # TileJSON's "name" is a standard field meant to be a plain display label,
   # distinct from "html"/"description"/"attribution" (D4: kept as raw HTML on
   # purpose) and from "title" (D5: raw GSI key passed through verbatim). Some
@@ -453,7 +481,13 @@ class GsiLayersToStaticMartin
       'scheme' => 'xyz'
     }
 
-    tilejson['attribution'] = layer['attribution'] if layer.key?('attribution')
+    attribution = layer['attribution'].to_s.strip
+    if attribution.empty?
+      default_attribution = default_attribution_for(source_id, url)
+      attribution = default_attribution if default_attribution
+    end
+    tilejson['attribution'] = attribution unless attribution.empty?
+
     tilejson['description'] = layer['html'] if layer.key?('html')
     tilejson['minzoom'] = layer['minZoom'] if layer.key?('minZoom')
     tilejson['maxzoom'] = layer['maxZoom'] if layer.key?('maxZoom')
@@ -554,12 +588,14 @@ class GsiLayersToStaticMartin
         'layers_excluded' => @excluded.length,
         'excluded_by_reason' => excluded_by_reason,
         'warnings' => @warnings.length,
+        'attribution_defaults' => @attribution_defaults.length,
         'failures' => @failures.length
       },
       'fetched_files' => @fetched_files,
       'excluded' => @excluded,
       'warnings' => @warnings,
       'id_changes' => @id_changes,
+      'attribution_defaults' => @attribution_defaults,
       'failures' => @failures
     }
   end

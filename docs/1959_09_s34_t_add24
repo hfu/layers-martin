@@ -5,7 +5,7 @@
     "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood2/1959_09_s34_t_add24/{z}/{x}/{y}.png"
   ],
   "scheme": "xyz",
-  "attribution": "",
+  "attribution": "国土交通省",
   "description": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果です（ズームレベル13～16で表示されます）。調査範囲内の情報のみ表示されてます。\n\nご利用にあたっては『土地履歴調査成果公開サイト』をご確認ください。",
   "minzoom": 7,
   "maxzoom": 16,

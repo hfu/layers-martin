@@ -5,7 +5,7 @@
     "https://nlftp.mlit.go.jp/kokjo/inspect/tile/landclassification/land_history/DisasterHist_flood/sizuoka1/{z}/{x}/{y}.png"
   ],
   "scheme": "xyz",
-  "attribution": "",
+  "attribution": "国土交通省",
   "description": "国土交通省政策統括官付地理空間情報課が提供する土地分類基本調査（土地履歴調査）で整備した調査成果図です（ズームレベル13～16で表示されます）。<br>\nご利用にあたっては<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">『土地履歴調査成果公開サイト』</a>をご確認ください。<br>\n<div class=\"gsi_layerinfo_title\">災害履歴（水害土砂災害）静岡地区（沼津）　昭和33年～平成19年（<a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/tile/legend/DisasterHist_flood/災害履歴_水害土砂災害_静岡地区（沼津）.pdf\">凡例を表示</a>）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://nlftp.mlit.go.jp/kokjo/inspect/landclassification/land/land_history_2011/index_tile.html\">解説</a>&nbsp;</div><div class=\"gsi_layerinfo_copy\">(c)国土交通省政策統括官付地理空間情報課</div>",
   "minzoom": 2,
   "maxzoom": 16,
