@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "標準地図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/std/{z}/{x}/{y}.png?_=20210915a"
+  ],
+  "scheme": "xyz",
+  "description": "",
+  "id": "std",
+  "title": "標準地図",
+  "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#std",
+  "html": "",
+  "cocotile": true,
+  "errorTileUrl": "./image/map/no-data-std.png",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers0.txt",
+  "path": [
+    "背景地図"
+  ]
+}

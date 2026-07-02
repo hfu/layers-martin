@@ -1512,6 +1512,10 @@
       "name": "アナグリフ（グレー）",
       "content_type": "image/png"
     },
+    "blank": {
+      "name": "白地図",
+      "content_type": "image/png"
+    },
     "ccm1": {
       "name": "平成元年以降",
       "content_type": "image/png"
@@ -2714,6 +2718,10 @@
     },
     "earthhillshade": {
       "name": "陰影起伏図（全球版）",
+      "content_type": "image/png"
+    },
+    "english": {
+      "name": "English",
       "content_type": "image/png"
     },
     "experimental_jhj_index": {
@@ -7220,6 +7228,10 @@
       "name": "災害履歴図（浸水）範囲",
       "content_type": "image/png"
     },
+    "pale": {
+      "name": "淡色地図",
+      "content_type": "image/png"
+    },
     "ptc2": {
       "name": "植生(樹木被覆率)",
       "content_type": "image/png"
@@ -7294,6 +7306,10 @@
     },
     "southpole_spec_ras": {
       "name": "南極の地理空間情報（整備範囲）",
+      "content_type": "image/png"
+    },
+    "std": {
+      "name": "標準地図",
       "content_type": "image/png"
     },
     "swale": {

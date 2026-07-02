@@ -27,6 +27,7 @@
 | [D10](#d10-同一タイルurlの重複参照を抑制する) | 同一タイルURLの重複参照を抑制する | Accepted | 2026-07-02 |
 | [D11](#d11-actions-の成功判定を出力内容の検証に基づかせる) | Actions の成功判定を出力内容の検証に基づかせる | Accepted | 2026-07-02 |
 | [D12](#d12-tilejson-の-name-はプレーンテキスト化する) | TileJSON の `name` はプレーンテキスト化する | Accepted | 2026-07-02 |
+| [D13](#d13-layers0txt-を明示的に読み込む) | `layers0.txt` を明示的に読み込む | Accepted | 2026-07-02 |
 
 ---
 
@@ -188,11 +189,20 @@
 
 **Consequences**: 影響していたのは1,874件中11件。`docs/catalog` の `tiles[id].name` と各 `docs/{id}` の `name` は、以後どちらも `build_tilejson` が計算した同じプレーンテキスト値を参照する(以前は catalog 側で `layer['title']` を独立に再計算しており、理論上ズレ得た)。
 
+## D13: `layers0.txt` を明示的に読み込む
+
+**Status**: Accepted
+
+**Context**: Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で、`std`(標準地図)がカタログに存在しないことが判明し、一旦バックログとした。その後、原因は `https://maps.gsi.go.jp/layers_txt/layers0.txt` という別ファイルに `std`/`pale`/`blank`/`english`/`ort` が定義されているが、ルートの `layers.txt` ツリーからは一切参照されていない(`url` 配列にも `layers`/`entries` にも現れない)ことだと分かった。GSI の Web アプリ側では、これらの背景地図はレイヤーツリーとは別の固定選択肢として扱われているらしく、`layers.txt` の再帰探索だけでは原理的に到達できない。
+
+**Decision**: `run` の冒頭で、ルート `layers.txt` の探索に加えて `layers0.txt` を明示的に(ルートURLからの相対パスとして)読み込む。取得した各 Layer には `path: ['背景地図']` を付与し、他のレイヤーと同じ拡張子フィルタ・重複URL抑制(D10)を通す。
+
+**Consequences**: `std`/`pale`/`blank`/`english` の4件が新たにカタログに加わった(1,874件 → 1,878件)。`layers0.txt` の `ort`(id: `ort`, タイルURL: `.../xyz/seamlessphoto/{z}/{x}/{y}.jpg`)は、既存の `seamlessphoto` と完全に同一のタイルURLを持つため、D10 の重複抑制がそのまま機能し `report.json` に `duplicate_url_reference` として記録される(手を加えずに正しく動作した)。`layers0.txt` が将来 URL 自体を変更(パスは変えず中身だけ差し替え)した場合、`read_document` の `@visited_urls` によるループ防止には影響しないが、内容の再検証は次回 cron 実行時まで行われない。
+
 ## バックログ(未決定・保留)
 
 Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で見つかったが、まだ決定していない項目。
 
-- **`std`(標準地図)がカタログに存在しない**。GSI 自身の `layers.txt` に `std` が載っていないため(タイル自体は生きている)。GSI 由来データに限定する現行方針の外側(layers.txt に無いものを補うかどうか)の判断が必要。
-- **`attribution` が1,874件中193件(10.3%)にしか無い**。「tiles URL のホストが `gsi.go.jp` なら `attribution` に国土地理院を補う」という案が出たが、`disaportaldata.gsi.go.jp` 配下でも実際の出典は国土交通省(砂防・国土数値情報)であるなど、ホスト名だけでは出典元を正しく推定できない反例が見つかっている。ホスト名ベースの単純な既定値付与は誤帰属のリスクがあるため、実装するなら別の判定方法が要る。
+- **`attribution` が1,878件中193件(10.3%)にしか無い**。「tiles URL のホストが `gsi.go.jp` なら `attribution` に国土地理院を補う」という案が出たが、`disaportaldata.gsi.go.jp` 配下でも実際の出典は国土交通省(砂防・国土数値情報)であるなど、ホスト名だけでは出典元を正しく推定できない反例が見つかっている。ホスト名ベースの単純な既定値付与は誤帰属のリスクがあるため、実装するなら別の判定方法が要る。
 - **`bounds`(46.2%)/`center`(4.6%)の欠落**。地理的カバレッジで足切りや自動フィットができない。対応は保留。
 - **重複レイヤーの統合**(D10 で見送り済み)。

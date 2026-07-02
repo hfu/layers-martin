@@ -82,6 +82,14 @@ class GsiLayersToStaticMartin
     log "reading #{@root_url}"
     read_document(@root_url, [])
 
+    # layers0.txt holds the base maps (std/pale/blank/english/ort) and is not
+    # linked from the root layers.txt tree at all -- it has to be fetched
+    # explicitly or the catalog ends up with no background maps. See
+    # DECISIONS.md D13.
+    layers0_url = absolute_url('layers0.txt', @root_url)
+    log "reading #{layers0_url}"
+    read_document(layers0_url, ['背景地図'])
+
     FileUtils.rm_rf(@out_dir)
     FileUtils.mkdir_p(@out_dir)
 

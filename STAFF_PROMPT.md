@@ -32,12 +32,15 @@ Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、�
   「地域別に分かれているため対象地域を確認したい」という形で `任意確認事項` に回す方が Cartographer に
   渡す Map Intent がノイズまみれにならずに済む。
 
+## 背景地図(base map)について
+
+`std`(標準地図)/`pale`(淡色地図)/`blank`(白地図)/`english` は `path: ["背景地図"]` として存在する
+([DECISIONS.md](DECISIONS.md) D13)。GSI の `layers.txt` 本体のツリーには含まれず、別ファイル
+`layers0.txt` にのみ定義されている背景地図選択肢のため、`path` で他のレイヤーと区別できるようにしてある。
+背景地図が必要な場合はこの4件からの選択を優先し、主題レイヤー(`required_layers`)と混同しないこと。
+
 ## 既知の欠落(このカタログ固有の制約)
 
-- **`std`(国土地理院 標準地図)はこのカタログに存在しない**。GSI 自身の `layers.txt` が `std` を含んで
-  いないため([DECISIONS.md](DECISIONS.md) バックログ参照)。背景地図が必要な場合、このカタログから
-  source_id を捏造しないこと。Cartographer 側の既定の背景地図に委ねるか、`output_notes` に「このカタログ
-  には標準的な背景地図が含まれていない」旨を明記する。
 - **`bounds`/`center` は過半数のレイヤーで欠落している**(2026-07-02 時点: bounds 46.2%、center 4.6%)。
   地理的カバレッジをカタログのメタデータだけから断定しないこと。`bounds` が無い場合、それを「全国カバー」
   とも「対象地域限定」とも決めつけず、`name`/`path` の記述(地名の有無)から判断し、不確かなら
@@ -71,12 +74,15 @@ map_intent:
     - source_id: landslide
       catalog_type: layers_txt
       purpose: 地すべり地形分布図（防災科学技術研究所）。現況の警戒区域とは異なる地形の観点からの補助情報
+  base:
+    - source_id: std
+      catalog_type: layers_txt
+      purpose: 背景の標準地図
   catalog_context:
     active_catalogs:
       - catalog_type: layers_txt
         uri: https://hfu.github.io/layers-martin/catalog
   output_notes:
-    - このカタログには標準地図（背景地図）が含まれていないため、背景表現は Cartographer 側の既定に委ねる
     - 対象地域が特定されていない場合、上記3レイヤーは全国データであり地域限定の絞り込みは行っていない
 ```
 ````

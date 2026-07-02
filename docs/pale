@@ -1,0 +1,19 @@
+{
+  "tilejson": "3.0.0",
+  "name": "淡色地図",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png?_=20210915a"
+  ],
+  "scheme": "xyz",
+  "description": "",
+  "id": "pale",
+  "title": "淡色地図",
+  "legendUrl": "https://maps.gsi.go.jp/development/ichiran.html#pale",
+  "html": "",
+  "cocotile": true,
+  "errorTileUrl": "./image/map/no-data-pale.png",
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers0.txt",
+  "path": [
+    "背景地図"
+  ]
+}

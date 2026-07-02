@@ -1,16 +1,16 @@
 {
   "summary": {
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-    "visited_urls": 182,
-    "fetched_files": 182,
+    "visited_urls": 183,
+    "fetched_files": 183,
     "groups_seen": 858,
-    "layers_seen": 13924,
-    "tiles_included": 1874,
-    "layers_excluded": 12050,
+    "layers_seen": 13929,
+    "tiles_included": 1878,
+    "layers_excluded": 12051,
     "excluded_by_reason": {
       "unsupported_extension": 1321,
       "sar_observation_snapshot": 10538,
-      "duplicate_url_reference": 191
+      "duplicate_url_reference": 192
     },
     "warnings": 0,
     "failures": 0
@@ -743,6 +743,10 @@
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_gsj_G50K.txt",
       "bytes": 976773
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers0.txt",
+      "bytes": 1632
     }
   ],
   "excluded": [
@@ -179140,6 +179144,17 @@
       "path": [
         "その他",
         "ベクトルタイル提供実験"
+      ]
+    },
+    {
+      "id": "ort",
+      "title": "写真",
+      "url": "https://maps.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg",
+      "reason": "duplicate_url_reference",
+      "extension": ".jpg",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers0.txt",
+      "path": [
+        "背景地図"
       ]
     }
   ],
