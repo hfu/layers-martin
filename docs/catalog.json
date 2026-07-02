@@ -884,14 +884,6 @@
       "name": "2018/2/16･27（無人航空機（UAV)撮影）",
       "content_type": "image/png"
     },
-    "20180127kusatsushirane_apsar180127nesw": {
-      "name": "2018/1/27観測（北東から南西)",
-      "content_type": "image/png"
-    },
-    "20180127kusatsushirane_apsar180127sn": {
-      "name": "2018/1/27観測（南から北）",
-      "content_type": "image/png"
-    },
     "20180130_kusatsushiranesan_sekishokurittai": {
       "name": "平成30年1月23日噴火前の赤色立体地図（本白根山周辺）",
       "content_type": "image/png"
@@ -930,34 +922,6 @@
     },
     "20180419kirishima_apsar180420swne": {
       "name": "2018/4/20観測（南西から観測した画像)",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c1": {
-      "name": "2018/6/22観測（東から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c2": {
-      "name": "2018/6/22観測（北から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c4": {
-      "name": "2018/6/22観測（南から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c5": {
-      "name": "2018/6/22観測（北東から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c6": {
-      "name": "2018/6/22観測（北西から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c7": {
-      "name": "2018/6/22観測（南西から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20180622_asama_c8": {
-      "name": "2018/6/22観測（南東から観測した画像）",
       "content_type": "image/png"
     },
     "201807h3007gouu_etajima_0716do": {
@@ -1154,38 +1118,6 @@
     },
     "20190807asama_sekisyoku": {
       "name": "赤色立体地図（浅間山）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c1": {
-      "name": "2019/8/8観測（東から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c2": {
-      "name": "2019/8/8観測（北から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c3": {
-      "name": "2019/8/8観測（西から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c4": {
-      "name": "2019/8/8観測（南から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c5": {
-      "name": "2019/8/8観測（北東から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c6": {
-      "name": "2019/8/8観測（北西から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c7": {
-      "name": "2019/8/8観測（南西から観測した画像）",
-      "content_type": "image/png"
-    },
-    "20190808_asama_c8": {
-      "name": "2019/8/8観測（南東から観測した画像）",
       "content_type": "image/png"
     },
     "20190828_kyusyu_0828dansaizu": {

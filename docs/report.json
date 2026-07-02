@@ -5,12 +5,13 @@
     "fetched_files": 183,
     "groups_seen": 858,
     "layers_seen": 13929,
-    "tiles_included": 1878,
-    "layers_excluded": 12051,
+    "tiles_included": 1861,
+    "layers_excluded": 12068,
     "excluded_by_reason": {
       "unsupported_extension": 1321,
       "sar_observation_snapshot": 10538,
-      "duplicate_url_reference": 192
+      "duplicate_url_reference": 192,
+      "aircraft_sar_observation_snapshot": 17
     },
     "warnings": 0,
     "failures": 0
@@ -163912,6 +163913,34 @@
       ]
     },
     {
+      "id": "20180127kusatsushirane_apsar180127sn",
+      "title": "2018/1/27観測（南から北）",
+      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127sn/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山",
+        "航空機SAR画像（速報）"
+      ]
+    },
+    {
+      "id": "20180127kusatsushirane_apsar180127nesw",
+      "title": "2018/1/27観測（北東から南西) ",
+      "url": "https://maps.gsi.go.jp/xyz/20180127kusatsushirane_apsar180127nesw/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20180124kusatsushirane.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "草津白根山",
+        "航空機SAR画像（速報）"
+      ]
+    },
+    {
       "id": "20180226_kusatsushiranesan_suiteikakouichi",
       "title": "推定火口位置（平成30年1月23日噴火）及び推定小火口位置（過去の噴火）",
       "url": "https://maps.gsi.go.jp/xyz/20180226_kusatsushiranesan_suiteikakouichi/{z}/{x}/{y}.geojson",
@@ -163977,6 +164006,231 @@
         "近年の災害",
         "火山",
         "草津白根山"
+      ]
+    },
+    {
+      "id": "20190808_asama_c1",
+      "title": "2019/8/8観測（東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c1/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c2",
+      "title": "2019/8/8観測（北から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c2/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c3",
+      "title": "2019/8/8観測（西から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c3/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c4",
+      "title": "2019/8/8観測（南から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c4/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c5",
+      "title": "2019/8/8観測（北東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c5/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c6",
+      "title": "2019/8/8観測（北西から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c6/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c7",
+      "title": "2019/8/8観測（南西から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c7/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20190808_asama_c8",
+      "title": "2019/8/8観測（南東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20190808_asama_c8/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2019/8/8観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c1",
+      "title": "2018/6/22観測（東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c1/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c2",
+      "title": "2018/6/22観測（北から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c2/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c4",
+      "title": "2018/6/22観測（南から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c4/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c5",
+      "title": "2018/6/22観測（北東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c5/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c6",
+      "title": "2018/6/22観測（北西から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c6/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c7",
+      "title": "2018/6/22観測（南西から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c7/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
+      ]
+    },
+    {
+      "id": "20180622_asama_c8",
+      "title": "2018/6/22観測（南東から観測した画像）",
+      "url": "https://maps.gsi.go.jp/xyz/20180622_asama_c8/{z}/{x}/{y}.png",
+      "reason": "aircraft_sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
+      "path": [
+        "近年の災害",
+        "火山",
+        "浅間山",
+        "航空機SAR画像",
+        "2018/6/22観測"
       ]
     },
     {

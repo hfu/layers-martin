@@ -56,6 +56,13 @@ class GsiLayersToStaticMartin
   # and reversible. See HANDOVER.md "レイヤー抑制方針" for the full rationale.
   SAR_SOURCE_PREFIX = 'https://maps.gsi.go.jp/sar/'
 
+  # Aircraft SAR ("航空機SAR画像") observation snapshots are the same kind of
+  # per-event, per-observation-date/angle noise as SAR_SOURCE_PREFIX targets,
+  # just hosted outside maps.gsi.go.jp/sar/ (e.g. layers6.txt), so they are
+  # identified by category path instead of URL. Much smaller in volume
+  # (~17 layers) but suppressed on the same principle. See DECISIONS.md D15.
+  AIRCRAFT_SAR_PATH_PREFIX = '航空機SAR画像'
+
   MARTIN_RESERVED_IDS = Set.new(%w[
     _ catalog config font health help index manifest metrics refresh reload sprite status
   ]).freeze
@@ -114,6 +121,11 @@ class GsiLayersToStaticMartin
 
       if record[:source_url].to_s.start_with?(SAR_SOURCE_PREFIX)
         @excluded << exclusion_record(record, url, 'sar_observation_snapshot', ext)
+        next
+      end
+
+      if (record[:path] || []).any? { |p| p.to_s.start_with?(AIRCRAFT_SAR_PATH_PREFIX) }
+        @excluded << exclusion_record(record, url, 'aircraft_sar_observation_snapshot', ext)
         next
       end
 
