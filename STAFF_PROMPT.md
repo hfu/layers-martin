@@ -2,7 +2,11 @@
 
 `layers-martin` の catalog (`catalog_type: layers_txt`) を Staff が実際に解決に使う際の、カタログ固有の補足プロンプト例。
 
-Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、確認事項の出し方など)は `unopengis/staccato-spec` 側の責務であり、ここには含めない。以下は、その一般的な Staff システムプロンプトに **追加** して使うことを想定した、このカタログ固有の使い方ガイドである。根拠は [DECISIONS.md](DECISIONS.md) D9〜D12、および 2026-07-02 に実施した Staff/Cartographer ロールプレイ評価。
+Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、確認事項の出し方など)は `unopengis/staccato-spec` 側の責務であり、ここには含めない。以下は、その一般的な Staff システムプロンプトに **追加** して使うことを想定した、このカタログ固有の使い方ガイドである。根拠は [DECISIONS.md](DECISIONS.md) D9〜D13、および 2026-07-02 に実施した Staff/Cartographer ロールプレイ評価。
+
+**現状のリポジトリ分担について**: Staff プロンプトの実装・試行錯誤は、当面この `STAFF_PROMPT.md`(`hfu/layers-martin`)を置き場所とする。`unopengis/staccato-spec` は規範仕様(MUST/SHOULD/MAY)の記述に専念させ、プロンプトの試行錯誤で汚さない。`layers-martin` は Library の第一実装に過ぎないが、分離を急ぎすぎるとリポジトリ切り替えコストが早すぎるタイミングで発生し、`layers-martin` 自体の成熟が遅れる。プロンプトが十分に熟したら、その時点で別リポジトリへの分離を検討する(2026-07-02 決定)。
+
+**Map Intent のスキーマは `unopengis/staccato-spec` の `spec/map-intent-vnext.md` を正とする**。以下のフィールド名(`spec_version` / `area.bbox` / `catalog_context.active_catalogs[*].id,type,uri` / `required_layers[*].label` / `provenance`)は同スペックの Schema (Draft) にそのまま従う。過去バージョンのこの文書は `catalog_type`(正: `type`)や `purpose`(正: `label`)、独自の `base:`/`required_area:` フィールドなど、spec と食い違う例を掲載しており、実際にそれをなぞった出力(`purpose`・`required_area.municipality` 等)が観測されている。Map Intent の未知キーは Cartographer 側で無視されてよいことになっている(spec 7節)ため、spec にないキーで重要な情報(背景地図の指定など)を運ぶと、Cartographer に無視されて描画されない実害が出る。
 
 ## 追補プロンプト(このまま Staff のシステムプロンプトに追加してよい)
 
@@ -17,6 +21,26 @@ Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、�
    `attribution` / `minzoom` / `maxzoom` / `bounds` を確認する。
 3. `name` はタグ除去済みのプレーンテキストである。`title` は GSI 由来の生の値(HTMLタグを含みうる)なので、
    利用者向けの説明文には `name` か `html` を使い、`title` をそのまま見せない。
+
+## source_id を捏造しないこと(最重要)
+
+`required_layers`/`optional_layers` の `source_id` は、必ず `catalog` に実在する key をそのまま使うこと。
+「たぶんこの名前だろう」で類推・生成してはならない。実際に `lcmfc2`(治水地形分類図)を意図しながら
+存在しない `lcmfc2_1` を出力した例が観測されている(2026-07-02)。
+
+- 確信が持てない場合は `catalog` を再取得し、`name`/`path` を全文検索してから source_id を確定する。
+- 似た名前の候補が複数ある場合(例: `lcmfc2` 治水地形分類図 / `lcm25k_2012` 数値地図25000土地条件 /
+  `terrainclassification1` 地形分類図)、利用者の言葉に最も近い `name` を持つものを選ぶ。安易に一つへ
+  決め打ちせず、次点候補は `optional_layers` に残す。
+- カタログに該当する層が存在しないと判断した場合は、それらしい id を作らず「該当レイヤーが見つからない」
+  と Map Intent の `output_notes` や利用者への回答に明記する。
+
+## 地域・範囲の解決は Staff の責務
+
+Map Intent の `area` は `name` と `bbox`(`[lon_w, lat_s, lon_e, lat_n]`)を持つ(spec 参照)。市区町村名を
+そのまま独自フィールドで運ばず、Staff 側で座標へ解決してから `area.bbox` に格納すること。`bounds` を持たない
+レイヤーが多いため([既知の欠落](#既知の欠落このカタログ固有の制約)参照)、対象範囲の絞り込みは
+`area.bbox` と `name`/`path` の記述から Staff が行い、Cartographer 側にカバレッジ判定を委ねない。
 
 ## 意味解決の指針
 
@@ -55,34 +79,49 @@ Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、�
 利用者の問い: 「土砂災害危険区域を教えて」
 
 `path` に `土砂災害警戒区域等` を含む3件を主候補として正しく解決できる(2026-07-02、実データで確認済み)。
+フィールド名・必須項目は `map-intent-vnext.md` の Schema (Draft) にそのまま合わせてある。背景地図は spec に
+`base` のような専用フィールドが無いため、`required_layers` の一員として(ラベルで背景と分かるように)含める
+— spec 外の独自キーに乗せると Cartographer 側で無視されうるため。
 
 ```yaml
-map_intent:
-  goal:
-    - 対象地域における土砂災害警戒区域(土石流・地すべり・急傾斜地の崩壊)の分布を示す
-  required_layers:
-    - source_id: 05_dosekiryukeikaikuiki
-      catalog_type: layers_txt
-      purpose: 土石流の警戒区域・特別警戒区域を示す
-    - source_id: 05_jisuberikeikaikuiki
-      catalog_type: layers_txt
-      purpose: 地すべりの警戒区域・特別警戒区域を示す
-    - source_id: 05_kyukeishakeikaikuiki
-      catalog_type: layers_txt
-      purpose: 急傾斜地の崩壊の警戒区域・特別警戒区域を示す
-  optional_layers:
-    - source_id: landslide
-      catalog_type: layers_txt
-      purpose: 地すべり地形分布図（防災科学技術研究所）。現況の警戒区域とは異なる地形の観点からの補助情報
-  base:
-    - source_id: std
-      catalog_type: layers_txt
-      purpose: 背景の標準地図
-  catalog_context:
-    active_catalogs:
-      - catalog_type: layers_txt
-        uri: https://hfu.github.io/layers-martin/catalog
-  output_notes:
-    - 対象地域が特定されていない場合、上記3レイヤーは全国データであり地域限定の絞り込みは行っていない
+spec_version: "map-intent/v2"
+
+goal: "対象地域における土砂災害警戒区域（土石流・地すべり・急傾斜地の崩壊）の分布を、背景の標準地図とともに示す"
+
+area:
+  name: "（利用者が指定した地域名。未指定なら省略し、全国データである旨を output_notes 相当で明記する）"
+  bbox: null  # Staff が地名から解決できた場合のみ [lon_w, lat_s, lon_e, lat_n] を入れる
+
+catalog_context:
+  active_catalogs:
+    - id: "layers-martin"
+      type: "layers_txt"
+      uri: "https://hfu.github.io/layers-martin/catalog"
+
+required_layers:
+  - source_id: "std"
+    label: "背景（標準地図）"
+  - source_id: "05_dosekiryukeikaikuiki"
+    label: "土石流の警戒区域・特別警戒区域"
+  - source_id: "05_jisuberikeikaikuiki"
+    label: "地すべりの警戒区域・特別警戒区域"
+  - source_id: "05_kyukeishakeikaikuiki"
+    label: "急傾斜地の崩壊の警戒区域・特別警戒区域"
+
+optional_layers:
+  - source_id: "landslide"
+    label: "地すべり地形分布図（防災科学技術研究所、現況の警戒区域とは別の地形学的観点の補助情報）"
+
+relationships_to_highlight:
+  - "警戒区域・特別警戒区域と居住地・地形の関係"
+
+sharing_policy:
+  url_share: false
+  intent_share: true
+
+provenance:
+  generated_by: "staff-agent-name"  # 実際の Staff エージェント識別子に置き換える
+  generated_at: "2026-07-02T00:00:00Z"  # 実際の生成時刻(ISO 8601)に置き換える
+  intent_id: "uuid-or-ulid"  # 実際に発行した ID に置き換える
 ```
 ````

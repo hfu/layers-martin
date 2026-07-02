@@ -28,6 +28,7 @@
 | [D11](#d11-actions-の成功判定を出力内容の検証に基づかせる) | Actions の成功判定を出力内容の検証に基づかせる | Accepted | 2026-07-02 |
 | [D12](#d12-tilejson-の-name-はプレーンテキスト化する) | TileJSON の `name` はプレーンテキスト化する | Accepted | 2026-07-02 |
 | [D13](#d13-layers0txt-を明示的に読み込む) | `layers0.txt` を明示的に読み込む | Accepted | 2026-07-02 |
+| [D14](#d14-staff-プロンプトの置き場所とmap-intent-vnextへの準拠) | Staff プロンプトの置き場所と map-intent-vnext への準拠 | Accepted | 2026-07-02 |
 
 ---
 
@@ -198,6 +199,26 @@
 **Decision**: `run` の冒頭で、ルート `layers.txt` の探索に加えて `layers0.txt` を明示的に(ルートURLからの相対パスとして)読み込む。取得した各 Layer には `path: ['背景地図']` を付与し、他のレイヤーと同じ拡張子フィルタ・重複URL抑制(D10)を通す。
 
 **Consequences**: `std`/`pale`/`blank`/`english` の4件が新たにカタログに加わった(1,874件 → 1,878件)。`layers0.txt` の `ort`(id: `ort`, タイルURL: `.../xyz/seamlessphoto/{z}/{x}/{y}.jpg`)は、既存の `seamlessphoto` と完全に同一のタイルURLを持つため、D10 の重複抑制がそのまま機能し `report.json` に `duplicate_url_reference` として記録される(手を加えずに正しく動作した)。`layers0.txt` が将来 URL 自体を変更(パスは変えず中身だけ差し替え)した場合、`read_document` の `@visited_urls` によるループ防止には影響しないが、内容の再検証は次回 cron 実行時まで行われない。
+
+## D14: Staff プロンプトの置き場所と map-intent-vnext への準拠
+
+**Status**: Accepted
+
+**Context**: `STAFF_PROMPT.md` を使ってエンタープライズ側の生成AIに実際にクエリ(「札幌市清田区の地形分類を見たい」)を処理させたところ、次の2つの問題が観測された。
+
+1. 存在しない source_id(`lcmfc2_1`)を捏造していた。実在するのは `lcmfc2`(治水地形分類図)、`lcm25k_2012`(数値地図25000土地条件)、`terrainclassification1`(地形分類図)。
+2. `STAFF_PROMPT.md` の Map Intent 例が `unopengis/staccato-spec` の `spec/map-intent-vnext.md` と食い違っていた(`catalog_type` vs 正しい `type`、`purpose` vs 正しい `label`、`spec_version`/`provenance` の欠落、独自の `required_area`/`base` フィールド)。AIの出力はこの食い違った例をなぞっていたと考えられる。
+
+あわせて、Staff プロンプトの実装をどのリポジトリの責務にするかの整理が必要になった。`unopengis/staccato-spec` は規範仕様の記述に専念させたい一方、`layers-martin` は Library の第一実装に過ぎずプロンプトの本来の置き場所ではない。しかし分離を急ぎすぎると、`layers-martin` 自体が固まる前にリポジトリ切り替えコストが発生する。
+
+**Decision**:
+
+- Staff プロンプトの試行錯誤は、当面 `layers-martin` の `STAFF_PROMPT.md` を置き場所とする。プロンプトが十分に熟したら、その時点で別リポジトリへの分離を検討する。
+- `STAFF_PROMPT.md` の Map Intent 例は `map-intent-vnext.md` の Schema (Draft) に文字通り従う(フィールド名を含む)。spec にないキー(`base` 等)で重要情報を運ばない。Cartographer は未知キーを無視してよいことになっているため、spec 外のキーに乗せた情報は実際に無視されて描画されないリスクがある。
+- `STAFF_PROMPT.md` に「source_id を捏造しない」ことを明示的なルールとして追加する。確信が持てない candidate は catalog を再検索してから確定し、それでも見つからない場合は捏造せず「見つからない」と申告する。
+- 地域名(市区町村名等)から `area.bbox` への解決は Staff の責務とする。Cartographer や独自フィールドに丸投げしない。
+
+**Consequences**: `STAFF_PROMPT.md` の例を spec 準拠に書き直した。次に別の生成AIで同様のテストを行う場合、(a) 捏造IDが出ないか、(b) 出力が `spec_version`/`provenance`/`area.bbox` を含む正しいスキーマになっているかを確認するとよい。
 
 ## バックログ(未決定・保留)
 
