@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "<div class=\"gsi_layerinfo_title\">平成25年台風第26・27号の大雨 - 火山基本図（透過）</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 8,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/legend_vbm22izuoshima.png",
   "id": "vbm_22izuoshima_chocolate",
   "title": "火山基本図（透過）",
   "legendUrl": "https://maps.gsi.go.jp/legend/legend_vbm22izuoshima.png",

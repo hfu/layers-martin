@@ -104,6 +104,12 @@ Layer.area         -> center、変換可能な場合
 Layer.bounds       -> bounds、変換可能な場合
 ```
 
+### `legend_image_url`(独自拡張キー)
+
+`legendUrl` が凡例画像を直接指していない、または存在しない場合に備え、`html` 内に埋め込まれた凡例画像を抽出した
+独自拡張キー `legend_image_url` を付与します(存在する場合のみ)。決定順位や抽出方法の詳細は
+[DECISIONS.md](DECISIONS.md) D18 を参照してください。
+
 ## 出力構成
 
 生成されるファイルは `docs/` 配下に置かれます。

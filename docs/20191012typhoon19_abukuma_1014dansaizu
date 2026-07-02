@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">浸水推定段彩図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>10月14日18時までの情報と国土地理院が10月13日に撮影した空中写真及び標高データを用いて、浸水範囲における水深を算出して深さごとに色別に表現した地図です。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul></div></td><td><img src=\"https://maps.gsi.go.jp/legend/20191012typhoon19_abukuma_1014dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
   "minzoom": 2,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/20191012typhoon19_abukuma_1014dansaizu.png",
   "id": "20191012typhoon19_abukuma_1014dansaizu",
   "title": "阿武隈川水系（阿武隈川）",
   "maxZoom": 16,

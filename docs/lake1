@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">湖沼図　<a target=\"_blank\" href=\"https://www.gsi.go.jp/kankyochiri/gsilake.html\">解説</a></div><div class=\"gsi_layerinfo_kaisetu\">（注）湖岸線等は湖沼調査時点のものであり電子地形図と異なる場合があります。</div><form name=\"lake1jump\"><select name=\"lake1select\" onchange=\"location.href=location.pathname+'#'+value\"><option value=\"\" disabled selected style='display:none;'>---選択して下さい---</option><option value=\"16/44.265301/143.497120/\">コムケ湖（昭和53年測量）</option><option value=\"16/44.112871/143.783782/\">サロマ湖（昭和46-49年測量）</option><option value=\"16/43.285602/145.325925/\">風蓮湖（昭和54・56年測量）</option><option value=\"16/42.768017/141.372594/\">支笏湖（昭和42・43年測量）</option><option value=\"16/42.589875/140.812997/\">洞爺湖（昭和43・44年測量）</option><option value=\"16/40.475607/140.888779/\">十和田湖（昭和38・39年測量）</option><option value=\"16/38.184582/140.963044/\">井土浦（昭和58年測量）</option><option value=\"16/38.033514/140.909374/\">鳥の海（昭和58年測量）</option><option value=\"16/37.688230/140.045450/\">桧原湖（昭和42年測量）</option><option value=\"16/34.784201/137.556789/\">猪鼻湖（昭和40・41年測量）</option><option value=\"16/34.723273/137.566037/\">浜名湖（昭和40・41年測量）</option><option value=\"16/35.523180/136.193819/\">余呉湖（昭和36年測量）</option><option value=\"16/35.124209/135.936713/\">琵琶湖（昭和48・51年部分修正）</option></select></form><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 5,
   "maxzoom": 17,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/LAKE_beforeH2.png",
   "id": "lake1",
   "title": "湖沼図",
   "maxZoom": 17,

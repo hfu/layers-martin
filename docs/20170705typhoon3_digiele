@@ -8,6 +8,7 @@
   "description": "基盤地図情報の数値標高モデルを使用して作成",
   "minzoom": 3,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/saigai_0707_legend.png",
   "id": "20170705typhoon3_digiele",
   "title": "デジタル標高地形図<br>【東峰村及び久大本線橋脚流出箇所周辺】",
   "maxZoom": 16,

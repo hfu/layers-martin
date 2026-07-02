@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">（上載）地形判読図</div><div class=\"gsi_layerinfo_subtitle\">(2015.12.9)</div><div class=\"gsi_layerinfo_kaisetu\"><font color='red'>正射画像2015.12.9 と合わせてご覧下さい。</font></div>",
   "minzoom": 13,
   "maxzoom": 17,
+  "legend_image_url": "https://maps.gsi.go.jp/xyz/20151209doh2/151209doh2-legend.jpg",
   "id": "20151209doh2",
   "title": "2015/12/9",
   "maxZoom": 17,

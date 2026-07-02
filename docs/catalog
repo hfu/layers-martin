@@ -7445,10 +7445,7 @@
       "content_type": "image/png"
     }
   },
-  "sprites": {
-  },
-  "fonts": {
-  },
-  "styles": {
-  }
+  "sprites": {},
+  "fonts": {},
+  "styles": {}
 }

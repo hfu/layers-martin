@@ -8,6 +8,7 @@
   "description": "基盤地図情報の数値標高モデルを使用して作成",
   "minzoom": 3,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/saigai_0725_legend.jpg",
   "id": "20170722akita_digiele",
   "title": "デジタル標高地形図<br>【雄物川周辺】",
   "maxZoom": 16,

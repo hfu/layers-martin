@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'>地表面の傾きを区分した地図です。一般的に雪崩は一定の傾斜の斜面で発生しやすいことが知られていますが、雪崩の危険度を評価したものではありませんのでご注意下さい。</div><img src='https://maps.gsi.go.jp/legend/slopeclassification.png' alt='' width='30%' height='30%'><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://maps.gsi.go.jp/legend/attention_slopezone1map.pdf\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>",
   "minzoom": 3,
   "maxzoom": 18,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/slopeclassification.png",
   "id": "slopezone1map",
   "title": "全国傾斜量区分図（雪崩関連）",
   "maxZoom": 18,

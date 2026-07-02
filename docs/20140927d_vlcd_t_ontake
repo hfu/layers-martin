@@ -6,6 +6,7 @@
   ],
   "scheme": "xyz",
   "description": "<div class=\"gsi_layerinfo_title\">火山基本図「御嶽山」</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/volcano-maps-vbm.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "legend_image_url": "https://maps.gsi.go.jp/legend/l_vbm_ontake.jpg",
   "id": "20140927d_vlcd_t_ontake",
   "title": "火山基本図「御嶽山」（透過）",
   "legendUrl": "https://maps.gsi.go.jp/legend/l_vbm_ontake.jpg",

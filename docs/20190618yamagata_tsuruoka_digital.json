@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "デジタル標高地形図<br>2019年6月作成<br>（c）国土地理院<img src=\"https://maps.gsi.go.jp/legend/20190618yamagata_tsuruoka_digital_legend.png\" width=\"320\">",
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/20190618yamagata_tsuruoka_digital_legend.png",
   "id": "20190618yamagata_tsuruoka_digital",
   "title": "山形県鶴岡市周辺",
   "maxZoom": 16,

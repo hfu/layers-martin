@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'>ズームレベル3～9で表示</div><div class=\"gsi_layerinfo_kaisetu\"><a href=\"https://www.gsi.go.jp/buturisokuchi/grageo_geoid.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div><img src='https://maps.gsi.go.jp/legend/JPGEO2024_legend.png' alt='' width='50%' height='50%'>",
   "minzoom": 3,
   "maxzoom": 9,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/JPGEO2024_legend.png",
   "id": "jpgeo2024",
   "title": "ジオイド2024 日本とその周辺",
   "maxZoom": 9,

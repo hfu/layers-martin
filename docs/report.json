@@ -13,8 +13,9 @@
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
-    "warnings": 0,
+    "warnings": 53,
     "attribution_defaults": 1050,
+    "legend_image_urls_found": 964,
     "failures": 0
   },
   "fetched_files": [
@@ -179414,11 +179415,326 @@
     }
   ],
   "warnings": [
-
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "earthdegital",
+      "url": "https://maps.gsi.go.jp/legend/legend_earthdegital.JPG",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "slopemap",
+      "url": "https://maps.gsi.go.jp/legend/slopemap.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "slopezone1map",
+      "url": "https://maps.gsi.go.jp/legend/slopeclassification.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "anaglyphmap_color",
+      "url": "https://maps.gsi.go.jp/legend/anaglyph.jpg",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "jpgeo2024",
+      "url": "https://maps.gsi.go.jp/legend/JPGEO2024_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20190618yamagata_tsuruoka_digital",
+      "url": "https://maps.gsi.go.jp/legend/20190618yamagata_tsuruoka_digital_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20180906hokkaido_iburi_hokaichi",
+      "url": "https://maps.gsi.go.jp/legend/20180906hokkaido_iburi_hokaichi_legend.PNG",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20160414kumamoto_relief_after",
+      "url": "https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20160414kumamoto_relief_before",
+      "url": "https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20160414kumamoto_relief_d",
+      "url": "https://maps.gsi.go.jp/legend/20160414kumamoto_relief_d.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20160414kumamoto_relief_d2",
+      "url": "https://maps.gsi.go.jp/legend/20160414kumamoto_relief_d2.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20240726rain_mogamigawa_0726dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20240726rain_mogamigawa_0726dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20230629rain_0711shinsui",
+      "url": "https://maps.gsi.go.jp/legend/20230629rain_0711shinsui.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20220804rain_0804dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20220804rain_0804dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20210815oame_0815dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20210815oame_0815dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20210705oame_hyoukou",
+      "url": "https://maps.gsi.go.jp/legend/20210705oame_hyoukou_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20210705oame_hyoukou_2021-2019",
+      "url": "https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2021-2019or2009_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20210705oame_hyoukou_2021-2009",
+      "url": "https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2021-2019or2009_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20210705oame_hyoukou_2019-2009",
+      "url": "https://maps.gsi.go.jp/legend/20210705oame_hyoukou_2019-2009_legend.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_kumagawahitoyoshi_0704dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_kumagawa_0704dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_sashikigawayunouragawaashikita_0704dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_omuta_0707dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_hita_0707dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_miyama_0708dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_chikugogawa_0708dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200703oame_chikugogawa_0709dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200729rain_mogamigawa_0729dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20200729rain_mogamigawa_0729dansaizu2",
+      "url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191025oame_sakura_1026dansaizu_sokuho",
+      "url": "https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191025oame_mobara_1026dansaizu_sokuho",
+      "url": "https://maps.gsi.go.jp/legend/20191025oame_sakura_1026dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191025oame_mobara_1028dansaizu_handoku",
+      "url": "https://maps.gsi.go.jp/legend/20191025oame_mobara_1028dansaizu.PNG",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_naruse_1014dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_naruse_1014dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_abukuma_1014dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_abukuma_1014dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_shinano_1013dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_shinano_1013dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_kuji_1014dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_kuji_1014dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_naka_1014dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_naka_1014dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20191012typhoon19_arakawa_1014dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20191012typhoon19_arakawa_1014dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20190828_kyusyu_0828dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20190828_kyusyu_0828dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "201807h3007gouu_hokaichiline_1",
+      "url": "https://maps.gsi.go.jp/legend/201807H3007gouu_hokaichiline_legend/201807H3007gouu_hokaichiline_legend_v2.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "201807h3007gouu_kurashiki_0707dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "201807h3007gouu_ozu_0707dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "201807h3007gouu_takahashigawa_dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "201807h3007gouu_hijikawa_dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/201807H3007gouu_dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "h30-h27_tikeihenka_kusatsushiranesan",
+      "url": "https://maps.gsi.go.jp/legend/H30-H27_tikeihenka_kusatsushiranesan.JPG",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20190807asama_kazantaisaku",
+      "url": "https://maps.gsi.go.jp/legend/20190807asama_kazantaisaku.PNG",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "jishindo_yosoku",
+      "url": "https://maps.gsi.go.jp/legend/jishindo_yosoku.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "01_flood_l2_shinsuishin_data",
+      "url": "https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "01_flood_l1_shinsuishin_newlegend_data",
+      "url": "https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "04_tsunami_newlegend_data",
+      "url": "https://disaportal.gsi.go.jp/maps/image/legend/shinsui_legend3.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "05_kyukeishakeikaikuiki",
+      "url": "https://disaportal.gsi.go.jp/hazardmap/maps/image/legend/keikai_kyukeisya.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "05_dosekiryukeikaikuiki",
+      "url": "https://disaportal.gsi.go.jp/hazardmap/maps/image/legend/keikai_dosekiryu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "05_jisuberikeikaikuiki",
+      "url": "https://disaportal.gsi.go.jp/hazardmap/maps/image/legend/keikai_jisuberi.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    }
   ],
-  "id_changes": [
-
-  ],
+  "id_changes": [],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -184671,7 +184987,5 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": [
-
-  ]
+  "failures": []
 }

@@ -99,6 +99,7 @@ class GsiLayersToStaticMartin
     @warnings = []
     @id_changes = []
     @attribution_defaults = []
+    @legend_image_urls_found = 0
     @used_ids = {}
   end
 
@@ -352,6 +353,27 @@ class GsiLayersToStaticMartin
     ext.empty? ? '(none)' : ext
   end
 
+  LEGEND_IMAGE_EXTENSIONS = %w[.png .jpg .jpeg .gif .svg .webp].freeze
+
+  # `legendUrl` and `html` are inconsistent across layers.txt entries: some
+  # have legendUrl pointing directly at an image, some have no legendUrl but
+  # embed a legend <img> inside html, some have neither. See DECISIONS.md
+  # D18. Returns [url, :direct | :html_extracted] or nil.
+  def legend_image_source(layer)
+    legend_url = layer['legendUrl'].to_s
+    if !legend_url.empty? && absolute_http_url?(legend_url) && LEGEND_IMAGE_EXTENSIONS.include?(extension_for(legend_url))
+      return [legend_url, :direct]
+    end
+
+    html = layer['html'].to_s
+    match = html.match(/<img[^>]+src=["']([^"']+)["']/i)
+    if match && absolute_http_url?(match[1])
+      return [match[1], :html_extracted]
+    end
+
+    nil
+  end
+
   def exclusion_record(record, url, reason, ext)
     layer = record[:layer]
     {
@@ -492,6 +514,21 @@ class GsiLayersToStaticMartin
     tilejson['minzoom'] = layer['minZoom'] if layer.key?('minZoom')
     tilejson['maxzoom'] = layer['maxZoom'] if layer.key?('maxZoom')
 
+    legend_source = legend_image_source(layer)
+    if legend_source
+      legend_url, origin = legend_source
+      tilejson['legend_image_url'] = legend_url
+      @legend_image_urls_found += 1
+      if origin == :html_extracted
+        @warnings << {
+          type: 'legend_image_extracted_from_html',
+          id: source_id,
+          url: legend_url,
+          action: 'no_legendUrl_image_available_scraped_first_img_tag_from_html'
+        }
+      end
+    end
+
     center = center_from_area(layer['area'])
     tilejson['center'] = center if center
 
@@ -589,6 +626,7 @@ class GsiLayersToStaticMartin
         'excluded_by_reason' => excluded_by_reason,
         'warnings' => @warnings.length,
         'attribution_defaults' => @attribution_defaults.length,
+        'legend_image_urls_found' => @legend_image_urls_found,
         'failures' => @failures.length
       },
       'fetched_files' => @fetched_files,

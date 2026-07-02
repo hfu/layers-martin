@@ -32,6 +32,7 @@
 | [D15](#d15-航空機sar画像スナップショットも同じ原則で抑制する) | 航空機SAR画像スナップショットも同じ原則で抑制する | Accepted | 2026-07-02 |
 | [D16](#d16-ホスト名の完全一致テーブルでattributionを補う) | ホスト名の完全一致テーブルで `attribution` を補う | Accepted | 2026-07-02 |
 | [D17](#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化) | `faceless-cartographer` との整合性確認: `catalog_context.version` と attribution可視性の文書化 | Accepted | 2026-07-03 |
+| [D18](#d18-tilejsonを拡張しlegend_image_urlを新設する) | TileJSONを拡張し `legend_image_url` を新設する | Accepted | 2026-07-03 |
 
 ---
 
@@ -266,6 +267,31 @@ www.j-shis.bosai.go.jp     -> 防災科学技術研究所
 **Decision**: `STAFF_PROMPT.md` に、(1) `version` は `manifest.json` の `generated_at` を使う旨、(2) `attribution` の有無だけでなく、そのレイヤーが実際に既定表示されるかどうかもStaffが考慮すべきことを追記した。`docs/catalog` 自体に `generated_at` を埋め込む案(カタログrootを汚さずに済ませられるかの検討)は見送り、`manifest.json` 参照という現行の分割構造を維持する(D2「catalogは最小構造」の方針を優先)。
 
 **Consequences**: `layers-martin` 側のコード変更は無し(ドキュメントのみ)。将来的に `attribution` の画面表示を確実にしたい場合、レイヤー選定側(Staff)の配慮だけでは限界があり、Cartographer側の実装(例えば非表示レイヤーの attribution も一覧表示する等)を変える方が本質的な解決になる可能性がある。
+
+## D18: TileJSONを拡張し `legend_image_url` を新設する
+
+**Status**: Accepted
+
+**Context**: `faceless-cartographer` 側で「凡例(legend)が画面に出ない」というバックログ課題を検討した際、根本対応として `layers-martin` 側で凡例画像URLを構造化して持たせる案が挙がった。実データを調べると、`legendUrl` と `html` の間で凡例情報の持ち方が一貫していない。
+
+- `legendUrl` が凡例画像そのものを指す場合(例: `relief`)
+- `legendUrl` が凡例画像ではなくHTMLページを指す場合(例: `std`)
+- `legendUrl` が無く、`html`(`description`)内に `<img>` タグとして凡例画像が埋め込まれている場合(例: `05_dosekiryukeikaikuiki` 等、今回のworked exampleの主要3レイヤーがこれに該当)
+- どちらにも凡例情報が無い場合(例: `landslide`)
+
+これを Cartographer 側で毎回 `html` をスニッフィングして判定するのは、複数の Cartographer 実装が今後現れることを考えると非効率かつ実装の重複を招く。Library(`layers-martin`)側で一度だけ解決しておくのが筋が良い。
+
+TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止しておらず、本プロジェクトは既に `legendUrl`/`iconUrl`/`path`/`cocotile` 等、GSI由来の非標準キーを何のためらいもなく TileJSON に追加してきた(D5)。Martin互換の catalog root(`docs/catalog`)自体は最小構造を保つ方針(D2)だが、個々の TileJSON(`docs/{id}`)は元々「情報損失を避けることを優先する」設計であり、拡張のハードルは低いと判断した。
+
+**Decision**: TileJSON に新しい拡張キー `legend_image_url` を追加する。決定順位は次の通り。
+
+1. `legendUrl` が存在し、絶対URLで、拡張子が画像(`.png`/`.jpg`/`.jpeg`/`.gif`/`.svg`/`.webp`)であれば、それをそのまま使う。
+2. 上記が使えない場合、`html` から最初の `<img src="...">` を正規表現で抽出し、絶対URLであればそれを使う。この場合、`report.json` に `legend_image_extracted_from_html` warning を記録する(html本文からの抽出は正規表現によるヒューリスティックであり、100%の再現性は保証されないため、どのレイヤーがこの経路を通ったか追跡可能にしておく)。
+3. どちらも無ければ `legend_image_url` キー自体を出力しない(無いことを明示するために `null` にはしない。既存の `attribution`/`bounds` 等と同じ扱い)。
+
+`validate_outputs.rb` に、`legend_image_url` が存在する場合は絶対URLであることを検証するチェックを追加した。
+
+**Consequences**: 1,861件中 **964件(51.8%)** に `legend_image_url` が付与された。今回のworked example(`05_dosekiryukeikaikuiki`/`05_jisuberikeikaikuiki`/`05_kyukeishakeikaikuiki`)はすべて `html` からの抽出経路で取得できている。`html` の構造が将来変わった場合、正規表現による抽出が効かなくなる可能性があるが、その場合も `legend_image_url` が単に付与されなくなるだけで、既存の動作(`html`/`description` フィールド自体の保持)には影響しない。
 
 ## バックログ(未決定・保留)
 

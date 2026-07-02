@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">火山災害対策用図<br>基盤地図情報の数値標高モデルを使用して作成</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 2,
   "maxzoom": 18,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/20180309_kazantaisaku_kirishima.jpg",
   "id": "20180309_kazantaisaku_kirishima",
   "title": "火山災害対策用図（新燃岳周辺）",
   "maxZoom": 18,

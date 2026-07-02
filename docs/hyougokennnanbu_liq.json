@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">地震編</div>「地理教育の道具箱」の「イラストで学ぶ過去の災害と地形」へリンクしています。<br><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/chirikyouiku45134.html\">イラストで学ぶ過去の災害と地形（地震編）</a><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 11,
   "maxzoom": 15,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/geography_earthquake_legend.png",
   "id": "hyougokennnanbu_liq",
   "title": "液状化",
   "maxZoom": 15,

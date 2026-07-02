@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'>標高に応じて色分けした世界地図です。地球地図全球版標高第2版データから算出しています。</div><img src='https://maps.gsi.go.jp/legend/legend_earthdegital.JPG' alt='' width='50%' height='50%'>",
   "minzoom": 0,
   "maxzoom": 18,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/legend_earthdegital.JPG",
   "id": "earthdegital",
   "title": "デジタル標高地形図（全球版）",
   "maxZoom": 18,

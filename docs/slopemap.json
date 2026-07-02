@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'>地表面の傾きを示した地図です。白いほど緩やか、黒いほど急峻であることを意味しています。</div><p>凡例</p><img src='https://maps.gsi.go.jp/legend/slopemap.png' alt='' width='30%' height='30%'><div class=\"gsi_layerinfo_kaisetu\"><a href=\"http://www.gsi.go.jp/bousaichiri/slopemap.html\" class=\"gsi_layerinfo_kaisetu\" target=\"_blank\">解説</a></div>",
   "minzoom": 3,
   "maxzoom": 18,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/slopemap.png",
   "id": "slopemap",
   "title": "傾斜量図",
   "maxZoom": 18,

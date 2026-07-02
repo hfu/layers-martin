@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "<div class=\"gsi_layerinfo_title\">近畿圏</div><div class=\"gsi_layerinfo_subtitle\">(1974年)</div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-takudo.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/takuchi_hanrei.png",
   "id": "lum4bl_kinki1974",
   "title": "1974年",
   "maxZoom": 16,

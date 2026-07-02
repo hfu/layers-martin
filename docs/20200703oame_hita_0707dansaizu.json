@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">浸水推定図</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この地図は、国土地理院が7月7日11時までに収集したSNS画像と標高データを用いて、浸水範囲における水深を算出して深さを濃淡で表現した地図です。時点情報のため、最大浸水範囲を示したものではありません。</li><li>実際に浸水のあった範囲でも把握できていない部分、浸水していない範囲でも浸水範囲として表示されている部分があります。</li></ul>2020年7月7日14時作成</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png\" width=100 alt=\"凡例\"></td></tr></table>",
   "minzoom": 2,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/20200703oame_dansaizu.png",
   "center": [
     130.907593,
     33.325939,

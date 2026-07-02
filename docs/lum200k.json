@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'><p>1982～83年に作成した、全国の当時の土地利用を表した地図です。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/lum-200k.html\">解説</a></div>",
   "minzoom": 11,
   "maxzoom": 14,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/lum200k_legend.jpg",
   "id": "lum200k",
   "title": "20万分１土地利用図（1982～1983年）",
   "maxZoom": 14,

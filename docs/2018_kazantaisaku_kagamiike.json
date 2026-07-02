@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "minzoom": 3,
   "maxzoom": 18,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/2018_kazantaisaku_kagamiike.jpg",
   "id": "2018_kazantaisaku_kagamiike",
   "title": "火山災害対策用図（鏡池周辺）",
   "maxZoom": 18,

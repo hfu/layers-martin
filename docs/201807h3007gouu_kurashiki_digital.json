@@ -8,6 +8,7 @@
   "description": "基盤地図情報の数値標高モデルを使用して作成",
   "minzoom": 6,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/201807H3007gouu_kurashiki_digital.png",
   "id": "201807H3007gouu_kurashiki_digital",
   "title": "岡山県倉敷市",
   "maxZoom": 16,

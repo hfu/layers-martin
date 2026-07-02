@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">布田川断層帯・日奈久断層帯周辺陰影段彩図（地震後）</div><table><tr><td><div class=\"gsi_layerinfo_kaisetu\"><ul><li>この図は、平成28年5月8日の航空レーザ測量から求めた標高から作成しました。</li><li>標高の高い部分を茶色の暖色系に、標高の低い部分を青色の寒色系で彩色したものに陰影を付けたものです。</li></ul></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div></td><td><img src=\"https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png\" alt=\"凡例\"></td></tr></table>",
   "minzoom": 2,
   "maxzoom": 16,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/20160414kumamoto_relief.png",
   "id": "20160414kumamoto_relief_after",
   "title": "布田川断層帯周辺陰影段彩図（地震後）",
   "maxZoom": 16,

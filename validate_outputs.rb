@@ -150,6 +150,11 @@ class OutputsValidator
     unless url.include?('{z}') && url.include?('{x}') && url.include?('{y}')
       @errors << "docs/#{id}: tiles[0] is missing {z}/{x}/{y} placeholders (#{url})"
     end
+
+    legend_image_url = tilejson['legend_image_url']
+    if legend_image_url && !legend_image_url.start_with?('http://', 'https://')
+      @errors << "docs/#{id}: legend_image_url is not an absolute URL (#{legend_image_url})"
+    end
   end
 
   def check_duplicate_tile_url(id, tilejson, seen_tile_urls)
