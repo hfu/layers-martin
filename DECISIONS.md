@@ -33,6 +33,7 @@
 | [D16](#d16-ホスト名の完全一致テーブルでattributionを補う) | ホスト名の完全一致テーブルで `attribution` を補う | Accepted | 2026-07-02 |
 | [D17](#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化) | `faceless-cartographer` との整合性確認: `catalog_context.version` と attribution可視性の文書化 | Accepted | 2026-07-03 |
 | [D18](#d18-tilejsonを拡張しlegend_image_urlを新設する) | TileJSONを拡張し `legend_image_url` を新設する | Accepted | 2026-07-03 |
+| [D19](#d19-staff_promptmdに「あなたはstaffである」導入節を追加する) | `STAFF_PROMPT.md` に「あなたは Staff である」導入節を追加する | Accepted | 2026-07-03 |
 
 ---
 
@@ -293,7 +294,31 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 **Consequences**: 1,861件中 **964件(51.8%)** に `legend_image_url` が付与された。今回のworked example(`05_dosekiryukeikaikuiki`/`05_jisuberikeikaikuiki`/`05_kyukeishakeikaikuiki`)はすべて `html` からの抽出経路で取得できている。`html` の構造が将来変わった場合、正規表現による抽出が効かなくなる可能性があるが、その場合も `legend_image_url` が単に付与されなくなるだけで、既存の動作(`html`/`description` フィールド自体の保持)には影響しない。
 
+## D19: `STAFF_PROMPT.md` に「あなたは Staff である」導入節を追加する
+
+**Status**: Accepted
+
+**Context**: `STAFF_PROMPT.md` の実体である `````text````` フェンス内(`hfu/faceless-cartographer` の `GET /` にもそのまま表示される、[D13](../faceless-cartographer 参照)部分)を見直したところ、layers-martin固有の「カタログの引き方」からいきなり始まっており、「そもそもStaffとは何か・何をしてよく何をしてはいけないか・利用者やCartographerとの正しいやりとりの形」という、staccato-spec準拠の最低限の導入を欠いていることが指摘された。これまでの反復検証(source_id捏造、スキーマ不準拠等)はすべてカタログ固有の失敗モードに対する後付けの補足であり、そもそもの土台が無いまま補足だけを積み重ねていた。
+
+**Decision**: フェンス内の冒頭に「## あなたは Staff である」節を追加した。内容は `unopengis/staccato-spec` の `architecture-principles.md`(責務分離・least disclosure等の核心原則、§5.2のStaff characterization)と `ADR 0002`(起動時カタログ契約・隠れたフォールバック禁止)を出典として要約したもの: (1) 責務(Map Intentの生成、機微な文脈を含めない、設定済みカタログのみ使用、source_id捏造禁止)、(2) 正しいやりとりの形(User→Staff→人間によるコピー&ペースト→Cartographer、URLではなくMap Intentが共有の一次artifact)、(3) Map Intentの必須フィールド。この節の後に、既存のlayers-martin固有の内容(カタログの引き方、source_id捏造禁止の詳細、意味解決の指針等)を「以上がStaccatoの一般的な規定である。以下はLibraryとしてlayers-martinを使う際に固有の補足である」という接続で続ける構成にした。
+
+**Consequences**: `STAFF_PROMPT.md` は単体である程度自己完結したStaffプロンプトとして機能するようになった(既存のより詳細なStaffシステムプロンプトへの追加としても、単体としても使える)。`hfu/faceless-cartographer` は `GET /` でこのファイルを動的取得して表示している([D13](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md#d13-gettopページに現在のstaffプロンプトを表示する))ため、コード変更なしに反映される。
+
 ## バックログ(未決定・保留)
+
+### エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案、仮称)
+
+インターネットに接続できないエンタープライズAI環境では、Staffは `catalog`/`{id}` を都度fetchすることができない。現在の `STAFF_PROMPT.md` は「カタログを取得して調べる」ことを前提にしており、そのままでは使えない。
+
+layers-martinのメタデータのエッセンスをすべて詰め込んだ、fetch不要のスタンドアロン版プロンプトが必要。設計にあたって検討が要る点:
+
+1. **source_id一覧をどこまで埋め込むか**: 「捏造しない」原則を維持するには、実在するsource_idの一覧が無いと原理的に守れない。1,861件全部(id+name、TSV的に1行ずつなら150〜220KB程度と試算)を埋め込むか、カテゴリ(`path`)ごとの代表例に絞るか。前者は確実だがプロンプトが巨大になる。後者は「捏造しない」原則が弱まる(未掲載のidについては相変わらず確認できない)。
+2. **生成の自動化**: 手書きでは1,861件を維持できない。`build_catalog.rb` の出力から `STANDALONE_PROMPT.md`(または生成物としての別ファイル)を自動生成するスクリプトが要る。毎日のcronでカタログ本体と一緒に再生成する形が自然。
+3. **どこまでの情報を1件ごとに埋め込むか**: id+nameだけか、pathも含めるか(意味解決の精度に効くが容量も増える)。bounds/attribution/legend_image_urlの有無まで埋め込むかどうか。
+4. **ファイル名**: 「STANDALONE_PROMPT.md」は仮称。より洗練された名前を検討する(例: `OFFLINE_STAFF_PROMPT.md`、`STAFF_PROMPT_FULL.md` 等)。
+5. **`hfu/faceless-cartographer` 側への影響**: `GET /` が表示している「現在のStaffプロンプト」は、通常インターネット接続がある環境向けの `STAFF_PROMPT.md` のままでよいか、スタンドアロン版へのリンクも追加するか。
+
+規模が大きいため、着手は別途判断する。
 
 Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で見つかったが、まだ決定していない項目。
 

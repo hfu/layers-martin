@@ -42,9 +42,11 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 - `legend_image_url`(独自拡張キー)を約52%のレイヤーに付与している([D18](DECISIONS.md#d18-tilejsonを拡張しlegend_image_urlを新設する))。`legendUrl` が凡例画像を直接指さない/存在しない場合に、`html` から凡例画像を抽出する。
 - GitHub Actions の成功判定は `validate_outputs.rb`([D11](DECISIONS.md#d11-actions-の成功判定を出力内容の検証に基づかせる))でカタログ内容そのものを検証するようになっている(ファイル存在確認だけだった旧版では、実質空のカタログでも success 表示になっていた)。
 - Cartographer の実装(`hfu/faceless-cartographer`)との整合性確認を行い、`STAFF_PROMPT.md` に `catalog_context.version` の埋め方(`manifest.json` の `generated_at`)と、attribution が実際に画面表示されるかはレイヤーの既定表示状態にも依存する旨を追記した([D17](DECISIONS.md#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化))。
+- `STAFF_PROMPT.md` の実行可能プロンプト部分に、staccato-spec準拠の「あなたはStaffである」導入節(責務・正しいやりとりの形・Map Intent必須フィールド)を追加した([D19](DECISIONS.md#d19-staff_promptmdに「あなたはstaffである」導入節を追加する))。以前はlayers-martin固有の使い方からいきなり始まっており、Staffとしての基礎が欠けていた。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
   - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。
+  - インターネット接続できないエンタープライズAI向けの、fetch不要なスタンドアロン版Staffプロンプト(仮称`STANDALONE_PROMPT.md`)。カタログのメタデータを全埋め込みする必要があり規模が大きいため未着手。
   - `bounds`/`center` が過半数のレイヤーで欠落している。
 
 ## 参照情報
