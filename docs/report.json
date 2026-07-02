@@ -179413,8 +179413,12 @@
       ]
     }
   ],
-  "warnings": [],
-  "id_changes": [],
+  "warnings": [
+
+  ],
+  "id_changes": [
+
+  ],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -184667,5 +184671,7 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": []
+  "failures": [
+
+  ]
 }
