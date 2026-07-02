@@ -31,6 +31,7 @@
 | [D14](#d14-staff-プロンプトの置き場所とmap-intent-vnextへの準拠) | Staff プロンプトの置き場所と map-intent-vnext への準拠 | Accepted | 2026-07-02 |
 | [D15](#d15-航空機sar画像スナップショットも同じ原則で抑制する) | 航空機SAR画像スナップショットも同じ原則で抑制する | Accepted | 2026-07-02 |
 | [D16](#d16-ホスト名の完全一致テーブルでattributionを補う) | ホスト名の完全一致テーブルで `attribution` を補う | Accepted | 2026-07-02 |
+| [D17](#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化) | `faceless-cartographer` との整合性確認: `catalog_context.version` と attribution可視性の文書化 | Accepted | 2026-07-03 |
 
 ---
 
@@ -252,6 +253,19 @@ www.j-shis.bosai.go.jp     -> 防災科学技術研究所
 `maps.gsi.go.jp`・`cyberjapandata.gsi.go.jp`・`disaportaldata.gsi.go.jp` は、他機関のデータが混在することが確認されているため、テーブルに**含めない**(既定値を付けない)。`layer['attribution']` が空でない場合は既定値で上書きしない。付与した件数・対象idは `report.json` の `attribution_defaults`(および `summary.attribution_defaults`)に記録する。
 
 **Consequences**: 1,861件中 **1,050件(56.4%)** に確度の高い `attribution` が付与された。残り811件(`maps.gsi.go.jp` 系804件・`cyberjapandata.gsi.go.jp` 1件・`disaportaldata.gsi.go.jp` 6件)は既定値なしのままで、これは意図的な保留である(誤帰属より無帰属の方が安全という判断)。`maps.gsi.go.jp` 配下だけでも大半(804件中789件、約98%)はGSI自身のデータだが、`html` 本文の文字列解析で他機関を判定するような追加のヒューリスティックは、今回は実装しない(検出漏れ・誤判定のリスクと実装複雑性が見合わないと判断)。将来 `maps.gsi.go.jp` 配下の対応を進めるなら、ホスト単位ではなく `path`/`html` の内容ベースでの判定(D15 で `path` ベースの判定を既に導入した前例あり)を検討する。
+
+## D17: `faceless-cartographer` との整合性確認: `catalog_context.version` と attribution可視性の文書化
+
+**Status**: Accepted
+
+**Context**: Cartographer の初期実装(`hfu/faceless-cartographer`)を進める過程で、`layers-martin`/`faceless-cartographer`/`unopengis/staccato-spec` の3リポジトリ間の整合性を確認した。2点、ドキュメントで埋めるべきギャップが見つかった。
+
+1. `map-intent-vnext.md` の `catalog_context.active_catalogs[*].version` は任意フィールドだが、`docs/catalog`/`docs/catalog.json` 自体にはバージョン情報が無く、`docs/manifest.json` の `generated_at` を別途取得しないと埋められない。`STAFF_PROMPT.md` の実例もこれまで `version` を設定していなかった。
+2. `faceless-cartographer` を実際にブラウザで動かして検証したところ、MapLibre GL JS の attribution 表示は「現在表示中のレイヤー」の分しか合成しない仕様だと分かった。D16 で `attribution` を56%のレイヤーに付与したが、典型的な Map Intent の構成(`maps.gsi.go.jp` 系の std やハザードマップが `required_layers` に、D16 で確実に attribution が付く4ホスト系が `optional_layers` になりやすい)では、既定表示の状態で画面に出典が一切表示されない組み合わせになりがちであることが実地で確認された。
+
+**Decision**: `STAFF_PROMPT.md` に、(1) `version` は `manifest.json` の `generated_at` を使う旨、(2) `attribution` の有無だけでなく、そのレイヤーが実際に既定表示されるかどうかもStaffが考慮すべきことを追記した。`docs/catalog` 自体に `generated_at` を埋め込む案(カタログrootを汚さずに済ませられるかの検討)は見送り、`manifest.json` 参照という現行の分割構造を維持する(D2「catalogは最小構造」の方針を優先)。
+
+**Consequences**: `layers-martin` 側のコード変更は無し(ドキュメントのみ)。将来的に `attribution` の画面表示を確実にしたい場合、レイヤー選定側(Staff)の配慮だけでは限界があり、Cartographer側の実装(例えば非表示レイヤーの attribution も一覧表示する等)を変える方が本質的な解決になる可能性がある。
 
 ## バックログ(未決定・保留)
 

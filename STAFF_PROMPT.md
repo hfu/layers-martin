@@ -21,6 +21,9 @@ Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、�
    `attribution` / `minzoom` / `maxzoom` / `bounds` を確認する。
 3. `name` はタグ除去済みのプレーンテキストである。`title` は GSI 由来の生の値(HTMLタグを含みうる)なので、
    利用者向けの説明文には `name` か `html` を使い、`title` をそのまま見せない。
+4. Map Intent の `catalog_context.active_catalogs[*].version` を埋めたい場合、`catalog`/`catalog.json` 自体には
+   バージョン情報が無い。`manifest.json` を別途取得し、その `generated_at`(ISO 8601、毎日 cron で更新される)を
+   `version` の値として使う。
 
 ## source_id を捏造しないこと(最重要)
 
@@ -83,6 +86,16 @@ Map Intent の `area` は `name` と `bbox`(`[lon_w, lat_s, lon_e, lat_n]`)を�
   GSI自身のデータが大半だが、`rinya`(林野庁提供の空中写真)のように他省庁データも混在するため、
   ホスト名だけから「国土地理院」と決めつけない。出典が必要な場合は `html` 末尾のリンク(「データに
   ついて」等)を手がかりにする。
+- **`attribution` がTileJSONにあっても、Cartographer側の画面に必ず出るとは限らない**。`faceless-cartographer`
+  で確認したところ、MapLibre GL JSの既定の attribution 表示は「現在表示中のレイヤー」の分しか合成しない
+  仕様であるため、`attribution` を持つレイヤーが `optional_layers` として既定非表示になっていたり、
+  そもそも `required_layers` に選ばれなかったりすると、その出典は画面上に一切現れない。特にこのカタログの
+  場合、`attribution` が空になりがちな `maps.gsi.go.jp` 系(std や災害系ハザードマップなど)がよく
+  `required_layers` に選ばれる一方、`attribution` が確実に付く4ホスト系(地質図・土地履歴図等)は
+  `optional_layers` になりやすい、という組み合わせにより、典型的な構成では画面上の attribution 表示が
+  「MapLibre」表記だけになりがちである。出典表示を利用者に見せる必要がある場合、Staff は `attribution`
+  の有無だけでなく、そのレイヤーが実際に既定表示されるか(`required_layers` か、`optional_layers` でも
+  既定オンか)まで考慮する必要がある。
 
 ## 動作確認済みの例
 
@@ -107,6 +120,7 @@ catalog_context:
     - id: "layers-martin"
       type: "layers_txt"
       uri: "https://hfu.github.io/layers-martin/catalog"
+      version: "2026-07-02T18:38:03Z"  # docs/manifest.json の generated_at をそのまま使う(下記参照)
 
 required_layers:
   - source_id: "std"
