@@ -3,12 +3,12 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 183,
     "fetched_files": 183,
-    "groups_seen": 858,
-    "layers_seen": 13929,
+    "groups_seen": 859,
+    "layers_seen": 13931,
     "tiles_included": 1861,
-    "layers_excluded": 12068,
+    "layers_excluded": 12070,
     "excluded_by_reason": {
-      "unsupported_extension": 1321,
+      "unsupported_extension": 1323,
       "sar_observation_snapshot": 10538,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -729,7 +729,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 329560
+      "bytes": 332237
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -173230,6 +173230,34 @@
       ]
     },
     {
+      "id": "drone_yz_2607",
+      "title": "【令和8年7月14日以降】対象施設周辺地域（イエローゾーン）",
+      "url": "https://maps.gsi.go.jp/xyz/drone_yz_2607/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
+        "【令和8年7月14日以降】対象施設周辺地域（レッドゾーン＋イエローゾーン）"
+      ]
+    },
+    {
+      "id": "drone_rz_2607",
+      "title": "【令和8年7月14日以降】対象施設及びその指定敷地等（レッドゾーン）",
+      "url": "https://maps.gsi.go.jp/xyz/drone_rz_2607/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
+        "【令和8年7月14日以降】対象施設周辺地域（レッドゾーン＋イエローゾーン）"
+      ]
+    },
+    {
       "id": "minato_icon",
       "title": "みなとオアシス（港湾局）",
       "url": "https://maps.gsi.go.jp/xyz/minato_icon/{z}/{x}/{y}.geojson",
@@ -179734,7 +179762,9 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     }
   ],
-  "id_changes": [],
+  "id_changes": [
+
+  ],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -184987,5 +185017,7 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": []
+  "failures": [
+
+  ]
 }
