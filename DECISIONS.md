@@ -34,6 +34,7 @@
 | [D17](#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化) | `faceless-cartographer` との整合性確認: `catalog_context.version` と attribution可視性の文書化 | Accepted | 2026-07-03 |
 | [D18](#d18-tilejsonを拡張しlegend_image_urlを新設する) | TileJSONを拡張し `legend_image_url` を新設する | Accepted | 2026-07-03 |
 | [D19](#d19-staff_promptmdに「あなたはstaffである」導入節を追加する) | `STAFF_PROMPT.md` に「あなたは Staff である」導入節を追加する | Accepted | 2026-07-03 |
+| [D20](#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる) | `STAFF_PROMPT.md` を `faceless-cartographer` の新アーキテクチャに追随させる | Accepted | 2026-07-04 |
 
 ---
 
@@ -302,7 +303,23 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 **Decision**: フェンス内の冒頭に「## あなたは Staff である」節を追加した。内容は `unopengis/staccato-spec` の `architecture-principles.md`(責務分離・least disclosure等の核心原則、§5.2のStaff characterization)と `ADR 0002`(起動時カタログ契約・隠れたフォールバック禁止)を出典として要約したもの: (1) 責務(Map Intentの生成、機微な文脈を含めない、設定済みカタログのみ使用、source_id捏造禁止)、(2) 正しいやりとりの形(User→Staff→人間によるコピー&ペースト→Cartographer、URLではなくMap Intentが共有の一次artifact)、(3) Map Intentの必須フィールド。この節の後に、既存のlayers-martin固有の内容(カタログの引き方、source_id捏造禁止の詳細、意味解決の指針等)を「以上がStaccatoの一般的な規定である。以下はLibraryとしてlayers-martinを使う際に固有の補足である」という接続で続ける構成にした。
 
-**Consequences**: `STAFF_PROMPT.md` は単体である程度自己完結したStaffプロンプトとして機能するようになった(既存のより詳細なStaffシステムプロンプトへの追加としても、単体としても使える)。`hfu/faceless-cartographer` は `GET /` でこのファイルを動的取得して表示している([D13](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md#d13-gettopページに現在のstaffプロンプトを表示する))ため、コード変更なしに反映される。
+**Consequences**: `STAFF_PROMPT.md` は単体である程度自己完結したStaffプロンプトとして機能するようになった(既存のより詳細なStaffシステムプロンプトへの追加としても、単体としても使える)。`hfu/faceless-cartographer` はこのファイルを取得して表示している([D13](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md#d13-gettopページに現在のstaffプロンプトを表示する))ため、コード変更なしに反映される。
+
+**2026-07-04 追記**: `hfu/faceless-cartographer` はその後アーキテクチャを変更し(D18)、`GET /` によるサーバー取得ではなくビルド時fetch(D19、faceless-cartographer側の同名の別決定)に変わった。取得元がこのファイルであることは変わらない。詳細は [D20](#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる) を参照。
+
+## D20: `STAFF_PROMPT.md` を `faceless-cartographer` の新アーキテクチャに追随させる
+
+**Status**: Accepted
+
+**Context**: `hfu/faceless-cartographer` が大きくアーキテクチャを変更した(単一ページのSPA化、この世代ではLLMを使わない、静的サイト化。詳細は同リポジトリの DECISIONS.md D18・D20・D21)。`STAFF_PROMPT.md` の「正しいやりとりの形」節が「Cartographer の `POST /` に貼り付ける」という、もはや実態と異なる表現を含んでいた(実装はサーバーレスの単一ページで、文字通りのHTTP POSTは発生しない)。
+
+**Decision**: 「Cartographer の `POST /` に貼り付ける」を「Cartographer の画面に貼り付ける」という実装非依存の表現に変更した。Staff はCartographerの実装形態(サーバーか静的サイトか)を関知しない、という原則を明記した。あわせて、次の2点を追加した。
+
+- 参照実装 `hfu/faceless-cartographer`(https://hfu.github.io/faceless-cartographer/)が実在し、実際にMap Intentを貼り付けて動作確認できることを明記した。以前は「Cartographerはこう動くはず」という仕様上の想定にとどまっていた。
+- 参照実装がこの世代ではLLMを使わないため、地図に添える自然文の説明が返ってくることを期待しないよう明記した。
+- 参照実装の「Copy Map Intent」が `cartographer_feedback`(`missing_layers`/`unrenderable_layers`)を埋め込む場合があることと、それを受け取った場合にStaffが次の応答へ反映すべきことを、「正しいやりとりの形」に6番目の項目として追加した(faceless-cartographer D15)。
+
+**Consequences**: `STAFF_PROMPT.md` が特定のCartographer実装の内部実装(サーバーかどうか等)に依存しない書き方になった。将来Cartographer側がまた実装を変えても(例えばLLMを追加する等)、この文書側の変更は今回のように必要に応じて追随させる運用を続ける。
 
 ## バックログ(未決定・保留)
 

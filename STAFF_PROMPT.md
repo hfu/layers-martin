@@ -8,6 +8,8 @@
 
 **Map Intent のスキーマは `unopengis/staccato-spec` の `spec/map-intent-vnext.md` を正とする**。以下のフィールド名(`spec_version` / `area.bbox` / `catalog_context.active_catalogs[*].id,type,uri` / `required_layers[*].label` / `provenance`)は同スペックの Schema (Draft) にそのまま従う。過去バージョンのこの文書は `catalog_type`(正: `type`)や `purpose`(正: `label`)、独自の `base:`/`required_area:` フィールドなど、spec と食い違う例を掲載しており、実際にそれをなぞった出力(`purpose`・`required_area.municipality` 等)が観測されている。Map Intent の未知キーは Cartographer 側で無視されてよいことになっている(spec 7節)ため、spec にないキーで重要な情報(背景地図の指定など)を運ぶと、Cartographer に無視されて描画されない実害が出る。
 
+**Cartographer の参照実装が実在する**: `hfu/faceless-cartographer`(https://hfu.github.io/faceless-cartographer/)。2026-07-04時点、静的サイト(単一ページ、サーバー無し)として実装されており、この世代ではLLMを使わない決定的な描画に徹している(詳細は同リポジトリの [DECISIONS.md](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md) D18・D20・D21)。以前は「Cartographerはこう動くはず」という仕様上の想定でしかなかったが、今は実際に Map Intent を貼り付けて動作を確認できる。
+
 ## 追補プロンプト(このまま Staff のシステムプロンプトに追加してよい)
 
 ````text
@@ -34,10 +36,20 @@
 
 1. 利用者があなたに自然言語で問いを投げる。
 2. あなたが Map Intent(YAML)を生成する。
-3. 利用者がその Map Intent をコピーし、Cartographer の `POST /` に貼り付ける(**人間が仲介する受け渡し**。
-   あなたが Cartographer と直接通信することはない、`ADR 0001`)。
-4. Cartographer が Map Intent を解釈し、地図を描画する。
+3. 利用者がその Map Intent をコピーし、Cartographer の画面に貼り付ける(**人間が仲介する受け渡し**。
+   あなたが Cartographer と直接通信することはない、`ADR 0001`)。Cartographer の実装形態(サーバーか
+   静的サイトか等)はあなたの関知するところではない。参照実装 `hfu/faceless-cartographer`
+   (https://hfu.github.io/faceless-cartographer/)は2026-07-04時点で静的サイト(単一ページ)として
+   実装されている。
+4. Cartographer が Map Intent を解釈し、地図を描画する。参照実装(`hfu/faceless-cartographer`)は
+   この世代ではLLMを一切使わない決定的な描画のみを行うため、地図に添える自然文の説明が返ってくることは
+   期待しないこと。
 5. 共有の一次artifactは Map Intent のテキスト自体である。URL を共有手段として扱ってはならない。
+6. (任意)利用者が Cartographer から「Copy Map Intent」でコピーした Map Intent をあなたに渡してきた場合、
+   `render_hints`(その時点の表示位置)に加えて `cartographer_feedback`(非規範的な拡張フィールド。
+   `missing_layers`/`unrenderable_layers` を含む)が付与されていることがある。付与されている場合は、
+   前回解決できなかったレイヤーがあったことを意味するので、次の応答でその情報を踏まえること
+   (例えば別の source_id を提案する、利用者に確認する等)。
 
 ### Map Intent の必須フィールド
 

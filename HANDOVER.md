@@ -43,6 +43,7 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 - GitHub Actions の成功判定は `validate_outputs.rb`([D11](DECISIONS.md#d11-actions-の成功判定を出力内容の検証に基づかせる))でカタログ内容そのものを検証するようになっている(ファイル存在確認だけだった旧版では、実質空のカタログでも success 表示になっていた)。
 - Cartographer の実装(`hfu/faceless-cartographer`)との整合性確認を行い、`STAFF_PROMPT.md` に `catalog_context.version` の埋め方(`manifest.json` の `generated_at`)と、attribution が実際に画面表示されるかはレイヤーの既定表示状態にも依存する旨を追記した([D17](DECISIONS.md#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化))。
 - `STAFF_PROMPT.md` の実行可能プロンプト部分に、staccato-spec準拠の「あなたはStaffである」導入節(責務・正しいやりとりの形・Map Intent必須フィールド)を追加した([D19](DECISIONS.md#d19-staff_promptmdに「あなたはstaffである」導入節を追加する))。以前はlayers-martin固有の使い方からいきなり始まっており、Staffとしての基礎が欠けていた。
+- `hfu/faceless-cartographer` がSPA・LLM無し・静的サイトへとアーキテクチャを変更したことを受け、`STAFF_PROMPT.md` の「Cartographer の `POST /` に貼り付ける」という実装依存の表現を「Cartographer の画面に貼り付ける」に改め、参照実装が実在すること・LLMを使わないこと・`cartographer_feedback` の環流を明記した([D20](DECISIONS.md#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる))。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
   - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。
