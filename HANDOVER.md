@@ -44,6 +44,7 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 - Cartographer の実装(`hfu/faceless-cartographer`)との整合性確認を行い、`STAFF_PROMPT.md` に `catalog_context.version` の埋め方(`manifest.json` の `generated_at`)と、attribution が実際に画面表示されるかはレイヤーの既定表示状態にも依存する旨を追記した([D17](DECISIONS.md#d17-faceless-cartographer-との整合性確認catalog_contextversion-と-attribution可視性の文書化))。
 - `STAFF_PROMPT.md` の実行可能プロンプト部分に、staccato-spec準拠の「あなたはStaffである」導入節(責務・正しいやりとりの形・Map Intent必須フィールド)を追加した([D19](DECISIONS.md#d19-staff_promptmdに「あなたはstaffである」導入節を追加する))。以前はlayers-martin固有の使い方からいきなり始まっており、Staffとしての基礎が欠けていた。
 - `hfu/faceless-cartographer` がSPA・LLM無し・静的サイトへとアーキテクチャを変更したことを受け、`STAFF_PROMPT.md` の「Cartographer の `POST /` に貼り付ける」という実装依存の表現を「Cartographer の画面に貼り付ける」に改め、参照実装が実在すること・LLMを使わないこと・`cartographer_feedback` の環流を明記した([D20](DECISIONS.md#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる))。
+- `layers-martin` の責務拡張として、実際に稼働している別の Martin サーバー `stars.optgeo.org/catalog`(国土地理院最適化ベクトルタイル `bvmap` を含む)を取り込めないか検討した結果、`layers-martin` 側のコード・カタログ生成物には手を入れず、`STAFF_PROMPT.md` に「別カタログ」として案内する形にとどめた([D21](DECISIONS.md#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない))。統合用のaggregatorリポジトリは不要と判断した — Map Intent の `catalog_context.active_catalogs` が複数カタログの併記をもともと許容しているため。`bvmap` の実際の描画(ジオメトリタイプ別の汎用スタイリング)は `hfu/faceless-cartographer` 側で実装済み(同リポジトリ D23)。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
   - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。

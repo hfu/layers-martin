@@ -35,6 +35,7 @@
 | [D18](#d18-tilejsonを拡張しlegend_image_urlを新設する) | TileJSONを拡張し `legend_image_url` を新設する | Accepted | 2026-07-03 |
 | [D19](#d19-staff_promptmdに「あなたはstaffである」導入節を追加する) | `STAFF_PROMPT.md` に「あなたは Staff である」導入節を追加する | Accepted | 2026-07-03 |
 | [D20](#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる) | `STAFF_PROMPT.md` を `faceless-cartographer` の新アーキテクチャに追随させる | Accepted | 2026-07-04 |
+| [D21](#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない) | `STAFF_PROMPT.md` に `stars.optgeo.org` を別カタログとして追記する。aggregatorは作らない | Accepted | 2026-07-04 |
 
 ---
 
@@ -320,6 +321,16 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - 参照実装の「Copy Map Intent」が `cartographer_feedback`(`missing_layers`/`unrenderable_layers`)を埋め込む場合があることと、それを受け取った場合にStaffが次の応答へ反映すべきことを、「正しいやりとりの形」に6番目の項目として追加した(faceless-cartographer D15)。
 
 **Consequences**: `STAFF_PROMPT.md` が特定のCartographer実装の内部実装(サーバーかどうか等)に依存しない書き方になった。将来Cartographer側がまた実装を変えても(例えばLLMを追加する等)、この文書側の変更は今回のように必要に応じて追随させる運用を続ける。
+
+## D21: `STAFF_PROMPT.md` に `stars.optgeo.org` を別カタログとして追記する。aggregatorは作らない
+
+**Status**: Accepted
+
+**Context**: `layers-martin` の責務を拡張し、`https://stars.optgeo.org/catalog`(実際に稼働している、`layers-martin` とは無関係の Martin サーバー)を取り込めないか検討する依頼があった。目玉は国土地理院最適化ベクトルタイル(`bvmap`)で、これにより Staff がベースマップをベクトルタイルとして扱う選択肢を得る。検討した設計候補は主に3つ: (A) `layers-martin` 内部で `stars.optgeo.org` のカタログを取り込み、自前のカタログとマージして1つの静的カタログとして出す、(B) 別リポジトリに「Martin catalog アグリゲーター」を新設し、そこで複数カタログの統合を行う、(C) 統合そのものをしない。`layers-martin` は自分自身のカタログを出し続け、`stars.optgeo.org` はそのまま Staff に案内し、Map Intent の `catalog_context.active_catalogs` に2つのカタログを並べて持たせる。(A)は `layers-martin` が他者の運用するサーバーの可用性・データ形状変更に直接依存することになり、日次バッチ生成という `layers-martin` 自身のライフサイクル(D_多数、生成物はGitHub Pagesの静的ファイル)と、実サーバーである `stars.optgeo.org` のライフサイクル(常時稼働、いつでも形が変わりうる)が混ざってしまう。(B)は正しく動くはずだが、Map Intent の spec が最初から複数 `active_catalogs` の併記を許容しているため、統合のための専用コードを別リポジトリに書く前に、まずその素の機能で足りるか確かめるべきだと判断した。
+
+**Decision**: (C) を採用した。`layers-martin` のコード・カタログ生成物には一切手を入れない。代わりに `STAFF_PROMPT.md` に新しい節「別カタログ: stars.optgeo.org(国土地理院最適化ベクトルタイル)」を追加し、Staff が `catalog_context.active_catalogs` に `layers-martin` と `stars.optgeo.org` の2件を並べて使えること、使い分けの目安(ラスタ背景地図で足りるなら不要、ベクトルタイルとしてベースマップを扱いたいなら `bvmap`)、`bvmap` の `source_id` もカタログを実際に取得してから使うこと(捏造禁止の原則がこちらにも及ぶ)を明記した。実際にこの2カタログを1つの Map Intent で解決できることは `hfu/faceless-cartographer` 側で実データに対する統合テストとして確認済み(同リポジトリ [DECISIONS.md](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md) D23)。`bvmap` の実際の描画(ジオメトリタイプ別の汎用スタイリング)も同じくCartographer側の責務として実装済み。
+
+**Consequences**: `layers-martin` はカタログのマージや外部サーバーへの依存を一切持たないまま、Staff がベクトルベースマップという選択肢を得られるようになった。将来、統合したいカタログが増えて「毎回 `active_catalogs` に手で列挙する」運用が煩雑になった場合は、その時点で改めて(B)のアグリゲーターを検討する余地を残す(このADRはその判断を妨げない、可逆的な決定)。
 
 ## バックログ(未決定・保留)
 
