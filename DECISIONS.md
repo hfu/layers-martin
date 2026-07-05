@@ -214,9 +214,9 @@
 **Context**: `STAFF_PROMPT.md` を使ってエンタープライズ側の生成AIに実際にクエリ(「札幌市清田区の地形分類を見たい」)を処理させたところ、次の2つの問題が観測された。
 
 1. 存在しない source_id(`lcmfc2_1`)を捏造していた。実在するのは `lcmfc2`(治水地形分類図)、`lcm25k_2012`(数値地図25000土地条件)、`terrainclassification1`(地形分類図)。
-2. `STAFF_PROMPT.md` の Map Intent 例が `unopengis/staccato-spec` の `spec/map-intent-vnext.md` と食い違っていた(`catalog_type` vs 正しい `type`、`purpose` vs 正しい `label`、`spec_version`/`provenance` の欠落、独自の `required_area`/`base` フィールド)。AIの出力はこの食い違った例をなぞっていたと考えられる。
+2. `STAFF_PROMPT.md` の Map Intent 例が `UNopenGIS/staccato-spec` の `spec/map-intent-vnext.md` と食い違っていた(`catalog_type` vs 正しい `type`、`purpose` vs 正しい `label`、`spec_version`/`provenance` の欠落、独自の `required_area`/`base` フィールド)。AIの出力はこの食い違った例をなぞっていたと考えられる。
 
-あわせて、Staff プロンプトの実装をどのリポジトリの責務にするかの整理が必要になった。`unopengis/staccato-spec` は規範仕様の記述に専念させたい一方、`layers-martin` は Library の第一実装に過ぎずプロンプトの本来の置き場所ではない。しかし分離を急ぎすぎると、`layers-martin` 自体が固まる前にリポジトリ切り替えコストが発生する。
+あわせて、Staff プロンプトの実装をどのリポジトリの責務にするかの整理が必要になった。`UNopenGIS/staccato-spec` は規範仕様の記述に専念させたい一方、`layers-martin` は Library の第一実装に過ぎずプロンプトの本来の置き場所ではない。しかし分離を急ぎすぎると、`layers-martin` 自体が固まる前にリポジトリ切り替えコストが発生する。
 
 **Decision**:
 
@@ -262,7 +262,7 @@ www.j-shis.bosai.go.jp     -> 防災科学技術研究所
 
 **Status**: Accepted
 
-**Context**: Cartographer の初期実装(`hfu/faceless-cartographer`)を進める過程で、`layers-martin`/`faceless-cartographer`/`unopengis/staccato-spec` の3リポジトリ間の整合性を確認した。2点、ドキュメントで埋めるべきギャップが見つかった。
+**Context**: Cartographer の初期実装(`hfu/faceless-cartographer`)を進める過程で、`layers-martin`/`faceless-cartographer`/`UNopenGIS/staccato-spec` の3リポジトリ間の整合性を確認した。2点、ドキュメントで埋めるべきギャップが見つかった。
 
 1. `map-intent-vnext.md` の `catalog_context.active_catalogs[*].version` は任意フィールドだが、`docs/catalog`/`docs/catalog.json` 自体にはバージョン情報が無く、`docs/manifest.json` の `generated_at` を別途取得しないと埋められない。`STAFF_PROMPT.md` の実例もこれまで `version` を設定していなかった。
 2. `faceless-cartographer` を実際にブラウザで動かして検証したところ、MapLibre GL JS の attribution 表示は「現在表示中のレイヤー」の分しか合成しない仕様だと分かった。D16 で `attribution` を56%のレイヤーに付与したが、典型的な Map Intent の構成(`maps.gsi.go.jp` 系の std やハザードマップが `required_layers` に、D16 で確実に attribution が付く4ホスト系が `optional_layers` になりやすい)では、既定表示の状態で画面に出典が一切表示されない組み合わせになりがちであることが実地で確認された。
@@ -302,7 +302,7 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 **Context**: `STAFF_PROMPT.md` の実体である `````text````` フェンス内(`hfu/faceless-cartographer` の `GET /` にもそのまま表示される、[D13](../faceless-cartographer 参照)部分)を見直したところ、layers-martin固有の「カタログの引き方」からいきなり始まっており、「そもそもStaffとは何か・何をしてよく何をしてはいけないか・利用者やCartographerとの正しいやりとりの形」という、staccato-spec準拠の最低限の導入を欠いていることが指摘された。これまでの反復検証(source_id捏造、スキーマ不準拠等)はすべてカタログ固有の失敗モードに対する後付けの補足であり、そもそもの土台が無いまま補足だけを積み重ねていた。
 
-**Decision**: フェンス内の冒頭に「## あなたは Staff である」節を追加した。内容は `unopengis/staccato-spec` の `architecture-principles.md`(責務分離・least disclosure等の核心原則、§5.2のStaff characterization)と `ADR 0002`(起動時カタログ契約・隠れたフォールバック禁止)を出典として要約したもの: (1) 責務(Map Intentの生成、機微な文脈を含めない、設定済みカタログのみ使用、source_id捏造禁止)、(2) 正しいやりとりの形(User→Staff→人間によるコピー&ペースト→Cartographer、URLではなくMap Intentが共有の一次artifact)、(3) Map Intentの必須フィールド。この節の後に、既存のlayers-martin固有の内容(カタログの引き方、source_id捏造禁止の詳細、意味解決の指針等)を「以上がStaccatoの一般的な規定である。以下はLibraryとしてlayers-martinを使う際に固有の補足である」という接続で続ける構成にした。
+**Decision**: フェンス内の冒頭に「## あなたは Staff である」節を追加した。内容は `UNopenGIS/staccato-spec` の `architecture-principles.md`(責務分離・least disclosure等の核心原則、§5.2のStaff characterization)と `ADR 0002`(起動時カタログ契約・隠れたフォールバック禁止)を出典として要約したもの: (1) 責務(Map Intentの生成、機微な文脈を含めない、設定済みカタログのみ使用、source_id捏造禁止)、(2) 正しいやりとりの形(User→Staff→人間によるコピー&ペースト→Cartographer、URLではなくMap Intentが共有の一次artifact)、(3) Map Intentの必須フィールド。この節の後に、既存のlayers-martin固有の内容(カタログの引き方、source_id捏造禁止の詳細、意味解決の指針等)を「以上がStaccatoの一般的な規定である。以下はLibraryとしてlayers-martinを使う際に固有の補足である」という接続で続ける構成にした。
 
 **Consequences**: `STAFF_PROMPT.md` は単体である程度自己完結したStaffプロンプトとして機能するようになった(既存のより詳細なStaffシステムプロンプトへの追加としても、単体としても使える)。`hfu/faceless-cartographer` はこのファイルを取得して表示している([D13](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md#d13-gettopページに現在のstaffプロンプトを表示する))ため、コード変更なしに反映される。
 

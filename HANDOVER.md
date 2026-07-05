@@ -17,7 +17,7 @@ GitHub Pages では Martin サーバを動かさず、`docs/` 配下に静的フ
 
 ## 上位構想: Staccato アーキテクチャにおける位置づけ
 
-`layers-martin` は単独のツールではなく、`unopengis/staccato-spec` が定義する Staff-Cartographer アーキテクチャの一部として構想されている（`UNopenGIS/7#936` が親issue、`UNopenGIS/7#938` が本プロジェクトのissue）。
+`layers-martin` は単独のツールではなく、`UNopenGIS/staccato-spec` が定義する Staff-Cartographer アーキテクチャの一部として構想されている（`UNopenGIS/7#936` が親issue、`UNopenGIS/7#938` が本プロジェクトのissue）。
 
 Staccato は次の 4 者モデルを定義する。
 

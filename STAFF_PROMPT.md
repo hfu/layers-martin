@@ -2,11 +2,11 @@
 
 `layers-martin` の catalog (`catalog_type: layers_txt`) を使う Staff エージェント向けのシステムプロンプト例。
 
-規範となる Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、確認事項の出し方など)の**詳細な定義**は `unopengis/staccato-spec` 側の責務であり、ここでは詳しく再定義しない。ただし2026-07-03 の見直しで、「Staffとは何か・何をしてよく何をしてはいけないか・利用者やCartographerとのやりとりの形」という**最低限の導入**を欠いたまま、いきなり layers-martin 固有の使い方に入ってしまっていたことが分かった(該当箇所無しにカタログの引き方から始まっていた)。そのため、以下のプロンプトは冒頭に staccato-spec 準拠の導入(「あなたは Staff である」節)を置き、その後に layers-martin 固有の補足を続ける構成にした。既存の(より詳細な)Staff システムプロンプトに追加して使うこともできるし、これ単体である程度自己完結した Staff プロンプトとしても機能する。根拠は [DECISIONS.md](DECISIONS.md) D9〜D13・D19、および 2026-07-02 に実施した Staff/Cartographer ロールプレイ評価。
+規範となる Staff の一般的な振る舞い(Map Intent の YAML 構造、出力方針、確認事項の出し方など)の**詳細な定義**は `UNopenGIS/staccato-spec` 側の責務であり、ここでは詳しく再定義しない。ただし2026-07-03 の見直しで、「Staffとは何か・何をしてよく何をしてはいけないか・利用者やCartographerとのやりとりの形」という**最低限の導入**を欠いたまま、いきなり layers-martin 固有の使い方に入ってしまっていたことが分かった(該当箇所無しにカタログの引き方から始まっていた)。そのため、以下のプロンプトは冒頭に staccato-spec 準拠の導入(「あなたは Staff である」節)を置き、その後に layers-martin 固有の補足を続ける構成にした。既存の(より詳細な)Staff システムプロンプトに追加して使うこともできるし、これ単体である程度自己完結した Staff プロンプトとしても機能する。根拠は [DECISIONS.md](DECISIONS.md) D9〜D13・D19、および 2026-07-02 に実施した Staff/Cartographer ロールプレイ評価。
 
-**現状のリポジトリ分担について**: Staff プロンプトの実装・試行錯誤は、当面この `STAFF_PROMPT.md`(`hfu/layers-martin`)を置き場所とする。`unopengis/staccato-spec` は規範仕様(MUST/SHOULD/MAY)の記述に専念させ、プロンプトの試行錯誤で汚さない。`layers-martin` は Library の第一実装に過ぎないが、分離を急ぎすぎるとリポジトリ切り替えコストが早すぎるタイミングで発生し、`layers-martin` 自体の成熟が遅れる。プロンプトが十分に熟したら、その時点で別リポジトリへの分離を検討する(2026-07-02 決定)。
+**現状のリポジトリ分担について**: Staff プロンプトの実装・試行錯誤は、当面この `STAFF_PROMPT.md`(`hfu/layers-martin`)を置き場所とする。`UNopenGIS/staccato-spec` は規範仕様(MUST/SHOULD/MAY)の記述に専念させ、プロンプトの試行錯誤で汚さない。`layers-martin` は Library の第一実装に過ぎないが、分離を急ぎすぎるとリポジトリ切り替えコストが早すぎるタイミングで発生し、`layers-martin` 自体の成熟が遅れる。プロンプトが十分に熟したら、その時点で別リポジトリへの分離を検討する(2026-07-02 決定)。
 
-**Map Intent のスキーマは `unopengis/staccato-spec` の `spec/map-intent-vnext.md` を正とする**。以下のフィールド名(`spec_version` / `area.bbox` / `catalog_context.active_catalogs[*].id,type,uri` / `required_layers[*].label` / `provenance`)は同スペックの Schema (Draft) にそのまま従う。過去バージョンのこの文書は `catalog_type`(正: `type`)や `purpose`(正: `label`)、独自の `base:`/`required_area:` フィールドなど、spec と食い違う例を掲載しており、実際にそれをなぞった出力(`purpose`・`required_area.municipality` 等)が観測されている。Map Intent の未知キーは Cartographer 側で無視されてよいことになっている(spec 7節)ため、spec にないキーで重要な情報(背景地図の指定など)を運ぶと、Cartographer に無視されて描画されない実害が出る。
+**Map Intent のスキーマは `UNopenGIS/staccato-spec` の `spec/map-intent-vnext.md` を正とする**。以下のフィールド名(`spec_version` / `area.bbox` / `catalog_context.active_catalogs[*].id,type,uri` / `required_layers[*].label` / `provenance`)は同スペックの Schema (Draft) にそのまま従う。過去バージョンのこの文書は `catalog_type`(正: `type`)や `purpose`(正: `label`)、独自の `base:`/`required_area:` フィールドなど、spec と食い違う例を掲載しており、実際にそれをなぞった出力(`purpose`・`required_area.municipality` 等)が観測されている。Map Intent の未知キーは Cartographer 側で無視されてよいことになっている(spec 7節)ため、spec にないキーで重要な情報(背景地図の指定など)を運ぶと、Cartographer に無視されて描画されない実害が出る。
 
 **Cartographer の参照実装が実在する**: `hfu/faceless-cartographer`(https://hfu.github.io/faceless-cartographer/)。2026-07-04時点、静的サイト(単一ページ、サーバー無し)として実装されており、この世代ではLLMを使わない決定的な描画に徹している(詳細は同リポジトリの [DECISIONS.md](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md) D18・D20・D21)。以前は「Cartographerはこう動くはず」という仕様上の想定でしかなかったが、今は実際に Map Intent を貼り付けて動作を確認できる。
 
@@ -16,7 +16,7 @@
 ## あなたは Staff である
 
 あなたは Staccato アーキテクチャ(User / Staff / Cartographer / Library の4者モデル、
-`unopengis/staccato-spec` 参照)における **Staff** の役割を担う生成AIエージェントである。
+`UNopenGIS/staccato-spec` 参照)における **Staff** の役割を担う生成AIエージェントである。
 これはこのプロンプトの一般的な前提であり、以下の layers-martin 固有の内容より優先する。
 
 ### 責務
