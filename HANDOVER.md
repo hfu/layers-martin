@@ -34,7 +34,7 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 
 具体的な設計判断とその理由は [DECISIONS.md](DECISIONS.md) を参照。Staff がこのカタログを実際に解決に使う際の使い方(既知の欠落への対処を含む)は [STAFF_PROMPT.md](STAFF_PROMPT.md) を参照。
 
-## 現在の状態(2026-07-02 時点)
+## 現在の状態(2026-07-05 時点)
 
 - 実装は `build_catalog.rb`(単一 Ruby スクリプト)。`docs/` に生成物一式を出力し、GitHub Actions(`build-catalog.yml`)が毎日 cron で再生成・コミットする。
 - 主カタログは **1,861 件**。ルート `layers.txt` に加え `layers0.txt`([D13](DECISIONS.md#d13-layers0txt-を明示的に読み込む)、`std`/`pale`/`blank`/`english` 等の背景地図の在処)も読み込んでいる。拡張子除外・干渉SAR抑制([D9](DECISIONS.md#d9-干渉sarスナップショットレイヤーを主カタログから抑制する))・航空機SAR抑制([D15](DECISIONS.md#d15-航空機sar画像スナップショットも同じ原則で抑制する))・重複URL抑制([D10](DECISIONS.md#d10-同一タイルurlの重複参照を抑制する))を経てこの件数になっている。除外理由の内訳は `docs/report.json` の `summary.excluded_by_reason` を参照。
@@ -45,6 +45,8 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 - `STAFF_PROMPT.md` の実行可能プロンプト部分に、staccato-spec準拠の「あなたはStaffである」導入節(責務・正しいやりとりの形・Map Intent必須フィールド)を追加した([D19](DECISIONS.md#d19-staff_promptmdに「あなたはstaffである」導入節を追加する))。以前はlayers-martin固有の使い方からいきなり始まっており、Staffとしての基礎が欠けていた。
 - `hfu/faceless-cartographer` がSPA・LLM無し・静的サイトへとアーキテクチャを変更したことを受け、`STAFF_PROMPT.md` の「Cartographer の `POST /` に貼り付ける」という実装依存の表現を「Cartographer の画面に貼り付ける」に改め、参照実装が実在すること・LLMを使わないこと・`cartographer_feedback` の環流を明記した([D20](DECISIONS.md#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる))。
 - `layers-martin` の責務拡張として、実際に稼働している別の Martin サーバー `stars.optgeo.org/catalog`(国土地理院最適化ベクトルタイル `bvmap` を含む)を取り込めないか検討した結果、`layers-martin` 側のコード・カタログ生成物には手を入れず、`STAFF_PROMPT.md` に「別カタログ」として案内する形にとどめた([D21](DECISIONS.md#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない))。統合用のaggregatorリポジトリは不要と判断した — Map Intent の `catalog_context.active_catalogs` が複数カタログの併記をもともと許容しているため。`bvmap` の実際の描画(ジオメトリタイプ別の汎用スタイリング)は `hfu/faceless-cartographer` 側で実装済み(同リポジトリ D23)。
+- D21 の内容(`stars.optgeo.org` を別カタログとして案内)は `hfu/faceless-cartographer` 側で実データによる統合テストと実ブラウザでのスクリーンショット確認まで完了した(同リポジトリ D23): `layers-martin` の `std` と `stars.optgeo.org` の `bvmap` を1つの Map Intent の `active_catalogs` から同時解決し、`bvmap` の実際の道路・水域・建物ポリゴンが描画されることまで確認済み。`layers-martin` 側は無変更のまま。
+- (運用メモ、`layers-martin` 自身にも当てはまる)GitHub Pages の branch-based デプロイ(このプロジェクトも `hfu/faceless-cartographer` も `build_type: legacy` で同じ仕組み)は、ビルド自体が成功していても「Deployment failed, try again later」で失敗することがまれにある(`faceless-cartographer` 側で2回観測)。自動生成される `pages build and deployment` ワークフローはリポジトリの `.github/workflows/` には存在せず修正できないため、症状が出た場合は `gh api repos/hfu/layers-martin/pages/builds -X POST` で再実行すれば通常は解消する。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
   - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。
