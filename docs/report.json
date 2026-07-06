@@ -4,11 +4,11 @@
     "visited_urls": 183,
     "fetched_files": 183,
     "groups_seen": 859,
-    "layers_seen": 13931,
+    "layers_seen": 13932,
     "tiles_included": 1861,
-    "layers_excluded": 12070,
+    "layers_excluded": 12071,
     "excluded_by_reason": {
-      "unsupported_extension": 1323,
+      "unsupported_extension": 1324,
       "sar_observation_snapshot": 10538,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -729,7 +729,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 332237
+      "bytes": 332578
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -173379,6 +173379,20 @@
         "地図の更新情報や提供地域",
         "電子国土基本図の更新情報",
         "2026年迅速更新情報"
+      ]
+    },
+    {
+      "id": "men202606",
+      "title": "6月更新",
+      "url": "https://maps.gsi.go.jp/xyz/men202606/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "地図の更新情報や提供地域",
+        "電子国土基本図の更新情報",
+        "2026年面的更新情報"
       ]
     },
     {
