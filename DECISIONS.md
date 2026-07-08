@@ -36,6 +36,7 @@
 | [D19](#d19-staff_promptmdに「あなたはstaffである」導入節を追加する) | `STAFF_PROMPT.md` に「あなたは Staff である」導入節を追加する | Accepted | 2026-07-03 |
 | [D20](#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる) | `STAFF_PROMPT.md` を `faceless-cartographer` の新アーキテクチャに追随させる | Accepted | 2026-07-04 |
 | [D21](#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない) | `STAFF_PROMPT.md` に `stars.optgeo.org` を別カタログとして追記する。aggregatorは作らない | Accepted | 2026-07-04 |
+| [D22](#d22-staff_promptmdをfaceless-cartographer-d24に追随させstaffの振る舞いを主眼に再構成する) | `STAFF_PROMPT.md` を `faceless-cartographer` D24 に追随させ、Staff の振る舞いを主眼に再構成する | Accepted | 2026-07-08 |
 
 ---
 
@@ -331,6 +332,32 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 **Decision**: (C) を採用した。`layers-martin` のコード・カタログ生成物には一切手を入れない。代わりに `STAFF_PROMPT.md` に新しい節「別カタログ: stars.optgeo.org(国土地理院最適化ベクトルタイル)」を追加し、Staff が `catalog_context.active_catalogs` に `layers-martin` と `stars.optgeo.org` の2件を並べて使えること、使い分けの目安(ラスタ背景地図で足りるなら不要、ベクトルタイルとしてベースマップを扱いたいなら `bvmap`)、`bvmap` の `source_id` もカタログを実際に取得してから使うこと(捏造禁止の原則がこちらにも及ぶ)を明記した。実際にこの2カタログを1つの Map Intent で解決できることは `hfu/faceless-cartographer` 側で実データに対する統合テストとして確認済み(同リポジトリ [DECISIONS.md](https://github.com/hfu/faceless-cartographer/blob/main/DECISIONS.md) D23)。`bvmap` の実際の描画(ジオメトリタイプ別の汎用スタイリング)も同じくCartographer側の責務として実装済み。
 
 **Consequences**: `layers-martin` はカタログのマージや外部サーバーへの依存を一切持たないまま、Staff がベクトルベースマップという選択肢を得られるようになった。将来、統合したいカタログが増えて「毎回 `active_catalogs` に手で列挙する」運用が煩雑になった場合は、その時点で改めて(B)のアグリゲーターを検討する余地を残す(このADRはその判断を妨げない、可逆的な決定)。
+
+## D22: `STAFF_PROMPT.md` を `faceless-cartographer` D24 に追随させ、Staff の振る舞いを主眼に再構成する
+
+**Status**: Accepted
+
+**Context**: `hfu/faceless-cartographer` が背景地図を常時自動描画するように変更された(D24: `bvmap` グレースケール + Mapterhorn hillshade/terrain に固定)。これに伴い、`layers-martin` の `STAFF_PROMPT.md` の現行の記述(「背景地図が必要な場合は `std`/`pale`/`blank`/`english` の4件から選べ」)は単に古いだけでなく、実害をもたらす。
+
+`faceless-cartographer` の `style.ts`(`buildStyle()`)では、レイヤースタックが `[...baseStyle.before(背景/水系/hillshade), ...主題レイヤー, ...contours(等高線), ...baseStyle.after(道路・建物・注記)]` という順序で合成される。Staff が背景地図(例: `"std"`)を `required_layers` に含めると、不透明なラスタタイルとして bvmap 背景の**上**・等高線や道路ラベルの**下**に挿入され、bvmap 由来の背景・hillshade・水系を覆い隠しつつ、bvmap 由来の道路・建物・注記だけが上に残るという崩れた見た目になる。`faceless-cartographer` 自身の `EXAMPLE_MAP_INTENT` は D24 で `std` を削除しており、この認識と整合している。
+
+加えて、現在の `STAFF_PROMPT.md` の構造に対する根本的な指摘があった: 本文(フェンス内の約210行)のうち、Staff の識別・責務・やりとりの形は冒頭40行で、残りは layers-martin カタログ固有の癖(attribution欠落、bounds欠落、同名紛らわしいレイヤーの見分け方等)に費やされている。Cartographer が実際に何をしてくれるか(背景・等高線・凡例・任意レイヤー切替・地形3D等)を踏まえて、Staff として Map Intent をどう書くべきかという「能力を踏まえた振る舞い」の節が丸ごと欠けている。ポイントがずれている。
+
+**Decision**: `STAFF_PROMPT.md` を以下の方針で全面的に再構成した。
+
+1. フェンス内の構成を再編成: 「Staccato の一般的な規定」(「あなたは Staff である」/「正しいやりとりの形」/「必須フィールド」)と、その直後に新しく「Cartographer(参照実装)の現在の能力を踏まえること」節を追加。この節で、背景地図・等高線・地形3D・任意レイヤー・凡例・cartographer_feedback など、Cartographer が「勝手にやってくれること」を明示的に列挙した。その上で、Staff としての正しい振る舞いが自動的に導き出される構成にした。
+
+2. 「背景地図(base map)について」節を全面差し替え: 「`std`/`pale`/`blank`/`english` から選ぶ」という現行の案内を撤回し、「背景は自動描画されるため source_id を指定する必要は無い。あえて指定すると、bvmap 背景の上に不透明なラスタとして重なり、道路・注記だけがその上にさらに乗る崩れた見た目になるため、指定しないこと」と明記した。
+
+3. 「別カタログ: stars.optgeo.org」節の理由付けを書き換え: D21 では「背景をベクトルタイル化したい場合に bvmap」という理由付けだったが、D24 により Cartographer が `bvmap` と同等以上のものを自動描画するため、この理由は弱くなった。代わりに、「Cartographer の既定背景には無い、本当に新しいコンテンツ」を案内する主目的へシフトした。具体的には `japan-seamless-aerial-z18`/`seamlessphoto512`(全国空中写真、ラスタ)と `vlcm`/`vbm`(北海道火山地質図・変動地形図、ベクトルタイル、道南〜道央限定)を主役に、使い分けの目安を更新した。
+
+4. 「動作確認済みの例」の YAML から `source_id: "std"` を削除し、削除理由(背景は自動描画されるため不要)を一言添えた。`faceless-cartographer` 自身の `EXAMPLE_MAP_INTENT` と整合。
+
+5. フェンス外側(GitHub で読む人間向け)の前置きテキストに、今回の書き換えの背景(D24 による背景地図の扱い変更、実害の分析、能力ベース節の欠如という指摘)を追記し、文脈を明確にした。
+
+**Consequences**: `STAFF_PROMPT.md` が「何をしてはいけないか」という禁止ベースの記述(D14「source_id を捏造しないこと」等)から、「Cartographer が何をしてくれるか」という能力ベースの記述へ、主眼がシフトした。この変更により、Staff が能力に見合った正しい Map Intent を書きやすくなる。背景地図指定による見た目崩れという実害も解消される。
+
+`hfu/faceless-cartographer` はこのファイルをビルド時に取得して `src/staff-prompt.txt` に組み込み、UI上で表示する(`scripts/fetch-staff-prompt.mjs` 実行時)。新しい `STAFF_PROMPT.md` の内容は自動的に反映される。
 
 ## バックログ(未決定・保留)
 
