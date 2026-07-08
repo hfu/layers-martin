@@ -37,6 +37,7 @@
 | [D20](#d20-staff_promptmdをfaceless-cartographerの新アーキテクチャに追随させる) | `STAFF_PROMPT.md` を `faceless-cartographer` の新アーキテクチャに追随させる | Accepted | 2026-07-04 |
 | [D21](#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない) | `STAFF_PROMPT.md` に `stars.optgeo.org` を別カタログとして追記する。aggregatorは作らない | Accepted | 2026-07-04 |
 | [D22](#d22-staff_promptmdをfaceless-cartographer-d24に追随させstaffの振る舞いを主眼に再構成する) | `STAFF_PROMPT.md` を `faceless-cartographer` D24 に追随させ、Staff の振る舞いを主眼に再構成する | Accepted | 2026-07-08 |
+| [D23](#d23-staff_promptmdをハイブリッド対応オンラインオフライン両立に設計する) | `STAFF_PROMPT.md` をハイブリッド対応(オンライン/オフライン両立)に設計する | Accepted | 2026-07-09 |
 
 ---
 
@@ -359,9 +360,34 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 `hfu/faceless-cartographer` はこのファイルをビルド時に取得して `src/staff-prompt.txt` に組み込み、UI上で表示する(`scripts/fetch-staff-prompt.mjs` 実行時)。新しい `STAFF_PROMPT.md` の内容は自動的に反映される。
 
+## D23: STAFF_PROMPT.md をハイブリッド対応（オンライン/オフライン両立）に設計する
+
+**Status**: Accepted
+
+**Context**: エンタープライズAI環境がインターネット接続できない場合、Staff は `catalog` を都度 fetch して source_id を確認することができない。これまで「別ファイル STANDALONE_PROMPT.md を作ってカタログ全 1,861 件を埋め込む」という計画があったが、そうすると：
+- 保守負荷が増える(生成スクリプト必要、二重管理)
+- ファイル容量が増加(150-220 KB)
+- source_id 完全性と実用性のバランスが悪い
+
+別案として「単一 STAFF_PROMPT.md で両方対応」を検討: インターネット接続有りの場合は「カタログの引き方」に従う(現行)、接続なしの場合は「オフラインフォールバック」セクションの既知 source_id 参考リストから選択。
+
+**Decision**: 単一ファイル STAFF_PROMPT.md でハイブリッド対応を採用した。
+
+- 「カタログの引き方」セクション: インターネット接続有りの手順(動的 catalog fetch)
+- 「オフラインフォールバック」セクション(新規): インターネット接続無しでの参考リスト
+  - カテゴリ別(災害リスク、地形・地質、土地利用)に厳選した代表例 ~15 件
+  - 「見つからない場合は捏造するな」原則は変わらず
+  - 実装判定: 「札幌の地形分類を見たい」という自然言語入力に対して生成した Map Intent が layers-martin カタログで完全に解決できることを確認(lcmfc2・relief・lcm25k_2012 全て存在、メタデータ適切)
+
+**Consequences**: 
+- 両環境対応: 接続有無を問わず使用可能
+- 保守シンプル: 二重管理・生成スクリプト不要
+- 実用性優先: 完全性より代表例で十分
+- source_id 参考リストは「参考値」明記(完全ではない)
+
 ## バックログ(未決定・保留)
 
-### エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案、仮称)
+### ~~エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案)~~
 
 インターネットに接続できないエンタープライズAI環境では、Staffは `catalog`/`{id}` を都度fetchすることができない。現在の `STAFF_PROMPT.md` は「カタログを取得して調べる」ことを前提にしており、そのままでは使えない。
 
