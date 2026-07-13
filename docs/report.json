@@ -3,12 +3,12 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 183,
     "fetched_files": 183,
-    "groups_seen": 859,
-    "layers_seen": 13932,
-    "tiles_included": 1861,
-    "layers_excluded": 12071,
+    "groups_seen": 861,
+    "layers_seen": 13936,
+    "tiles_included": 1863,
+    "layers_excluded": 12073,
     "excluded_by_reason": {
-      "unsupported_extension": 1324,
+      "unsupported_extension": 1326,
       "sar_observation_snapshot": 10538,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -53,7 +53,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
-      "bytes": 61258
+      "bytes": 65848
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers2.txt",
@@ -1904,6 +1904,32 @@
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
       "path": [
         "年代別の写真"
+      ]
+    },
+    {
+      "id": "nendophoto2026_spec",
+      "title": "2026年",
+      "url": "https://maps.gsi.go.jp/xyz/nendophoto2026/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+      "path": [
+        "年代別の写真",
+        "年度別写真（2007年以降）",
+        "2026年"
+      ]
+    },
+    {
+      "id": "nendophoto2025_spec",
+      "title": "2025年",
+      "url": "https://maps.gsi.go.jp/xyz/nendophoto2025/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
+      "path": [
+        "年代別の写真",
+        "年度別写真（2007年以降）",
+        "2025年"
       ]
     },
     {

@@ -7092,6 +7092,14 @@
       "name": "2024年",
       "content_type": "image/png"
     },
+    "nendophoto2025": {
+      "name": "2025年",
+      "content_type": "image/png"
+    },
+    "nendophoto2026": {
+      "name": "2026年",
+      "content_type": "image/png"
+    },
     "nihonkaichubu_bld": {
       "name": "建物被害",
       "content_type": "image/png"
