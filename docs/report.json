@@ -3,12 +3,12 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 183,
     "fetched_files": 183,
-    "groups_seen": 861,
-    "layers_seen": 13936,
+    "groups_seen": 860,
+    "layers_seen": 13934,
     "tiles_included": 1863,
-    "layers_excluded": 12073,
+    "layers_excluded": 12071,
     "excluded_by_reason": {
-      "unsupported_extension": 1326,
+      "unsupported_extension": 1324,
       "sar_observation_snapshot": 10538,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -729,7 +729,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 332578
+      "bytes": 329901
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -173253,34 +173253,6 @@
         "他機関の情報",
         "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
         "対象施設周辺地域（レッドゾーン＋イエローゾーン）"
-      ]
-    },
-    {
-      "id": "drone_yz_2607",
-      "title": "【令和8年7月14日以降】対象施設周辺地域（イエローゾーン）",
-      "url": "https://maps.gsi.go.jp/xyz/drone_yz_2607/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "path": [
-        "その他",
-        "他機関の情報",
-        "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
-        "【令和8年7月14日以降】対象施設周辺地域（レッドゾーン＋イエローゾーン）"
-      ]
-    },
-    {
-      "id": "drone_rz_2607",
-      "title": "【令和8年7月14日以降】対象施設及びその指定敷地等（レッドゾーン）",
-      "url": "https://maps.gsi.go.jp/xyz/drone_rz_2607/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "path": [
-        "その他",
-        "他機関の情報",
-        "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
-        "【令和8年7月14日以降】対象施設周辺地域（レッドゾーン＋イエローゾーン）"
       ]
     },
     {
