@@ -142,7 +142,8 @@ catalog_context:
 - `05_dosekiryukeikaikuiki` — 土石流(警戒区域/特別警戒区域)
 - `05_jisuberikeikaikuiki` — 地すべり(警戒区域/特別警戒区域)
 - `05_kyukeishakeikaikuiki` — 急傾斜地の崩壊(警戒区域/特別警戒区域)
-- `flood_l2` または `flood_l3` — 洪水浸水想定区域(ハザードマップ由来)
+- `01_flood_l1_shinsuishin_newlegend_data` — 洪水浸水想定区域(計画規模(現在の凡例))
+- `01_flood_l2_shinsuishin_data` — 洪水浸水想定区域(想定最大規模)
 
 ### 地形・地質
 
