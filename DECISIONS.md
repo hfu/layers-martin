@@ -38,6 +38,7 @@
 | [D21](#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない) | `STAFF_PROMPT.md` に `stars.optgeo.org` を別カタログとして追記する。aggregatorは作らない | Accepted | 2026-07-04 |
 | [D22](#d22-staff_promptmdをfaceless-cartographer-d24に追随させstaffの振る舞いを主眼に再構成する) | `STAFF_PROMPT.md` を `faceless-cartographer` D24 に追随させ、Staff の振る舞いを主眼に再構成する | Accepted | 2026-07-08 |
 | [D23](#d23-staff_promptmdをハイブリッド対応オンラインオフライン両立に設計する) | `STAFF_PROMPT.md` をハイブリッド対応(オンライン/オフライン両立)に設計する | Accepted | 2026-07-09 |
+| [D24](#d24-staff_promptmd-を指標駆動の実証ループで改善する) | `STAFF_PROMPT.md` を「指標駆動の実証ループ」で改善する | Accepted | 2026-07-16 |
 
 ---
 
@@ -384,6 +385,33 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - 保守シンプル: 二重管理・生成スクリプト不要
 - 実用性優先: 完全性より代表例で十分
 - source_id 参考リストは「参考値」明記(完全ではない)
+
+## D24: STAFF_PROMPT.md を「指標駆動の実証ループ」で改善する
+
+**Status**: Accepted(2026-07-16)
+
+**Context**: これまで STAFF_PROMPT.md の改善は、ロールプレイ評価(D9〜D13)や仕様追随で行ってきたが、「実際に Map Intent を生成し、Cartographer で描画してみて、客観指標で良し悪しを測る」という反復は行っていなかった。その結果、プロンプト自身のオフライン一覧(D23)に載っている source_id が陳腐化していても気づけなかった。
+
+`hfu/faceless-cartographer` の UI 改善(同リポジトリ Issue #4)で、サンプル質問「石狩川の治水について考えたい」に対応する Map Intent を実データで組み立てた際、この一覧の洪水 id が実在しないことに気づいたのが契機。
+
+**Decision**: STAFF_PROMPT.md の改善は、次の**指標駆動の実証ループ**で行う。
+
+1. **評価ハーネス**: `hfu/faceless-cartographer` の `scripts/eval-intent.ts`(同リポジトリの解決パイプライン `parseMapIntent`/`resolveLayers` と `style.ts` と同一の描画可能性判定を再利用)で、Map Intent YAML 1件から客観指標を算出する。
+2. **指標(指標)**: M1 スキーマ妥当性 / M2 解決率(resolved/(resolved+missing)) / M3 描画可能率(vector_layers 無しの vector は unrenderable) / M4 視野内データ(area.bbox 中心タイルが実データを返すか) / M5 フレーミング(bbox の有無) / M6 非 spec キー。
+3. **テスト質問スイート**: カタログの強みと既知の罠を代表する 7 問(土砂災害・治水・洪水・土地条件・液状化〈負例〉・空中写真〈第2カタログ raster〉・火山地質〈第2カタログ vector〉)。
+4. **ループ**: 現行プロンプトに忠実に Staff を演じて各問の Map Intent を生成 → ハーネスで採点 → 各 defect をプロンプトのどの記述が原因か根本原因分解 → 修正 → 再採点。閾値(M2=M3=1.0、負例正答)到達か改善頭打ちまで反復。
+
+**この回の実測結果(before → after)**: スイート 4/6 → **6/6 合格**。
+
+- **M2 defect(最重要)**: オフライン一覧の洪水 id `flood_l2`/`flood_l3` が 404(実在せず)。実在 id `01_flood_l2_shinsuishin_data`(想定最大規模)/`01_flood_l1_shinsuishin_newlegend_data`(計画規模)へ修正。「石狩川治水」で M2 0.50→1.00、「洪水浸水想定」で M2 0.00→1.00。
+- **再発防止**: 「一覧の id 自体も改名で陳腐化しうる。接続時はカタログ実在確認をオフライン一覧に優先」を明記。
+- **M4 finding**: `lcm25k`(土地条件図)は石狩平野を整備対象外で 404(解決するが空描画)。カバレッジ注意と、低地地形は `lcmfc2` で代替する指針を追加(M4 0/1→1/1)。
+- **追加**: 「石狩川の治水」worked example(実 bbox・治水地形分類図×洪水浸水・`relationships_to_highlight`)を新設。
+
+**Consequences**:
+- プロンプトの陳腐化・カバレッジ欠落を、印象論ではなく再現可能な指標で検出・修正できるようになった。
+- カタログ改訂で source_id が改名されると再びオフライン一覧が陳腐化するため、定期的に本ループを回して回帰確認する(将来: cron 化・フィクスチャ化を検討)。
+- ハーネスとテスト intents は `hfu/faceless-cartographer` 側に置く(解決コードがそこにあるため)。STAFF_PROMPT.md 改善の一次リポジトリは引き続き `layers-martin`。
 
 ## バックログ(未決定・保留)
 

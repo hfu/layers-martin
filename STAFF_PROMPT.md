@@ -137,13 +137,20 @@ catalog_context:
 のメインカタログに存在しない可能性が高い。下記「source_id を捏造しないこと」の「見つからない場合は捏造するな」
 というルールを優先すること。
 
+**さらに重要: このリストに載っている source_id 自体も陳腐化しうる。** カタログの key は改訂で改名される
+ことがある(実例: かつてこのリストは洪水を `flood_l2`/`flood_l3` としていたが、現在の実在 key は
+`01_flood_l2_shinsuishin_data` / `01_flood_l1_shinsuishin_newlegend_data` であり、旧 id は 404 になる)。
+**インターネットに接続できる場合は、このオフライン一覧の id をそのまま信用せず、必ず「カタログの引き方」に
+従って `catalog` を取得し、使う直前に各 source_id が実在することを確認すること。** オフライン一覧より
+オンライン検証が常に優先する。
+
 ### 災害リスク(ハザードマップ)
 
 - `05_dosekiryukeikaikuiki` — 土石流(警戒区域/特別警戒区域)
 - `05_jisuberikeikaikuiki` — 地すべり(警戒区域/特別警戒区域)
 - `05_kyukeishakeikaikuiki` — 急傾斜地の崩壊(警戒区域/特別警戒区域)
-- `01_flood_l1_shinsuishin_newlegend_data` — 洪水浸水想定区域(計画規模(現在の凡例))
 - `01_flood_l2_shinsuishin_data` — 洪水浸水想定区域(想定最大規模)
+- `01_flood_l1_shinsuishin_newlegend_data` — 洪水浸水想定区域(計画規模(現在の凡例))
 
 ### 地形・地質
 
@@ -155,6 +162,11 @@ catalog_context:
 
 - `lcm25k_2012` — 数値地図25000(土地条件図)
 - `lcm25k` — 数値地図25000(より新しいバージョン、利用可能ならこちらを優先)
+  - **カバレッジに注意**: 土地条件図(`lcm25k`/`lcm25k_2012`)は整備済みの主要平野の一部のみで、全国は覆わない。
+    例えば北海道の石狩平野では**タイルが存在せず(404)、地図上に何も出ない**ことを確認済み。対象地域で
+    土地条件図が空になる場合、低地の地形(旧河道・自然堤防・後背湿地など)を見たい意図であれば、より広く
+    カバーする治水地形分類図(`lcmfc2`)を代替・併用候補にする。`bounds` がカタログに無いため、対象地域を
+    実際にカバーするかはタイル取得で確認するのが確実(下記「地域・範囲の解決」参照)。
 
 ### 背景地図関連
 
@@ -273,5 +285,51 @@ provenance:
   generated_by: "staff-agent-name"  # 実際の Staff エージェント識別子に置き換える
   generated_at: "2026-07-02T00:00:00Z"  # 実際の生成時刻(ISO 8601)に置き換える
   intent_id: "uuid-or-ulid"  # 実際に発行した ID に置き換える
+```
+
+## 動作確認済みの例2: 「石狩川の治水について考えたい」
+
+治水を考える問いには、**地形(なぜそこが浸水しやすいか)と想定浸水範囲を重ねる**構成が有効。治水地形分類図
+(`lcmfc2`、旧河道・自然堤防・後背湿地などの低地地形)と洪水浸水想定区域(`01_flood_l2_shinsuishin_data`)を
+重ね、`relationships_to_highlight` で両者の対応関係を意図として明示する。対象が地名を含む(石狩川)ため、
+Staff 側で `area.bbox` を石狩平野下流域に解決してから入れる(下記「地域・範囲の解決」の実践例)。
+`hfu/faceless-cartographer` の描画で全レイヤー解決・浸水凡例付き描画を確認済み(2026-07-16)。
+
+```yaml
+spec_version: "map-intent/v2"
+
+goal: "石狩川下流域（石狩平野）の治水を考えるため、治水地形分類図（旧河道・自然堤防・後背湿地などの地形）と洪水浸水想定区域を重ね、地形条件と想定される浸水範囲の関係を背景地形とともに示す。"
+
+area:
+  name: "石狩川下流域（石狩平野）"
+  bbox: [141.25, 43.0, 141.85, 43.4]  # Staff が石狩川下流域を座標に解決して記入
+
+catalog_context:
+  active_catalogs:
+    - id: "layers-martin"
+      type: "layers_txt"
+      uri: "https://hfu.github.io/layers-martin/catalog"
+
+required_layers:
+  - source_id: "lcmfc2"
+    label: "治水地形分類図"
+  - source_id: "01_flood_l2_shinsuishin_data"
+    label: "洪水浸水想定区域（想定最大規模）"
+
+optional_layers:
+  - source_id: "01_flood_l1_shinsuishin_newlegend_data"
+    label: "洪水浸水想定区域（計画規模）"
+
+relationships_to_highlight:
+  - "治水地形分類図が示す旧河道・後背湿地などの低地地形と、想定浸水範囲の対応関係"
+
+sharing_policy:
+  url_share: false
+  intent_share: true
+
+provenance:
+  generated_by: "staff-agent-name"
+  generated_at: "2026-07-16T00:00:00Z"
+  intent_id: "uuid-or-ulid"
 ```
 ````
