@@ -39,6 +39,7 @@
 | [D22](#d22-staff_promptmdをfaceless-cartographer-d24に追随させstaffの振る舞いを主眼に再構成する) | `STAFF_PROMPT.md` を `faceless-cartographer` D24 に追随させ、Staff の振る舞いを主眼に再構成する | Accepted | 2026-07-08 |
 | [D23](#d23-staff_promptmdをハイブリッド対応オンラインオフライン両立に設計する) | `STAFF_PROMPT.md` をハイブリッド対応(オンライン/オフライン両立)に設計する | Accepted | 2026-07-09 |
 | [D24](#d24-staff_promptmd-を指標駆動の実証ループで改善する) | `STAFF_PROMPT.md` を「指標駆動の実証ループ」で改善する | Accepted | 2026-07-16 |
+| [D25](#d25-凡例画像の抽出を-a-href-リンク形式にも拡張するd18-の拡張) | 凡例画像の抽出を `<a href>` リンク形式にも拡張する（D18 の拡張） | Accepted | 2026-07-17 |
 
 ---
 
@@ -412,6 +413,19 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - プロンプトの陳腐化・カバレッジ欠落を、印象論ではなく再現可能な指標で検出・修正できるようになった。
 - カタログ改訂で source_id が改名されると再びオフライン一覧が陳腐化するため、定期的に本ループを回して回帰確認する(将来: cron 化・フィクスチャ化を検討)。
 - ハーネスとテスト intents は `hfu/faceless-cartographer` 側に置く(解決コードがそこにあるため)。STAFF_PROMPT.md 改善の一次リポジトリは引き続き `layers-martin`。
+
+## D25: 凡例画像の抽出を `<a href>` リンク形式にも拡張する（D18 の拡張）
+
+**Status**: Accepted（2026-07-17）
+
+**Context**: [D18](#d18-tilejsonを拡張しlegend_image_urlを新設する) で `legend_image_url`（TileJSON 独自拡張）を新設し、`legendUrl`（直接画像）または `html` 内の `<img>` から凡例画像を抽出していた。しかし GSI の一部レイヤーは凡例を `<img>` ではなく `<a target="_blank" href="…/legend/xxx_legend.jpg">凡例を表示</a>` という**リンク形式**で持つ。代表例が治水地形分類図（`lcmfc2`）で、公式の全国共通凡例 `lcmfc2_legend.jpg` が存在するのに `legend_image_url` が付与されず、`hfu/faceless-cartographer` 側でも凡例が出なかった（同リポジトリ Issue #5）。
+
+**Decision**: `build_catalog.rb` の `legend_image_source` に3段目の抽出を追加する。`html` 内の `<a href="…(画像拡張子)">` を凡例画像として採用するが、**誤検出を防ぐため、href が `/legend/` を含む、またはアンカーテキストに「凡例」を含むものに限定**する（写真リンクや「解説」ページを凡例と誤認しない）。優先順位は従来どおり 直接 `legendUrl` → `<img>` → 新規の `<a>` リンク。`:html_link` 由来は report の warning に記録し透明性を保つ。
+
+**Consequences**:
+- 再生成で凡例数 964 → 966（+2）。新規は `lcmfc2`（治水地形分類図）と `jinkodotai_jinko_sabun1995_2015`（人口動態）で、いずれも `/legend/` 配下の正当な凡例。誤検出なし。
+- `hfu/faceless-cartographer` はカタログを実行時取得するため、コード変更なしで既存の凡例機構（faceless-cartographer D14）が治水地形分類図の凡例を表示するようになる。
+- 治水地形分類図は全国単一タイルレイヤーで、この凡例が唯一の公式共通凡例。地域別の差異は無く「代表的な凡例のみ」といった但し書きは不要。
 
 ## バックログ(未決定・保留)
 

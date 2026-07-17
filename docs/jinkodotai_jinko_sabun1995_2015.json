@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">人口増減数（1995年～2015年）</div><div class=\"gsi_layerinfo_kaisetu\"><p>　1995年（平成7年）及び2015年（平成27年）の2時期の国勢調査の小地域集計（人口等基本集計に関する集計）の4次メッシュ（500mメッシュ）統計データの「男女別人口総数及び世帯総数」（平成７年）及び「その１人口等基本集計に関する事項」(平成27年)から、20年間の500mメッシュ区画単位の人口総数の増減数を計算し、４つの階級区分により表示したものです（ズームレベル12～17で表示されます）。</p><p>　<a href=\"https://maps.gsi.go.jp/legend/jinkodotai_jinko_sabun1995_2015.png\" target=\"_blank\"><span style=\"font-weight:bold\">凡例</span></a></p><p>　メッシュ統計データの詳細は、<a href=\"https://www.stat.go.jp/data/mesh/teikyo.html\" target=\"_blank\">総務省統計局サイト</a>でご確認ください。</p></div>",
   "minzoom": 12,
   "maxzoom": 17,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/jinkodotai_jinko_sabun1995_2015.png",
   "id": "jinkodotai_jinko_sabun1995_2015",
   "title": "人口増減数（1995年～2015年）",
   "maxZoom": 17,

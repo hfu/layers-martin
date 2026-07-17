@@ -13,9 +13,9 @@
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
-    "warnings": 53,
+    "warnings": 55,
     "attribution_defaults": 1050,
-    "legend_image_urls_found": 964,
+    "legend_image_urls_found": 966,
     "failures": 0
   },
   "fetched_files": [
@@ -179486,6 +179486,12 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     },
     {
+      "type": "legend_image_extracted_from_html_link",
+      "id": "lcmfc2",
+      "url": "https://maps.gsi.go.jp/legend/lcmfc2_legend.jpg",
+      "action": "no_legendUrl_or_img_available_used_legend_anchor_href_from_html"
+    },
+    {
       "type": "legend_image_extracted_from_html",
       "id": "20190618yamagata_tsuruoka_digital",
       "url": "https://maps.gsi.go.jp/legend/20190618yamagata_tsuruoka_digital_legend.png",
@@ -179732,6 +179738,12 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     },
     {
+      "type": "legend_image_extracted_from_html_link",
+      "id": "jinkodotai_jinko_sabun1995_2015",
+      "url": "https://maps.gsi.go.jp/legend/jinkodotai_jinko_sabun1995_2015.png",
+      "action": "no_legendUrl_or_img_available_used_legend_anchor_href_from_html"
+    },
+    {
       "type": "legend_image_extracted_from_html",
       "id": "jishindo_yosoku",
       "url": "https://maps.gsi.go.jp/legend/jishindo_yosoku.png",
@@ -179774,9 +179786,7 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     }
   ],
-  "id_changes": [
-
-  ],
+  "id_changes": [],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -185029,7 +185039,5 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": [
-
-  ]
+  "failures": []
 }

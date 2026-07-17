@@ -357,8 +357,10 @@ class GsiLayersToStaticMartin
 
   # `legendUrl` and `html` are inconsistent across layers.txt entries: some
   # have legendUrl pointing directly at an image, some have no legendUrl but
-  # embed a legend <img> inside html, some have neither. See DECISIONS.md
-  # D18. Returns [url, :direct | :html_extracted] or nil.
+  # embed a legend <img> inside html, some link to a legend image with an
+  # <a href="...jpg">凡例を表示</a> anchor (e.g. lcmfc2 治水地形分類図), some
+  # have neither. See DECISIONS.md D18. Returns
+  # [url, :direct | :html_extracted | :html_link] or nil.
   def legend_image_source(layer)
     legend_url = layer['legendUrl'].to_s
     if !legend_url.empty? && absolute_http_url?(legend_url) && LEGEND_IMAGE_EXTENSIONS.include?(extension_for(legend_url))
@@ -369,6 +371,17 @@ class GsiLayersToStaticMartin
     match = html.match(/<img[^>]+src=["']([^"']+)["']/i)
     if match && absolute_http_url?(match[1])
       return [match[1], :html_extracted]
+    end
+
+    # Anchor-linked legend image: GSI often exposes the legend not as an <img>
+    # but as a link (<a href=".../legend/xxx_legend.jpg">凡例を表示</a>). Only
+    # accept an anchor whose href is an image and that is clearly a legend --
+    # href under a /legend/ path, or anchor text mentioning 凡例 -- so we don't
+    # mistake an unrelated image link (a photo, a "解説" page, etc.) for a legend.
+    html.scan(%r{<a\b[^>]*href=["']([^"']+)["'][^>]*>(.*?)</a>}im).each do |href, text|
+      next unless absolute_http_url?(href)
+      next unless LEGEND_IMAGE_EXTENSIONS.include?(extension_for(href))
+      return [href, :html_link] if href.include?('/legend/') || text.include?('凡例')
     end
 
     nil
@@ -525,6 +538,13 @@ class GsiLayersToStaticMartin
           id: source_id,
           url: legend_url,
           action: 'no_legendUrl_image_available_scraped_first_img_tag_from_html'
+        }
+      elsif origin == :html_link
+        @warnings << {
+          type: 'legend_image_extracted_from_html_link',
+          id: source_id,
+          url: legend_url,
+          action: 'no_legendUrl_or_img_available_used_legend_anchor_href_from_html'
         }
       end
     end
