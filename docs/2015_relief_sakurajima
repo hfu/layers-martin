@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">陰影段彩図（応急版）</div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 13,
   "maxzoom": 17,
+  "legend_image_url": "https://maps.gsi.go.jp/legend/2015_relief_sakurajima.jpg",
   "id": "2015_relief_sakurajima",
   "title": "陰影段彩図（応急版）",
   "maxZoom": 17,

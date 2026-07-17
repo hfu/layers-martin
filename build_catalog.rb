@@ -362,15 +362,19 @@ class GsiLayersToStaticMartin
   # have neither. See DECISIONS.md D18. Returns
   # [url, :direct | :html_extracted | :html_link] or nil.
   def legend_image_source(layer)
-    legend_url = layer['legendUrl'].to_s
+    # URLs in layers.txt occasionally carry stray surrounding whitespace (e.g.
+    # legendUrl "https://maps.gsi.go.jp/legend/2015_relief_sakurajima.jpg "),
+    # which would otherwise defeat the image-extension check. Strip everywhere.
+    legend_url = layer['legendUrl'].to_s.strip
     if !legend_url.empty? && absolute_http_url?(legend_url) && LEGEND_IMAGE_EXTENSIONS.include?(extension_for(legend_url))
       return [legend_url, :direct]
     end
 
     html = layer['html'].to_s
     match = html.match(/<img[^>]+src=["']([^"']+)["']/i)
-    if match && absolute_http_url?(match[1])
-      return [match[1], :html_extracted]
+    if match
+      img_src = match[1].strip
+      return [img_src, :html_extracted] if absolute_http_url?(img_src)
     end
 
     # Anchor-linked legend image: GSI often exposes the legend not as an <img>
@@ -378,7 +382,8 @@ class GsiLayersToStaticMartin
     # accept an anchor whose href is an image and that is clearly a legend --
     # href under a /legend/ path, or anchor text mentioning 凡例 -- so we don't
     # mistake an unrelated image link (a photo, a "解説" page, etc.) for a legend.
-    html.scan(%r{<a\b[^>]*href=["']([^"']+)["'][^>]*>(.*?)</a>}im).each do |href, text|
+    html.scan(%r{<a\b[^>]*href=["']([^"']+)["'][^>]*>(.*?)</a>}im).each do |raw_href, text|
+      href = raw_href.strip
       next unless absolute_http_url?(href)
       next unless LEGEND_IMAGE_EXTENSIONS.include?(extension_for(href))
       return [href, :html_link] if href.include?('/legend/') || text.include?('凡例')
