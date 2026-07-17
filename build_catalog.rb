@@ -100,6 +100,7 @@ class GsiLayersToStaticMartin
     @id_changes = []
     @attribution_defaults = []
     @legend_image_urls_found = 0
+    @legend_pdf_urls_found = 0
     @used_ids = {}
   end
 
@@ -392,6 +393,31 @@ class GsiLayersToStaticMartin
     nil
   end
 
+  LEGEND_PDF_EXTENSIONS = %w[.pdf].freeze
+
+  # Some legends are only published as a PDF (e.g. NDVI, 復旧計画基図,
+  # 土地条件図 lcm25k_2012). A PDF can't be shown inline as an <img>, but the
+  # link is still worth surfacing (Cartographer renders it as a "凡例 (PDF)"
+  # link). Same shape/precedence as legend_image_source: a `.pdf` legendUrl, or
+  # an <a href="....pdf"> anchor scoped to /legend/ or 凡例 text. Returns
+  # [url, :direct | :html_link] or nil.
+  def legend_pdf_source(layer)
+    legend_url = layer['legendUrl'].to_s.strip
+    if !legend_url.empty? && absolute_http_url?(legend_url) && LEGEND_PDF_EXTENSIONS.include?(extension_for(legend_url))
+      return [legend_url, :direct]
+    end
+
+    html = layer['html'].to_s
+    html.scan(%r{<a\b[^>]*href=["']([^"']+)["'][^>]*>(.*?)</a>}im).each do |raw_href, text|
+      href = raw_href.strip
+      next unless absolute_http_url?(href)
+      next unless LEGEND_PDF_EXTENSIONS.include?(extension_for(href))
+      return [href, :html_link] if href.include?('/legend/') || text.include?('凡例')
+    end
+
+    nil
+  end
+
   def exclusion_record(record, url, reason, ext)
     layer = record[:layer]
     {
@@ -552,6 +578,14 @@ class GsiLayersToStaticMartin
           action: 'no_legendUrl_or_img_available_used_legend_anchor_href_from_html'
         }
       end
+    else
+      # Only offer a PDF legend when no inline image legend was found -- an
+      # image is always preferable since the Cartographer can render it inline.
+      pdf_source = legend_pdf_source(layer)
+      if pdf_source
+        tilejson['legend_pdf_url'] = pdf_source[0]
+        @legend_pdf_urls_found += 1
+      end
     end
 
     center = center_from_area(layer['area'])
@@ -652,6 +686,7 @@ class GsiLayersToStaticMartin
         'warnings' => @warnings.length,
         'attribution_defaults' => @attribution_defaults.length,
         'legend_image_urls_found' => @legend_image_urls_found,
+        'legend_pdf_urls_found' => @legend_pdf_urls_found,
         'failures' => @failures.length
       },
       'fetched_files' => @fetched_files,

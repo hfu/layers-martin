@@ -155,6 +155,11 @@ class OutputsValidator
     if legend_image_url && !legend_image_url.start_with?('http://', 'https://')
       @errors << "docs/#{id}: legend_image_url is not an absolute URL (#{legend_image_url})"
     end
+
+    legend_pdf_url = tilejson['legend_pdf_url']
+    if legend_pdf_url && !legend_pdf_url.start_with?('http://', 'https://')
+      @errors << "docs/#{id}: legend_pdf_url is not an absolute URL (#{legend_pdf_url})"
+    end
   end
 
   def check_duplicate_tile_url(id, tilejson, seen_tile_urls)

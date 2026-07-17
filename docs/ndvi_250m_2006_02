@@ -8,6 +8,7 @@
   "description": "<div class=\"gsi_layerinfo_title\">全国植生指標データ（250m）</div><div style=\"font-size:12px; margin: 2px\">(2006年2月)</div><div class=\"gsi_layerinfo_kaisetu\"></div><div style=\"font-size:13px; margin: 8px\" >国土地理院と東海大学との共同研究による。<BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi.html\">解説</a><BR/><a target=\"_blank\" href=\"http://www.gsi.go.jp/kankyochiri/ndvi-download.html\">データダウンロード</a><br></div><div style=\"font-size:13px; margin: 8px\" Align=\"right\">(c)国土地理院</div>",
   "minzoom": 3,
   "maxzoom": 10,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/legend_ndvi250m.pdf",
   "id": "ndvi_250m_2006_02",
   "title": "2月",
   "maxZoom": 10,

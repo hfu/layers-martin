@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'><p>地形分類（人工改変地形）を白黒表示しています。白黒コピー用の教材作成に活用できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/landform2_mono_legend.pdf\">凡例を表示</a></div><a target=\"_blank\" href=\"https://www.gsi.go.jp/CHIRIKYOUIKU/gsimaps_BWmap.html\">解説</a></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 14,
   "maxzoom": 16,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/landform2_mono_legend.pdf",
   "id": "landform2_mono",
   "title": "人工改変地形（白黒）",
   "maxZoom": 16,

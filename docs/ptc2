@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "<div class='layer_text'><p>世界の地表面に対する樹木の比率を表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院・千葉大学・協働機関</div>",
   "maxzoom": 7,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/Legend_PTC.pdf",
   "id": "ptc2",
   "title": "植生(樹木被覆率)",
   "maxZoom": 7,

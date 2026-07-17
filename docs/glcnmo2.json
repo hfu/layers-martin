@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "<div class='layer_text'><p>世界の土地が何に覆われているかを表した地図です。</p></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院・千葉大学・協働機関</div>",
   "maxzoom": 7,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/Legend_GLCNMO.pdf",
   "id": "glcnmo2",
   "title": "土地被覆(GLCNMO)",
   "maxZoom": 7,

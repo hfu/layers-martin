@@ -7,6 +7,7 @@
   "scheme": "xyz",
   "description": "<div class=\"gsi_layerinfo_title\">災害復興計画基図</div><div class=\"gsi_layerinfo_kaisetu\"><div><a target=\"_blank\" href=\"http://www.gsi.go.jp/kibanjoho/kibanjoho40022.html\">解説</a></div></div><div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
   "minzoom": 5,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",
   "id": "fukkokizu",
   "title": "災害復興計画基図",
   "legendUrl": "https://maps.gsi.go.jp/legend/fukkokizu.pdf",

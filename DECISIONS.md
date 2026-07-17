@@ -40,6 +40,7 @@
 | [D23](#d23-staff_promptmdをハイブリッド対応オンラインオフライン両立に設計する) | `STAFF_PROMPT.md` をハイブリッド対応(オンライン/オフライン両立)に設計する | Accepted | 2026-07-09 |
 | [D24](#d24-staff_promptmd-を指標駆動の実証ループで改善する) | `STAFF_PROMPT.md` を「指標駆動の実証ループ」で改善する | Accepted | 2026-07-16 |
 | [D25](#d25-凡例画像の抽出を-a-href-リンク形式にも拡張するd18-の拡張) | 凡例画像の抽出を `<a href>` リンク形式にも拡張する（D18 の拡張） | Accepted | 2026-07-17 |
+| [D26](#d26-pdf-のみで公開される凡例を-legend_pdf_url-として収録する全レイヤー点検の結果) | PDF のみで公開される凡例を `legend_pdf_url` として収録する（全レイヤー点検の結果） | Accepted | 2026-07-17 |
 
 ---
 
@@ -426,6 +427,22 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - 再生成で凡例数 964 → 966（+2）。新規は `lcmfc2`（治水地形分類図）と `jinkodotai_jinko_sabun1995_2015`（人口動態）で、いずれも `/legend/` 配下の正当な凡例。誤検出なし。
 - `hfu/faceless-cartographer` はカタログを実行時取得するため、コード変更なしで既存の凡例機構（faceless-cartographer D14）が治水地形分類図の凡例を表示するようになる。
 - 治水地形分類図は全国単一タイルレイヤーで、この凡例が唯一の公式共通凡例。地域別の差異は無く「代表的な凡例のみ」といった但し書きは不要。
+
+## D26: PDF のみで公開される凡例を `legend_pdf_url` として収録する（全レイヤー点検の結果）
+
+**Status**: Accepted（2026-07-17）
+
+**Context**: D25 の後、`hfu/faceless-cartographer` から「全レイヤーで凡例の取りこぼしが無いか点検してほしい」という依頼を受け、全 1863 レイヤーを監査した。結果:
+- 画像凡例(`<img>`/直接画像/`<a>` 画像リンク)の抽出は**取りこぼしゼロ・バグゼロ**。ただし1件、`legendUrl` に末尾空白がある画像凡例(`2015_relief_sakurajima.jpg `)を空白除去で拾えるよう修正(966→967)。
+- `iconUrl` は全て汎用マーカー記号(`symbols/670.png` 等)で凡例ではない。背景系ページ(`ichiran.html#std` 等)や注意ページ(`attension_relief.html`)も色凡例ではない。
+- **実在するのに未収録なのは PDF 形式の凡例のみ**(114レイヤー、10種の PDF。例: NDVI・復旧計画基図・土地条件図 `lcm25k_2012` の `lc_legend.pdf`)。
+
+**Decision**: PDF 凡例を新しい TileJSON 拡張キー `legend_pdf_url` として収録する。画像凡例と別キーにするのは、Cartographer がインライン `<img>` で描画できるのは画像だけで、PDF は「凡例 (PDF)」リンクとして扱う必要があるため。抽出は `legend_image_source` と同じ形/スコープ(`.pdf` の `legendUrl`、または `/legend/`・「凡例」に限定した `<a href="….pdf">`)。**画像凡例が見つかった場合は PDF を付与しない**(画像優先)。`report.summary.legend_pdf_urls_found` に件数を記録。`validate_outputs.rb` も `legend_pdf_url` の絶対URL検証を追加。
+
+**Consequences**:
+- 再生成で `legend_pdf_url` を 124 レイヤーに付与(画像凡例 967 とは重複なし)。差分は該当レイヤーのみ(誤検出なし)。
+- `hfu/faceless-cartographer` 側は `legend_pdf_url` があり画像凡例が無いレイヤーに「凡例 (PDF)」リンクを表示する(同リポジトリの対応が必要。画像凡例と違い無改修では出ない)。
+- これで「画像でもPDFでも、GSI が凡例を公開しているレイヤーは全て Cartographer から辿れる」状態になった。GSI が凡例を公開していない 762 レイヤーは対象外。
 
 ## バックログ(未決定・保留)
 

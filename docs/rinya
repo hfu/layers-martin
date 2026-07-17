@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'><p>2011年以降に整備した森林（国有林）地域の空中写真です。</p></div>ズームレベル14～18で表示されます。<div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"https://maps.gsi.go.jp/legend/rinya.pdf\">承認番号</a></div>",
   "minzoom": 2,
   "maxzoom": 18,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/rinya.pdf",
   "id": "rinya",
   "title": "森林（国有林）の空中写真（林野庁）",
   "maxZoom": 18,

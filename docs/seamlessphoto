@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'><p>各地域の最新の空中写真です。</p></div><a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf\">（詳細解説）</a>&emsp;<a target=\"_blank\" href=\"https://cyberjapandata.gsi.go.jp/legend/seamlessphoto_precaution.pdf\">承認番号</a>",
   "minzoom": 2,
   "maxzoom": 18,
+  "legend_pdf_url": "https://cyberjapandata.gsi.go.jp/legend/seamlessphoto.pdf",
   "id": "seamlessphoto",
   "title": "全国最新写真（シームレス）",
   "maxZoom": 18,

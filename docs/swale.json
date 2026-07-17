@@ -8,6 +8,7 @@
   "description": "<div class='layer_text'><p>明治期の地図から、当時の低湿地の分布を示した地図です。土地の液状化と関連が深いと考えられる区域を確認できます。</p></div><div class=\"gsi_layerinfo_kaisetu\"><a target=\"_blank\" href=\"http://www.gsi.go.jp/bousaichiri/lc_meiji.html\">解説</a></div>",
   "minzoom": 5,
   "maxzoom": 16,
+  "legend_pdf_url": "https://maps.gsi.go.jp/legend/lw_legend.pdf",
   "id": "swale",
   "title": "明治期の低湿地",
   "maxZoom": 16,
