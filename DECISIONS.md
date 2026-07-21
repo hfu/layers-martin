@@ -444,6 +444,31 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - `hfu/faceless-cartographer` 側は `legend_pdf_url` があり画像凡例が無いレイヤーに「凡例 (PDF)」リンクを表示する(同リポジトリの対応が必要。画像凡例と違い無改修では出ない)。
 - これで「画像でもPDFでも、GSI が凡例を公開しているレイヤーは全て Cartographer から辿れる」状態になった。GSI が凡例を公開していない 762 レイヤーは対象外。
 
+## D27: `STAFF_PROMPT.md` に `required_styles`/`optional_styles`(D39)を追加する
+
+**Status**: Accepted
+
+**Context**: `hfu/faceless-cartographer` の Issue #6 を受け、同リポジトリが Map Intent に `required_styles`/`optional_styles`(`style_id` でスタイル全体を参照できるフィールド、D39)を追加した。`stars-optgeo`(実際に稼働している Martin サーバー)は既にこのカタログに `vlcm`(火山土地条件図)・`vbm`(火山基本図)を完成済みスタイルとして公開済み(`GET /style/{style_id}`、`hfu/kitavolca` の色分け・記号化を反映)。
+
+しかし本 `STAFF_PROMPT.md` は `required_styles` を一切教えておらず、`vlcm`/`vbm` は「別カタログ: stars.optgeo.org」節に `required_layers` の `source_id` としてのみ記載されていた(D22 の頃からの記述)。この状態では、「北海道の火山土地条件図を見たい」という利用者の問いに対し、Staff が `required_styles` ベースの Map Intent を生成することは原理的に不可能だった(プロンプトが教えていない機能を使えるはずがない)。この欠落は `hfu/faceless-cartographer` 側がフォーム初期値をドロップダウン切り替え式にする作業(同リポジトリ D40)の過程で発見された。
+
+**Decision**: `STAFF_PROMPT.md` に以下を追加した。
+
+1. 「Map Intent の必須フィールド」節: `required_layers` **または** `required_styles` のどちらか1件以上でよい旨を明記。
+2. 「別カタログ: stars.optgeo.org」節の「使い分けの目安」: 利用者が「完成した主題図そのもの」を求めている場合は `required_styles`/`optional_styles` を優先する旨のガイダンスを追加(従来の `required_layers` 参照は「個別データ層として扱いたい場合」に限定)。
+3. 新節「完成した主題図が欲しい場合: `required_styles`(D39)」: `stars-optgeo` の `styles` エンドポイントの説明、YAML例、注意点(`style_id` も捏造しない、`layers-martin` は `styles` を持たない等)。
+4. 「動作確認済みの例3: 『北海道の火山土地条件図を見たい』」を追加(`required_styles: [vlcm]` + `optional_styles: [vbm]`)。
+
+**検証**: 単に文章を書くだけでなく、`hfu/faceless-cartographer` 側で以下の経験的検証を行った(同リポジトリ D40 参照)。
+
+- 更新後のプロンプト全文のみを与えた独立エージェントに、プロンプト自身の動作確認済み例3とは異なる具体例(「恵山の火山土地条件図が見たい」、有珠山ではなく恵山)で Staff を演じさせ、`required_styles: [{style_id: "vlcm"}]` を正しく導けることを確認した。単なる例3のコピペではなく、一般的な使い分け指針からの汎化であることを担保するため、あえて異なる火山を選んでいる。
+- 生成された Map Intent は `hfu/faceless-cartographer` の評価ハーネス(`scripts/eval-intent.ts`、`resolveStyles` 対応に拡張済み)で M1〜M5 すべて合格を確認済み。
+
+**Consequences**:
+- 「北海道の火山土地条件図を見たい」のような、完成した主題図を求める問いに対して、Staff が正しく `required_styles` を使えるようになった。
+- `hfu/faceless-cartographer` 側は、この検証済みの問い・Map Intent ペアを `scripts/example-intents/07-volcano-land-condition-map.yaml`(プロンプトの例3と同一)・`08-volcano-land-condition-map-esan.yaml`(恵山、汎化の証拠)としてフィクスチャ化し、フォームのドロップダウン選択肢にも採用した(同リポジトリ D40)。
+- `UNopenGIS/staccato-spec` への ADR 提案(ADR 0007、Proposed)も別途提出済み。
+
 ## バックログ(未決定・保留)
 
 ### ~~エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案)~~
