@@ -4,11 +4,11 @@
     "visited_urls": 183,
     "fetched_files": 183,
     "groups_seen": 860,
-    "layers_seen": 13934,
+    "layers_seen": 13935,
     "tiles_included": 1863,
-    "layers_excluded": 12071,
+    "layers_excluded": 12072,
     "excluded_by_reason": {
-      "unsupported_extension": 1324,
+      "unsupported_extension": 1325,
       "sar_observation_snapshot": 10538,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -730,7 +730,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 329901
+      "bytes": 331700
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -173254,6 +173254,19 @@
         "他機関の情報",
         "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）",
         "対象施設周辺地域（レッドゾーン＋イエローゾーン）"
+      ]
+    },
+    {
+      "id": "drone_yz_rz_event",
+      "title": "期間を定めて指定した施設（レッドゾーン＋イエローゾーン）",
+      "url": "https://maps.gsi.go.jp/xyz/drone_yz_rz_event/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "他機関の情報",
+        "小型無人機等飛行禁止法に基づく対象施設周辺地域（警察庁）"
       ]
     },
     {
