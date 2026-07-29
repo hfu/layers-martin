@@ -1,15 +1,15 @@
 {
   "summary": {
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-    "visited_urls": 183,
-    "fetched_files": 183,
-    "groups_seen": 860,
-    "layers_seen": 13936,
-    "tiles_included": 1863,
-    "layers_excluded": 12073,
+    "visited_urls": 186,
+    "fetched_files": 186,
+    "groups_seen": 871,
+    "layers_seen": 13941,
+    "tiles_included": 1864,
+    "layers_excluded": 12077,
     "excluded_by_reason": {
-      "unsupported_extension": 1326,
-      "sar_observation_snapshot": 10538,
+      "unsupported_extension": 1329,
+      "sar_observation_snapshot": 10539,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
@@ -22,7 +22,19 @@
   "fetched_files": [
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-      "bytes": 376
+      "bytes": 430
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260729kumamoto.txt",
+      "bytes": 233
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "bytes": 5679
+    },
+    {
+      "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "bytes": 3147
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20250815rain.txt",
@@ -78,7 +90,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_pub_alos2.txt",
-      "bytes": 56153
+      "bytes": 56420
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20251208aomori.txt",
@@ -518,7 +530,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
-      "bytes": 202177
+      "bytes": 202387
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20251210aomori.txt",
@@ -754,6 +766,56 @@
     }
   ],
   "excluded": [
+    {
+      "id": "20260729kumamoto_yatsushiro_0729suichoku_sokuho",
+      "title": "八代地区（7/29撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "垂直写真（速報）",
+        "八代地区"
+      ]
+    },
+    {
+      "id": "20260729kumamoto_yatsushiro_0729naname",
+      "title": "八代地区（7/29撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_yatsushiro_0729naname/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "斜め写真",
+        "八代地区"
+      ]
+    },
+    {
+      "id": "20260729kumamoto_syamenhoukai_dosekiryu_taiseki_yatsushiro",
+      "title": "斜面崩壊・土石流・堆積分布図データ（八代地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_dosekiryu_taiseki_yatsushiro/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "斜面崩壊・土石流・堆積分布図データ"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20260728R8kumamoto_20250812_20260728_u11l_p124f680_l10_obd_mask_offset",
+      "title": "2025/08/12～2026/07/28_AL",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20250812_20260728_u11l_p124f680_l10_obd_mask_offset/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "SAR解析結果(ALOS-2/ALOS-4)"
+      ]
+    },
     {
       "id": "20250815rain_amakusa_0815suichoku_sokuho",
       "title": "天草上島地区（8/15撮影）",

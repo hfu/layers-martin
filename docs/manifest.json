@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T18:36:14Z",
+  "generated_at": "2026-07-29T18:27:40Z",
   "generator": "gsi-layers-to-static-martin",
   "generator_version": "0.1.0",
   "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
@@ -18,9 +18,9 @@
     ".txt",
     ".kml"
   ],
-  "fetched_files": 183,
-  "layers_seen": 13936,
-  "tiles_included": 1863,
-  "layers_excluded": 12073,
+  "fetched_files": 186,
+  "layers_seen": 13941,
+  "tiles_included": 1864,
+  "layers_excluded": 12077,
   "warnings": 55
 }
