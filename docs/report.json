@@ -4,11 +4,11 @@
     "visited_urls": 186,
     "fetched_files": 186,
     "groups_seen": 878,
-    "layers_seen": 13952,
+    "layers_seen": 13953,
     "tiles_included": 1865,
-    "layers_excluded": 12087,
+    "layers_excluded": 12088,
     "excluded_by_reason": {
-      "unsupported_extension": 1338,
+      "unsupported_extension": 1339,
       "sar_observation_snapshot": 10540,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 12015
+      "bytes": 12927
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -822,6 +822,19 @@
       "id": "20260729kumamoto_kumamoto3_0730suichoku_sokuho",
       "title": "熊本３地区（7/30撮影）",
       "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0730suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "垂直写真",
+        "熊本３地区"
+      ]
+    },
+    {
+      "id": "20260729kumamoto_kumamoto3_0731suichoku_sokuho",
+      "title": "熊本３地区（7/31撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto3_0731suichoku_sokuho/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
