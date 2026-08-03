@@ -41,6 +41,8 @@
 | [D24](#d24-staff_promptmd-を指標駆動の実証ループで改善する) | `STAFF_PROMPT.md` を「指標駆動の実証ループ」で改善する | Accepted | 2026-07-16 |
 | [D25](#d25-凡例画像の抽出を-a-href-リンク形式にも拡張するd18-の拡張) | 凡例画像の抽出を `<a href>` リンク形式にも拡張する（D18 の拡張） | Accepted | 2026-07-17 |
 | [D26](#d26-pdf-のみで公開される凡例を-legend_pdf_url-として収録する全レイヤー点検の結果) | PDF のみで公開される凡例を `legend_pdf_url` として収録する（全レイヤー点検の結果） | Accepted | 2026-07-17 |
+| [D27](#d27-staff_promptmd-に-required_stylesoptional_stylesd39を追加する) | `STAFF_PROMPT.md` に `required_styles`/`optional_styles`(D39)を追加する | Accepted | 2026-07-21 |
+| [D28](#d28-インターネット非接続かつシステムプロンプト保存可能なaigennai_promptmdを新設する) | インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する | Accepted | 2026-08-03 |
 
 ---
 
@@ -469,9 +471,39 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 - `hfu/faceless-cartographer` 側は、この検証済みの問い・Map Intent ペアを `scripts/example-intents/07-volcano-land-condition-map.yaml`(プロンプトの例3と同一)・`08-volcano-land-condition-map-esan.yaml`(恵山、汎化の証拠)としてフィクスチャ化し、フォームのドロップダウン選択肢にも採用した(同リポジトリ D40)。
 - `UNopenGIS/staccato-spec` への ADR 提案(ADR 0007、Proposed)も別途提出済み。
 
+## D28: インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する
+
+**Status**: Accepted
+
+**Context**: `dwg7/spiccato`(このカタログを使う Cartographer 実装の1つ、`hfu/faceless-cartographer` の第三世代)が、Staffを使う「スタイル」をノーマル(`STAFF_PROMPT.md` の貼り付け)以外にも増やす取り組みの一環として、政府AI「源内」(デジタル庁、AWS製OSS `Generative AI Use Cases` ベース)向けの検討を行った。源内はシステムプロンプトを保存できる一方、インターネットに一切アクセスできない(Web検索・fetchが使えない構成)。実際の文字数上限は未確認だが、保守的に8,000字を目標とすることになった。
+
+この課題自体は本リポジトリで過去に検討済みである: 下記「バックログ」の `STANDALONE_PROMPT.md` 案(取り消し線あり)がほぼ同じ動機で提起されたが、D23 が「全カタログ埋め込み+生成スクリプトは保守負荷が高すぎる」と判断し、単一 `STAFF_PROMPT.md` 内のハイブリッド対応(小さな「オフラインフォールバック」節)を採用する形で決着していた。しかし D23 の解は `STAFF_PROMPT.md` 全体(34,497字)の一部として存在するものであり、**ファイル全体としては8,000字に収まらない**。源内のような厳しい文字数制約がある環境には、D23 の解決策そのままでは対応できない、という D23 が想定していなかったギャップが残っていた。
+
+**Decision**: `STANDALONE_PROMPT.md` 案(全1,861件embedding、生成スクリプトによる自動化、日次cron再生成)は採用しない。D23 の判断(保守負荷・実用性とのバランス)は今回も妥当と判断し、そのまま踏襲する。
+
+代わりに `GENNAI_PROMPT.md` を新設した。設計方針:
+
+- **自動生成しない、手動保守**。ソースコードから生成するスクリプトを新たに書かない。D23 の「二重管理を避ける」判断を継承しつつ、`STAFF_PROMPT.md` 本体とは別に「オフライン専用・文字数制約あり」という異なる制約を持つ用途向けの、意図的に薄いドキュメントとして位置づける。
+- **`STAFF_PROMPT.md` の既存の実証済み文章を土台に、抜粋・圧縮して構成する**。新規に内容を考案するのではなく、「あなたはStaffである」「責務」「Map Intentの必須フィールド」「背景地図について」「オフラインフォールバック」の各既存節、および `source_id` を捏造しないことという最重要ルールを土台にした。「意味解決の指針」「既知の欠落」「カタログの引き方」(インターネット接続前提のため無関係)、および3件の詳細なYAML例は文字数予算のため割愛した。
+- **`#q=` リンクを直接構築する指示に置き換えた**。`STAFF_PROMPT.md` の「正しいやりとりの形」ステップ3(Map IntentをコピーしてCartographerに貼り付ける)は、spiccato(`dwg7/spiccato`)を前提に「`https://dwg7.github.io/spiccato/#q=...` の形でリンクを直接構築して提示する」に置き換えた。`goal`パラメータは省略を指示している(spiccato側で自動生成される、D6/D8) — 長い日本語文をURLに含めると伝送経路での破損リスクが増えるという、このセッション自体で実際に踏んだ教訓([dwg7/spiccato](https://github.com/dwg7/spiccato) DECISIONS.md D8/D9のfeedbackメモリ)を直接反映している。`required_styles`/`optional_styles`(stars-optgeoのvlcm/vbm)は`#q=`で表現できないため、その場合のみMap Intent YAMLをそのまま提示する指示にした。
+- **既存のオフラインフォールバック一覧(約15件)を土台に、実在確認の上で軽微に拡充**した。新たに `terrainclassification1`(地形分類図、国交省土地履歴調査)を追加 — `STAFF_PROMPT.md` の「source_idを捏造しないこと」節が類似候補の一例として既に言及していたが、オフライン一覧自体には未収録だった。掲載した全14件のsource_id/style_id(layers-martin 10件・stars-optgeo 4件)は、執筆時点の実カタログ(`catalog.json`・`stars.optgeo.org/catalog`)に対して個別に存在確認済み。
+- **文字数**: 3,966字(目標8,000字に対して十分な余裕を残した)。D23の「完全性より代表例で十分」という判断を踏襲し、余裕があるからといって埋めるのではなく、タイトに保つことを優先した。実際の源内の上限が判明した場合、この文書の分量を再検討する(現時点では拡張の必要は無いと判断)。
+
+**Consequences**: `GENNAI_PROMPT.md` を追加。生成スクリプト・CI変更は無い(手動保守のため)。source_idの陳腐化リスクは `STAFF_PROMPT.md` のオフラインフォールバック節と同様に残る(D23が既に受容済みのリスクと同種) — 定期的に `STAFF_PROMPT.md` の該当節と突き合わせて更新する運用とする。上記「バックログ」の `STANDALONE_PROMPT.md` 案は、この決定によって改めて「不採用のまま」であることを明確にした(ファイル内に本Dへのポインタを追記)。
+
+**実機検証(2026-08-03)**: `dwg7/spiccato` のサイトに埋め込まれた3件のサンプル質問すべてで、`GENNAI_PROMPT.md`の内容だけを使って(実カタログをfetchせず)Map Intent/リンクを構築し、spiccatoの本番相当ビルドで実際に描画できることを確認した。
+
+1. 「令和8年熊本地震の災害対応正射画像(速報)を見たい」→ `#q=`リンク(`20260729kumamoto_yatsushiro_0729do_sokuho`)。欠落レイヤー無し。この事例のため、`## 例`節に個別のsource_idを明示的な「動作確認済みの例」として追記した(頻出カテゴリの一般化ではなく、このリポジトリの実際のflagshipデモに対する具体的な回答として)。
+2. 「石狩川の治水について考えたい」→ `#q=`リンク(`lcmfc2`・`01_flood_l2_shinsuishin_data`)。欠落レイヤー無し。
+3. 「北海道の火山土地条件図を見たい」→ Map Intent YAML(`required_styles: [vlcm]`・`optional_styles: [vbm]`)をspiccatoの貼り付けフォームに投入。欠落レイヤー無し。この検証の過程で、YAML例に`area.bbox`が欠けていた(全国表示にフォールバックしてしまう)不備を発見・修正した。
+
+いずれもコンソールエラー無し。
+
 ## バックログ(未決定・保留)
 
 ### ~~エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案)~~
+
+**2026-08-03追記**: この案自体は今回も不採用のまま。ただし動機となった課題(インターネット非接続環境向けのコンパクトなStaffプロンプト)は、より狭いスコープ(手動保守・数千字程度)で D28([GENNAI_PROMPT.md](GENNAI_PROMPT.md))として決着させた。
 
 インターネットに接続できないエンタープライズAI環境では、Staffは `catalog`/`{id}` を都度fetchすることができない。現在の `STAFF_PROMPT.md` は「カタログを取得して調べる」ことを前提にしており、そのままでは使えない。
 

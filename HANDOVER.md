@@ -50,10 +50,11 @@ staccato-spec の `spec/catalog-integration.md` は、タイル中心のカタ�
 - `STAFF_PROMPT.md` をハイブリッド対応（オンライン/オフライン両立）に設計した([D23](DECISIONS.md#d23-staff_promptmdをハイブリッド対応オンラインオフライン両立に設計する))。インターネット接続なしの環境でも Map Intent を組み立てられるよう、「オフラインフォールバック」セクションを追加。カテゴリ別(災害リスク、地形・地質、土地利用)に代表的な source_id ~15 件を列挙。二重ファイル化(STANDALONE_PROMPT.md)ではなく、単一ファイル内で両方の手順を並記することで保守を簡潔化。「札幌の地形分類を見たい」という自然言語入力に対するテスト実装により、layers-martin カタログで完全解決可能なことを確認済み。
 - (運用メモ、`layers-martin` 自身にも当てはまる)GitHub Pages の branch-based デプロイ(このプロジェクトも `hfu/faceless-cartographer` も `build_type: legacy` で同じ仕組み)は、ビルド自体が成功していても「Deployment failed, try again later」で失敗することがまれにある(`faceless-cartographer` 側で2回観測)。自動生成される `pages build and deployment` ワークフローはリポジトリの `.github/workflows/` には存在せず修正できないため、症状が出た場合は `gh api repos/hfu/layers-martin/pages/builds -X POST` で再実行すれば通常は解消する。
 - **2026-07-21**: `hfu/faceless-cartographer` の `required_styles`/`optional_styles`(D39、Map Intent から `style_id` でスタイル全体を参照できる新フィールド)を `STAFF_PROMPT.md` に反映した([D27](DECISIONS.md#d27-staff_promptmdに-required_stylesoptional_stylesd39-を追加する))。`stars-optgeo` が公開済みの `vlcm`(火山土地条件図)・`vbm`(火山基本図)スタイルを、利用者が「完成した主題図そのもの」を求めている場合に使うよう案内する節・使い分けの目安・動作確認済みの例3を追加。単なる文書追記に留めず、独立エージェントにプロンプト自身の例とは異なる具体例(恵山)で Staff を演じさせ、`required_styles` が正しく汎化して生成されることを実証してから確定した(検証プロセスの詳細は `hfu/faceless-cartographer` DECISIONS.md D40 参照)。
+- **2026-08-03**: インターネット非接続・システムプロンプト保存可能なAI(政府AI「源内」等)向けに [GENNAI_PROMPT.md](GENNAI_PROMPT.md) を新設した([D28](DECISIONS.md#d28-インターネット非接続かつシステムプロンプト保存可能なaigennai_promptmdを新設する))。`dwg7/spiccato` 側でのStaffの複数スタイル導入の一環(同リポジトリ DECISIONS.md D10、計画ファイル `/Users/hfu/.claude/plans/scalable-snacking-spring.md`)。`STANDALONE_PROMPT.md`案(下記バックログ、全カタログ埋め込み)は改めて不採用のまま、`STAFF_PROMPT.md`の既存の実証済み文章を抜粋・圧縮し、spiccatoの`#q=`リンク構築指示に置き換える形で3,966字に収めた(目標8,000字)。手動保守(自動生成スクリプトは追加していない)。
 - 既知のバックログ(詳細は [DECISIONS.md](DECISIONS.md) の「バックログ」節):
   - D10 で見送った「重複レイヤーの統合」。
   - `maps.gsi.go.jp` 系(811件)の `attribution` 欠落(D16 で意図的に保留)。
-  - インターネット接続できないエンタープライズAI向けの、fetch不要なスタンドアロン版Staffプロンプト(仮称`STANDALONE_PROMPT.md`)。カタログのメタデータを全埋め込みする必要があり規模が大きいため未着手。
+  - インターネット接続できないエンタープライズAI向けの、fetch不要なスタンドアロン版Staffプロンプト(仮称`STANDALONE_PROMPT.md`、全カタログ埋め込み構想)は不採用のまま。より狭いスコープ(手動保守・数千字程度)の代替として`GENNAI_PROMPT.md`(D28、上記)を新設した。
   - `bounds`/`center` が過半数のレイヤーで欠落している。
 
 ## 参照情報
