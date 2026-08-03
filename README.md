@@ -27,10 +27,9 @@ Martin では、概念的に次のような API モデルが使われます。
 
 このカタログを実際に使う生成AI(Staccatoアーキテクチャの**Staff**役)向けのシステムプロンプトも、このリポジトリで管理しています。
 
-- [STAFF_PROMPT.md](STAFF_PROMPT.md) — 通常版。カタログをその場でfetchできる環境向け(インターネット接続前提)。
-- [GENNAI_PROMPT.md](GENNAI_PROMPT.md) — タイトなオフライン版。システムプロンプトは保存できるがインターネットに一切アクセスできない生成AI(例: 政府AI「源内」)向け。約4,000字。設計判断は [DECISIONS.md](DECISIONS.md) D28 を参照。
+- [STAFF_PROMPT.md](STAFF_PROMPT.md) — カタログをその場でfetchできる環境向け(インターネット接続前提)。特定のCartographer実装に依存しない、汎用的な内容。
 
-どちらも `dwg7/spiccato`(このカタログを使うCartographer実装)のフォーム画面から直接コピーできます: <https://dwg7.github.io/spiccato/>
+インターネットに一切アクセスできない生成AI(例: 政府AI「源内」)向けのオフライン専用プロンプトは、`dwg7/spiccato`側の`GENNAI_PROMPT.md`を参照してください(spiccato固有のリンク構築方法を含むため、Cartographer実装に依存しないこのリポジトリではなくspiccato側で管理: <https://github.com/dwg7/spiccato/blob/main/GENNAI_PROMPT.md>)。どちらも `dwg7/spiccato` のフォーム画面から直接コピーできます: <https://dwg7.github.io/spiccato/>
 
 ## 背景
 

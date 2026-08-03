@@ -42,7 +42,7 @@
 | [D25](#d25-凡例画像の抽出を-a-href-リンク形式にも拡張するd18-の拡張) | 凡例画像の抽出を `<a href>` リンク形式にも拡張する（D18 の拡張） | Accepted | 2026-07-17 |
 | [D26](#d26-pdf-のみで公開される凡例を-legend_pdf_url-として収録する全レイヤー点検の結果) | PDF のみで公開される凡例を `legend_pdf_url` として収録する（全レイヤー点検の結果） | Accepted | 2026-07-17 |
 | [D27](#d27-staff_promptmd-に-required_stylesoptional_stylesd39を追加する) | `STAFF_PROMPT.md` に `required_styles`/`optional_styles`(D39)を追加する | Accepted | 2026-07-21 |
-| [D28](#d28-インターネット非接続かつシステムプロンプト保存可能なaigennai_promptmdを新設する) | インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する | Accepted | 2026-08-03 |
+| [D28](#d28-インターネット非接続かつシステムプロンプト保存可能なaigennai_promptmdを新設する) | インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する | Superseded(`dwg7/spiccato`へ移設) | 2026-08-03 |
 
 ---
 
@@ -473,7 +473,9 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 ## D28: インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する
 
-**Status**: Accepted
+**Status**: Superseded(2026-08-03、`dwg7/spiccato` へ移設。理由は本項末尾の追記を参照)
+
+**2026-08-03追記(Superseded)**: `GENNAI_PROMPT.md` は本リポジトリから削除し、`dwg7/spiccato` 側で管理することにした。理由: 内容の大部分(`#q=`リンク構築規則)がspiccato固有のインタフェース(DECISIONS.md D6/D8 in `dwg7/spiccato`)に依存しており、`layers-martin` は特定のCartographer実装に依存しないLibraryであるべき、という本リポジトリの一貫した立場([D21](#d21-staff_promptmdにstarsoptgeoorgを別カタログとして追記するaggregatorは作らない)の「Cartographer実装に依存しない」判断と同種)に反していた。さらに同日、埋め込み範囲を「精選版」から「既知のノイズ系統を除く全カタログ」へ拡大する判断もあったため、生成ロジックごとspiccato側(Node.js、`scripts/build-gennai-prompt.mjs`)に移設した。以下は移設前の元の決定内容(記録として残す)。
 
 **Context**: `dwg7/spiccato`(このカタログを使う Cartographer 実装の1つ、`hfu/faceless-cartographer` の第三世代)が、Staffを使う「スタイル」をノーマル(`STAFF_PROMPT.md` の貼り付け)以外にも増やす取り組みの一環として、政府AI「源内」(デジタル庁、AWS製OSS `Generative AI Use Cases` ベース)向けの検討を行った。源内はシステムプロンプトを保存できる一方、インターネットに一切アクセスできない(Web検索・fetchが使えない構成)。実際の文字数上限は未確認だが、保守的に8,000字を目標とすることになった。
 
@@ -503,7 +505,7 @@ TileJSON 3.0 自体は JSON Schema 上 `additionalProperties` を禁止してお
 
 ### ~~エンタープライズ向けスタンドアロン版Staffプロンプット(`STANDALONE_PROMPT.md` 案)~~
 
-**2026-08-03追記**: この案自体は今回も不採用のまま。ただし動機となった課題(インターネット非接続環境向けのコンパクトなStaffプロンプト)は、より狭いスコープ(手動保守・数千字程度)で D28([GENNAI_PROMPT.md](GENNAI_PROMPT.md))として決着させた。
+**2026-08-03追記**: この案自体は今回も不採用のまま。ただし動機となった課題(インターネット非接続環境向けのStaffプロンプト)は、D28として一度は本リポジトリ側で決着させた(その時点では手動保守・数千字程度の精選版)。同日中に、埋め込み範囲を「既知のノイズ系統を除く全カタログ」へ拡大し、かつ内容がspiccato固有のインタフェースに依存することから、`dwg7/spiccato`側(`GENNAI_PROMPT.md`、`scripts/build-gennai-prompt.mjs`)へ丸ごと移設した(D28はSuperseded、詳細は同項参照)。本リポジトリはカタログ生成(`build_catalog.rb`)に専念する。
 
 インターネットに接続できないエンタープライズAI環境では、Staffは `catalog`/`{id}` を都度fetchすることができない。現在の `STAFF_PROMPT.md` は「カタログを取得して調べる」ことを前提にしており、そのままでは使えない。
 
