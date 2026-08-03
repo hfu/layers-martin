@@ -23,6 +23,15 @@ Martin では、概念的に次のような API モデルが使われます。
 
 タイル実体は複製せず、GSI 等の既存タイル URL を参照します。生成するのは、あくまで発見用のメタデータです。
 
+## Staffプロンプト
+
+このカタログを実際に使う生成AI(Staccatoアーキテクチャの**Staff**役)向けのシステムプロンプトも、このリポジトリで管理しています。
+
+- [STAFF_PROMPT.md](STAFF_PROMPT.md) — 通常版。カタログをその場でfetchできる環境向け(インターネット接続前提)。
+- [GENNAI_PROMPT.md](GENNAI_PROMPT.md) — タイトなオフライン版。システムプロンプトは保存できるがインターネットに一切アクセスできない生成AI(例: 政府AI「源内」)向け。約4,000字。設計判断は [DECISIONS.md](DECISIONS.md) D28 を参照。
+
+どちらも `dwg7/spiccato`(このカタログを使うCartographer実装)のフォーム画面から直接コピーできます: <https://dwg7.github.io/spiccato/>
+
 ## 背景
 
 地理院地図の `layers.txt` には、多数のレイヤ定義が階層的に収録されています。
