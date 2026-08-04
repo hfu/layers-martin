@@ -3,13 +3,13 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 186,
     "fetched_files": 186,
-    "groups_seen": 880,
-    "layers_seen": 13960,
-    "tiles_included": 1865,
-    "layers_excluded": 12095,
+    "groups_seen": 885,
+    "layers_seen": 13968,
+    "tiles_included": 1867,
+    "layers_excluded": 12101,
     "excluded_by_reason": {
-      "unsupported_extension": 1342,
-      "sar_observation_snapshot": 10544,
+      "unsupported_extension": 1344,
+      "sar_observation_snapshot": 10548,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
@@ -30,11 +30,11 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 15787
+      "bytes": 20258
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
-      "bytes": 17097
+      "bytes": 30959
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20250815rain.txt",
@@ -806,6 +806,19 @@
       ]
     },
     {
+      "id": "20260729kumamoto_kumamoto1_0803suichoku",
+      "title": "熊本１地区（8/3撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto1_0803suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "垂直写真",
+        "熊本１地区"
+      ]
+    },
+    {
       "id": "20260729kumamoto_kumamoto2_0729suichoku_sokuho",
       "title": "熊本２地区（7/29撮影）",
       "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamoto2_0729suichoku_sokuho/{z}/{x}/{y}.geojson",
@@ -935,6 +948,18 @@
       ]
     },
     {
+      "id": "20260729kumamoto_syamenhoukai_taiseki_kumamoto3",
+      "title": "斜面崩壊・堆積分布データ（熊本３地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamoto3/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "斜面崩壊・堆積分布データ"
+      ]
+    },
+    {
       "id": "urgent_earthquake_20260728R8kumamoto_p124_20250812_20260728_p131_20260702_20260730_qu",
       "title": "2026年7月2日-2026年7月30日<br>準上下成分",
       "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_p124_20250812_20260728_p131_20260702_20260730_qu/{z}/{x}/{y}.png",
@@ -969,7 +994,8 @@
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
       "path": [
         "令和8年(2026年)熊本地震",
-        "SAR解析結果(ALOS-2/ALOS-4)"
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "アンラップ干渉画像"
       ]
     },
     {
@@ -981,31 +1007,86 @@
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
       "path": [
         "令和8年(2026年)熊本地震",
-        "SAR解析結果(ALOS-2/ALOS-4)"
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "アンラップ干渉画像"
       ]
     },
     {
-      "id": "urgent_earthquake_20260728R8kumamoto_20260702_20260730_u11l_p124f630_640_l12_obd",
-      "title": "2026/07/02～2026/07/30_AR",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20260702_20260730_u11l_p124f630_640_l12_obd/{z}/{x}/{y}.png",
+      "id": "urgent_earthquake_20260728R8kumamoto_20260515_20260801_u06l_p028_precise",
+      "title": "2026/05/15~2026/08/01_DL<br>dif4.atm.ion.psf精密暦p028",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20260515_20260801_u06l_p028_precise/{z}/{x}/{y}.png",
       "reason": "sar_observation_snapshot",
       "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
       "path": [
         "令和8年(2026年)熊本地震",
-        "SAR解析結果(ALOS-2/ALOS-4)"
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
       ]
     },
     {
-      "id": "urgent_earthquake_20260728R8kumamoto_20250812_20260728_u11l_p124f680_l10_obd_mask_offset",
-      "title": "2025/08/12～2026/07/28_AL",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20250812_20260728_u11l_p124f680_l10_obd_mask_offset/{z}/{x}/{y}.png",
+      "id": "urgent_earthquake_20260728R8kumamoto_20241220_20260731_u14r_p021_precise",
+      "title": "2024/12/20～2026/07/31_DR<br>dif4.atm.ion.psf精密暦p021",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20241220_20260731_u14r_p021_precise/{z}/{x}/{y}.png",
       "reason": "sar_observation_snapshot",
       "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
       "path": [
         "令和8年(2026年)熊本地震",
-        "SAR解析結果(ALOS-2/ALOS-4)"
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20260728R8kumamoto_20260710_20260730_u06r_p130_precise",
+      "title": "2026/07/11～2026/07/31_AR<br>dif4.atm.6lwcor.psf精密暦p130",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20260710_20260730_u06r_p130_precise/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20260728R8kumamoto_20260701_20260729_u89r_p131_precise",
+      "title": "2026/07/02～2026/07/30_AR<br>dif4.atm.ion.psf精密暦p131",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20260701_20260729_u89r_p131_precise/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20260728R8kumamoto_20251113_20260729_u09l_p029_precise",
+      "title": "2025/11/13~2026/07/29_DL<br>dif4.atm.4lwcor.psf精密暦p029",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20251113_20260729_u09l_p029_precise/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20260728R8kumamoto_20250812-20260728_u11l_p124f680-690_precise",
+      "title": "2025/08/12～2026/07/28_AL<br>dif4.atm.ion.psf精密暦p124",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_20250812-20260728_u11l_p124f680-690_precise/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "SAR解析結果(ALOS-2/ALOS-4)",
+        "干渉画像"
       ]
     },
     {
