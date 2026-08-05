@@ -7268,6 +7268,10 @@
       "name": "標準地図",
       "content_type": "image/png"
     },
+    "std_renewal_test": {
+      "name": "標準地図リニューアル版（試験公開）",
+      "content_type": "image/png"
+    },
     "swale": {
       "name": "明治期の低湿地",
       "content_type": "image/png"
