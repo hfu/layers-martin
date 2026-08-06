@@ -43,6 +43,7 @@
 | [D26](#d26-pdf-のみで公開される凡例を-legend_pdf_url-として収録する全レイヤー点検の結果) | PDF のみで公開される凡例を `legend_pdf_url` として収録する（全レイヤー点検の結果） | Accepted | 2026-07-17 |
 | [D27](#d27-staff_promptmd-に-required_stylesoptional_stylesd39を追加する) | `STAFF_PROMPT.md` に `required_styles`/`optional_styles`(D39)を追加する | Accepted | 2026-07-21 |
 | [D28](#d28-インターネット非接続かつシステムプロンプト保存可能なaigennai_promptmdを新設する) | インターネット非接続・システムプロンプト保存可能なAI向けに `GENNAI_PROMPT.md` を新設する | Superseded(`dwg7/spiccato`へ移設) | 2026-08-03 |
+| [D29](#d29-staff_promptmdにspiccato向けの受け渡し方法urlリンク構築手順を追記する) | `STAFF_PROMPT.md` に spiccato 向けの受け渡し方法・URLリンク構築手順を追記する | Accepted | 2026-08-06 |
 
 ---
 
@@ -524,3 +525,25 @@ Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で見つ�
 - **`maps.gsi.go.jp`/`cyberjapandata.gsi.go.jp`/`disaportaldata.gsi.go.jp` 配下(811件)の `attribution` 欠落**。D16 で意図的に保留(上記参照)。
 - **`bounds`(46.2%)/`center`(4.6%)の欠落**。地理的カバレッジで足切りや自動フィットができない。対応は保留。
 - **重複レイヤーの統合**(D10 で見送り済み)。
+
+## D29: `STAFF_PROMPT.md` に spiccato 向けの受け渡し方法・URLリンク構築手順を追記する
+
+**Status**: Accepted
+
+**Context**: `dwg7/spiccato`(`hfu/faceless-cartographer`の第三世代、URLに状態を持たせる設計、同リポジトリ`DECISIONS.md` D2)を実際に使い込む中で、`STAFF_PROMPT.md`の「正しいやりとりの形」がこの前提と正面から食い違っていることが分かった:
+
+- 第3項は「Map Intentをコピーして画面に貼り付ける」を唯一の受け渡し方法として記述しており、spiccatoが実際に想定するリンク直接構築という方法に触れていなかった。
+- 第5項「共有の一次artifactは Map Intent のテキスト自体である。URLを共有手段として扱ってはならない。」は、spiccatoの設計と**正面から矛盾**していた。
+
+この提案は2026-08-03時点で一度検討され(`/Users/hfu/spiccato`側のセッションでscratchpadに草稿として作成済み、`hfu/faceless-cartographer` D32のURL共有一回限り方針や`ADR 0001`との関係も踏まえて既に実機検証済みだった)、当時は適用を見送っていた。今回、spiccato側での作業(D10〜D15)を経て、この方向転換を`STAFF_PROMPT.md`自体にも反映すべきと判断した。
+
+**Decision**:
+
+- 「正しいやりとりの形」第3項・第5項を、対象Cartographerで条件分岐する形に差し替えた。`hfu/faceless-cartographer`は従来通り(貼り付け、`ADR 0001`のまま)、`dwg7/spiccato`はリンク直接構築(URL自体が一次artifact、`ADR 0001`の文言からの意図的な転換であることを明記)。どちらを対象にするかはStaffの関知するところではなく、利用者の指示・文脈に依存する、という立場を明記した。
+- 新設セクション「spiccato 向けURLの構築 (#q=、推奨)」「spiccato 向けURLの構築 (#m=、コード実行環境が必要)」を追加。spiccato `DECISIONS.md` D3・D6の内容(deflate-raw圧縮+base64url、query string形式)を、コードを持たないStaffでも実行できる手順として明記した。
+- 副産物として見つかった実務上の注意(`catalog`拡張子無しは`content-type: application/octet-stream`で返り、Web取得ツールによってはバイナリ扱いされる。`.json`付きを常用すべき)を、新設セクションと既存の「カタログの引き方」の両方に反映した。実際に`curl -I`で再確認済み。
+- リンク提示時は生URLでなく`[説明文](URL)`形式のMarkdownハイパーリンクにすることも明記した(可読性のため、以前から美観上の要請として指摘されていた点)。
+
+**Decision(範囲外としたもの)**: Staffが「対象のCartographerがどちらか」をどう判定するかは、利用者の初期指示や過去のやりとりに委ねる(自動判定ロジックは提案しない)。`hfu/faceless-cartographer`側の記述(同リポジトリD32のURL共有に関する記述)への変更は提案しない。両実装は並存する前提。
+
+**Consequences**: `STAFF_PROMPT.md`が初めてspiccatoを明示的に扱うようになった。今後spiccato側の`#q=`/`#m=`仕様が変わった場合(dwg7/spiccato DECISIONS.md参照)、この2節も追随して更新する必要がある。

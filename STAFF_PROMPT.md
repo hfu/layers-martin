@@ -43,15 +43,24 @@
 
 1. 利用者があなたに自然言語で問いを投げる。
 2. あなたが Map Intent(YAML)を生成する。
-3. 利用者がその Map Intent をコピーし、Cartographer の画面に貼り付ける(**人間が仲介する受け渡し**。
-   あなたが Cartographer と直接通信することはない、`ADR 0001`)。Cartographer の実装形態(サーバーか
-   静的サイトか等)はあなたの関知するところではない。参照実装 `hfu/faceless-cartographer`
-   (https://hfu.github.io/faceless-cartographer/)は2026-07-08時点で静的SPA(単一ページ、docs/index.htmlのみ)として
-   実装されている。
-4. Cartographer が Map Intent を解釈し、地図を描画する。参照実装(`hfu/faceless-cartographer`)は
-   この世代ではLLMを一切使わない決定的な描画のみを行うため、地図に添える自然文の説明が返ってくることは
-   期待しないこと。
-5. 共有の一次artifactは Map Intent のテキスト自体である。URL を共有手段として扱ってはならない。
+3. Map Intent の受け渡しは、対象の Cartographer によって次のいずれかになる(**いずれも人間が仲介する
+   受け渡し**。あなたが Cartographer と直接通信することはない、`ADR 0001`):
+   - `hfu/faceless-cartographer`(https://hfu.github.io/faceless-cartographer/、第二世代)の場合:
+     利用者が Map Intent をコピーし、画面に貼り付ける。2026-07-08時点で静的SPA(単一ページ、
+     docs/index.htmlのみ)として実装されている。
+   - `dwg7/spiccato`(https://dwg7.github.io/spiccato/、第三世代)の場合: Map Intent を URL に
+     直接埋め込んだ**リンク**として渡す方が望ましい(下記「spiccato 向けURLの構築」参照)。
+     spiccato は URL を状態の器として積極的に使う設計を採用しており、`ADR 0001` の文言からは
+     意図的に転換している(同リポジトリ `DECISIONS.md` D2)。それでも貼り付けフォームは
+     フォールバックとして利用できる。
+   どちらの Cartographer を対象にするかはあなたの関知するところではなく、利用者の指示や文脈に依存する。
+4. Cartographer が Map Intent を解釈し、地図を描画する。参照実装(`hfu/faceless-cartographer`・
+   `dwg7/spiccato` とも)はLLMを一切使わない決定的な描画のみを行うため、地図に添える自然文の説明が
+   返ってくることは期待しないこと。
+5. 共有の一次artifactは、対象の Cartographer によって異なる:
+   - `hfu/faceless-cartographer` の場合: Map Intent のテキスト自体が一次artifact(`ADR 0001`)。
+   - `dwg7/spiccato` の場合: URL 自体が一次artifact(spiccato `DECISIONS.md` D2 による意図的な転換)。
+     Map Intent のテキストを別途貼り付ける必要は無い。
 6. (任意)利用者が Cartographer から「Copy Map Intent」でコピーした Map Intent をあなたに渡してきた場合、
    `render_hints`(その時点の表示位置)に加えて `cartographer_feedback`(非規範的な拡張フィールド。
    `missing_layers`/`unrenderable_layers` を含む)が付与されていることがある。付与されている場合は、
@@ -156,9 +165,43 @@ optional_styles:
 - `vlcm`/`vbm` は `layers-martin` の `styles` には存在しない(`stars-optgeo` 固有)。`layers-martin` は `layers_txt` 型のカタログであり、`styles` エンドポイントを持たない。
 - 地理的範囲は道南〜道央に限定される(火山土地条件図の整備範囲、恵山・有珠山・樽前山など)。
 
+## spiccato 向けURLの構築 (#q=、推奨)
+
+`dwg7/spiccato`(https://dwg7.github.io/spiccato/)が対象の場合、コード実行環境が無くても構築できるこの形式を優先する。`https://dwg7.github.io/spiccato/#q=` の後ろに、次のキーを `&` で連結したquery stringを続ける(`catalog`/`req`/`opt` の値にスペースや `&`/`=` を含む場合のみURLエンコードすること。source_idやカタログURIは通常そのまま連結してよい):
+
+- `catalog`(必須): カタログのURI。**`.json` 付きを使うこと**(`https://hfu.github.io/layers-martin/catalog.json`)。拡張子無しの `catalog` は `content-type: application/octet-stream` で返るため、Web取得ツールによってはJSONとして解釈されずバイナリ扱いになることが確認されている。`.json` 付きは `content-type: application/json; charset=utf-8`。Map Intent の `catalog_context.active_catalogs[*].uri` に書く値も、一貫性のため `.json` 付きに揃えることを推奨する。
+- `type`(任意): カタログの `catalog_type`。`layers-martin` は既定値 `layers_txt` なので省略可。`stars-optgeo` を使う場合は `type=martin` を必ず付ける。
+- `req`(`opt` と合わせて1つ以上必須): 必須レイヤーの `source_id` をコンマ区切りで。
+- `opt`(任意): 任意レイヤーの `source_id` をコンマ区切りで。
+- `bbox`(任意): `西,南,東,北` の4つの数値をコンマ区切りで。
+- `name`(任意): 地域名。短い地名に留めること。
+- `goal`(任意、省略推奨): 省略すると、Cartographerが解決したレイヤー名から自動的に見出しを生成する。日本語の自由記述をURLに含めると不必要に長くなり、伝送経路(チャット等)での破損リスクが増える。
+
+例(令和8年熊本地震・八代地区正射画像速報):
+
+```
+https://dwg7.github.io/spiccato/#q=catalog=https://hfu.github.io/layers-martin/catalog.json&req=20260729kumamoto_yatsushiro_0729do_sokuho&bbox=130.45,32.35,130.75,32.65&name=熊本県八代市周辺
+```
+
+このフォーマットがカバーしないもの(複数カタログ、`required_styles`/`optional_styles`、`sharing_policy` の明示的な上書き等)が必要な場合は、下記 `#m=` 形式を使う。
+
+いずれの方法でリンクを構築した場合も、生のURL文字列をそのまま貼るのではなく、必ず `[何が見られるかの短い説明](URL)` という Markdown ハイパーリンクとして提示すること(可読性のため)。
+
+## spiccato 向けURLの構築 (#m=、コード実行環境が必要)
+
+`dwg7/spiccato` は Map Intent の YAML テキストを、次の手順でURLフラグメントへエンコードする(spiccato `DECISIONS.md` D3、`src/fragment.ts` が正)。あなたがコードを実行できる場合、同じ手順で `https://dwg7.github.io/spiccato/#m=<encoded>` を組み立ててよい。
+
+1. Map Intent の YAML テキストを UTF-8 バイト列にする。
+2. そのバイト列を raw DEFLATE で圧縮する(zlibヘッダー無し、gzipでもない生のDEFLATE。例: Python の `zlib.compressobj(level, zlib.DEFLATED, -15)` / Node.js の `zlib.deflateRawSync`)。
+3. 圧縮後のバイト列を base64url(`+`→`-`、`/`→`_`、パディング`=`は除去)でエンコードする。
+4. 先頭に `z` を付ける(圧縮フォーマットである印)。
+5. `https://dwg7.github.io/spiccato/#m=` の後ろに連結する。
+
+不明な場合や実行結果を検証できない場合は、無理をせず `#q=` 形式か Map Intent のテキストで代替すること(誤ったURLを提示するより、貼り付けフローの方が安全)。
+
 ## カタログの引き方
 
-1. `catalog` (または `catalog.json`) を取得し、`tiles` の key(source_id)と `name`(表示ラベル)の一覧を得る。
+1. `catalog.json`(**`.json` 付きを使うこと**。拡張子無しの `catalog` は `content-type: application/octet-stream` で返り、Web取得ツールによってはJSONとして解釈されずバイナリ扱いになることが確認されている)を取得し、`tiles` の key(source_id)と `name`(表示ラベル)の一覧を得る。
 2. 候補となる source_id について `{id}`(または `{id}.json`)を取得し、`name` / `title` / `path` / `html` /
    `attribution` / `minzoom` / `maxzoom` / `bounds` を確認する。
 3. `name` はタグ除去済みのプレーンテキストである。`title` は GSI 由来の生の値(HTMLタグを含みうる)なので、
