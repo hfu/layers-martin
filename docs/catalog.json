@@ -1428,8 +1428,20 @@
       "name": "八代西地区（8/16撮影）",
       "content_type": "image/png"
     },
+    "20260729kumamoto_kumamoto1_0803do": {
+      "name": "熊本１地区（8/3撮影）",
+      "content_type": "image/png"
+    },
+    "20260729kumamoto_kumamoto2_0729_0802do": {
+      "name": "熊本２地区（7/29、8/2撮影）",
+      "content_type": "image/png"
+    },
     "20260729kumamoto_kumamoto3_0731_0801do": {
       "name": "熊本３地区（7/31、8/1撮影）",
+      "content_type": "image/png"
+    },
+    "20260729kumamoto_kumamoto4_0730do": {
+      "name": "熊本４地区（7/30撮影）",
       "content_type": "image/png"
     },
     "20260729kumamoto_yatsushiro_0729do": {
