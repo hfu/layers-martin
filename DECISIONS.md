@@ -547,3 +547,18 @@ Staff/Cartographer ロールプレイでの実用性評価(2026-07-02)で見つ�
 **Decision(範囲外としたもの)**: Staffが「対象のCartographerがどちらか」をどう判定するかは、利用者の初期指示や過去のやりとりに委ねる(自動判定ロジックは提案しない)。`hfu/faceless-cartographer`側の記述(同リポジトリD32のURL共有に関する記述)への変更は提案しない。両実装は並存する前提。
 
 **Consequences**: `STAFF_PROMPT.md`が初めてspiccatoを明示的に扱うようになった。今後spiccato側の`#q=`/`#m=`仕様が変わった場合(dwg7/spiccato DECISIONS.md参照)、この2節も追随して更新する必要がある。
+
+## D30: `dwg7/spiccato` Issue #1(テストレポート)の提案を反映する
+
+**Status**: Accepted
+
+**Context**: `dwg7/spiccato`側のセッションで、[Issue #1](https://github.com/dwg7/spiccato/issues/1)(M365 CopilotによるSTAFF_PROMPT.md/GENNAI_PROMPT.mdの評価レポート)への対応として、GENNAI_PROMPT.mdと合わせてSTAFF_PROMPT.mdにも同趣旨の改善を反映する判断があった(dwg7/spiccato DECISIONS.md D17参照)。D15・D29が確立した「STAFF_PROMPT.mdとGENNAI_PROMPT.mdは内容面で対応するよう保守する」方針を踏襲する。
+
+**Decision**: 以下4点をSTAFF_PROMPT.mdに反映した(GENNAI_PROMPT.md側の対応する変更はdwg7/spiccato D17参照):
+
+1. **bbox捏造防止の明記**: 「地域・範囲の解決は Staff の責務」節に、「地名から十分な確信を持ってbboxを解決できない場合、細かい座標を推測で作らない。より広い既知の範囲に広げるか、`area.bbox`を`null`のまま残す方を優先する」という一文を追加した。既存の「動作確認済みの例」(`bbox: null # Staff が地名から解決できた場合のみ...`)は既にこの原則に沿っていたため、例自体の修正は不要だった。
+2. **選定手順の強化**: 「source_id を捏造しないこと」節の「似た名前の候補が複数ある場合」を、(1)完全一致・強い意味一致を優先、(2)複数候補があれば主候補を`required_layers`・次点を`optional_layers`に、(3)対応する候補が無ければ「見つからない」と言う、という3段の手順として書き直した。
+3. **`name`パラメータの日本語エンコーディング**: 「spiccato 向けURLの構築 (#q=、推奨)」節の`name`の説明に、「可能ならURLエンコードする。ただし確実にエンコードできる自信が無い場合は、日本語のままでもよい」という一文を追加した。リンク提示時の説明文については、同節が既にD29で「必ず`[説明文](URL)`形式のMarkdownハイパーリンクで提示する」ことを規定済みだったため、重複追加はしなかった。
+4. **`generated_at`の扱い**: 「動作確認済みの例3」(`required_styles`、D39)のYAML例の直後に、「利用可能な現在日時を確信を持って把握できる場合のみISO8601で埋める。現在日時を確信できない場合は省略してよい」という注記を追加した。
+
+**Consequences**: `STAFF_PROMPT.md`の4箇所を変更。GENNAI_PROMPT.mdとの内容対応(D15・D29の方針)を継続している。
