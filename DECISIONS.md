@@ -585,3 +585,24 @@ Staccatoアーキテクチャの4者モデル(User/Staff/Cartographer/Library)�
 あわせて、「source_id を捏造しないこと」節・「意味解決の指針」節にあった「正直に『見つからない』と伝える」というUSER向け応答のテンプレートをそのまま含んでいた2箇所の文言を、「見つからない旨を利用者に簡潔に伝える」という、内部規範への言及を含まない表現に書き換えた。**内部規範(捏造しないこと)自体は一切変更していない** — 変わったのは、その規範をUSERにどう伝えるか(あるいは伝えないか)という表現面のみ。
 
 **Consequences**: `STAFF_PROMPT.md`の3箇所を変更。GENNAI_PROMPT.mdとの内容対応(D15・D29の方針)を継続している(dwg7/spiccato DECISIONS.md D18)。
+
+## D32: 集約カタログ`catalog.json`の各エントリに`path`を追加する(オープンウェブスタイルの検索ギャップ修正)
+
+**Status**: Accepted
+
+**Context**: `dwg7/spiccato`側のD16(オープンウェブスタイル、最小限プロトタイプ)で、決定的検索レイヤー(`mcp/src/catalog.ts`の`searchCatalog`)が「令和8年熊本地震」のような日本語キーワードで実在のレイヤー(`20260729kumamoto_yatsushiro_0729do_sokuho`等)を発見できないという問題が見つかった。原因調査の結果、当該レイヤーの`name`(「八代地区（7/29撮影）」)には災害名が含まれておらず、ローマ字の`kumamoto`が`id`に含まれるのみだった。D16の時点では対応方向として「各エントリに日本語`description`を追加する」ことを技術的に実現可能(`build_catalog.rb`に1行足すだけ)と記録したが、実装は保留していた。
+
+今回`dwg7/spiccato`側から作業を引き継ぐにあたり、実際に`description`フィールドの中身を確認したところ、**`description`(GSIの`html`由来)は撮影手法に関する定型的な注記(「空中写真から自動処理により作成した正射画像です...」)であり、災害名は含まれていない**ことが分かった。一方、同じレイヤーの`path`フィールド(カテゴリ階層)を確認したところ、`["令和8年(2026年)熊本地震", "正射画像（速報）", "八代地区"]`のように、**災害イベント名がカテゴリ階層の先頭に明示的に含まれている**ことが判明した。GSIの`layers.txt`が「令和8年熊本地震」のような災害を独立したカテゴリとして階層化しているため。つまりD16が記録した対応方向(`description`)は的外れで、正しい修正対象は`path`だった。
+
+さらに調査したところ、`mcp/src/catalog.ts`の`searchCatalog`自体は**既に`entry?.path?.some((p) => p.toLowerCase().includes(q))`というpath検索ロジックを持っていた**(実装時点でおそらく`getLayerInfo`(個別TileJSON)経由の利用も想定していたため)。ボトルネックは集約カタログ`catalog.json`の`tiles[id]`エントリ(`build_catalog`メソッド)が`name`/`content_type`のみで`path`を含んでいなかったことにあり、`searchCatalog`のpath検索ロジックは実質的に一度も真になったことが無かった(dead code状態)。
+
+**Decision**: `build_catalog.rb`の2箇所に`path`を追加した:
+
+1. `tile_records <<`(126行目付近)のハッシュに`path: tilejson['path']`を追加。
+2. `build_catalog`メソッド(638行目付近)の`tiles[record[:id]]`ハッシュに`'path' => record[:path]`を追加。
+
+`path`の元データ(`record[:path]`、`walk_entry`で`layers.txt`の階層構造から蓄積済み)は既に個々のTileJSON生成(`build_tilejson`)で使われており、新規の外部fetchは不要だった。`dwg7/spiccato`側の`mcp/src/catalog.ts`・`openweb/`・MCPサーバーは無改修 — `searchCatalog`が既に持っていたpath検索ロジックが、データが揃ったことで初めて機能するようになる。
+
+**検証**: ローカルで`ruby build_catalog.rb --root https://maps.gsi.go.jp/layers_txt/layers.txt --out docs`を実行し、`ruby validate_outputs.rb --docs docs --min-tiles 1000`で整合性を確認(`validate_outputs: OK (1872 sources)`)。生成された`docs/catalog.json`に対し、`dwg7/spiccato`の`searchCatalog`と同一のマッチングロジックをNode.jsで再現して「熊本地震」を検索したところ、**45件ヒット**(令和8年(2026年)分7件・平成28年(2016年)分多数を含む)。D16が報告した0件から改善したことを直接確認した。`catalog.json`のファイルサイズは234KB→563KB(約2.4倍)に増加したが、静的ホスティングされるJSONファイルであり、GENNAI_PROMPT.mdへの埋め込み(D12、`name`のみを使用、`path`は埋め込まない)には影響しない。
+
+**Consequences**: `docs/catalog`・`docs/catalog.json`の全エントリに`path`が追加される(次回のcron再生成、または今回の手動コミットで反映)。`dwg7/spiccato`側のD16(2026-08-07追記)が記録した「description追加」という対応方向は、この`path`追加によって実質的に達成された(方向は違ったが、目的は同じ検索ギャップの解消)。オープンウェブスタイルの残課題(D16が指摘したLLM側のキーワード抽出精度)はこの変更の対象外で、引き続き別途の判断が必要。

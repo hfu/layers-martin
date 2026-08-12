@@ -177,6 +177,7 @@ class GsiLayersToStaticMartin
         id: source_id,
         name: tilejson['name'],
         content_type: content_type,
+        path: tilejson['path'],
         tilejson: tilejson
       }
     end
@@ -640,7 +641,8 @@ class GsiLayersToStaticMartin
     tile_records.sort_by { |r| r[:id] }.each do |record|
       tiles[record[:id]] = {
         'name' => record[:name],
-        'content_type' => record[:content_type]
+        'content_type' => record[:content_type],
+        'path' => record[:path]
       }
     end
 

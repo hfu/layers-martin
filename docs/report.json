@@ -3,12 +3,12 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 186,
     "fetched_files": 186,
-    "groups_seen": 888,
-    "layers_seen": 13976,
-    "tiles_included": 1871,
-    "layers_excluded": 12105,
+    "groups_seen": 890,
+    "layers_seen": 13978,
+    "tiles_included": 1872,
+    "layers_excluded": 12106,
     "excluded_by_reason": {
-      "unsupported_extension": 1348,
+      "unsupported_extension": 1349,
       "sar_observation_snapshot": 10548,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 28701
+      "bytes": 30949
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -777,6 +777,19 @@
         "令和8年(2026年)熊本地震",
         "垂直写真（速報）",
         "八代地区"
+      ]
+    },
+    {
+      "id": "20260729kumamoto_kumamotokeno_0812suichoku_sokuho",
+      "title": "熊本県央地区（8/12撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_kumamotokeno_0812suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "垂直写真（速報）",
+        "熊本県央地区"
       ]
     },
     {
@@ -180240,9 +180253,7 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     }
   ],
-  "id_changes": [
-
-  ],
+  "id_changes": [],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -185495,7 +185506,5 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": [
-
-  ]
+  "failures": []
 }
