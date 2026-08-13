@@ -18288,6 +18288,13 @@
         "背景地図"
       ]
     },
+    "pale_renewal_test": {
+      "name": "淡色地図リニューアル版（試験公開）",
+      "content_type": "image/png",
+      "path": [
+        "令和8年(2026年)熊本地震"
+      ]
+    },
     "ptc2": {
       "name": "植生(樹木被覆率)",
       "content_type": "image/png",
