@@ -4,8 +4,8 @@
     "visited_urls": 186,
     "fetched_files": 186,
     "groups_seen": 890,
-    "layers_seen": 13978,
-    "tiles_included": 1872,
+    "layers_seen": 13979,
+    "tiles_included": 1873,
     "layers_excluded": 12106,
     "excluded_by_reason": {
       "unsupported_extension": 1349,
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 30949
+      "bytes": 32151
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -180253,7 +180253,9 @@
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     }
   ],
-  "id_changes": [],
+  "id_changes": [
+
+  ],
   "attribution_defaults": [
     {
       "id": "terrainclassification1",
@@ -185506,5 +185508,7 @@
       "attribution": "防災科学技術研究所"
     }
   ],
-  "failures": []
+  "failures": [
+
+  ]
 }

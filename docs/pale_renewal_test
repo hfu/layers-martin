@@ -1,0 +1,30 @@
+{
+  "tilejson": "3.0.0",
+  "name": "淡色地図リニューアル版（試験公開）",
+  "tiles": [
+    "https://maps.gsi.go.jp/xyz/pale_renewal_test/{z}/{x}/{y}.png"
+  ],
+  "scheme": "xyz",
+  "description": "<div class=\"gsi_layerinfo_title\">淡色地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の淡色地図より情報量を充実させた、令和8年9月末公開予定の淡色地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "minzoom": 9,
+  "maxzoom": 14,
+  "center": [
+    130.601808,
+    32.507498,
+    14
+  ],
+  "id": "pale_renewal_test",
+  "title": "淡色地図リニューアル版（試験公開）",
+  "maxZoom": 14,
+  "maxNativeZoom": 14,
+  "html": "<div class=\"gsi_layerinfo_title\">淡色地図リニューアル版（試験公開）</div><div class=\"gsi_layerinfo_kaisetu\">現行の淡色地図より情報量を充実させた、令和8年9月末公開予定の淡色地図リニューアル版を試験公開しています。<br>令和８年熊本地震の災害対応に資するために試験公開するもので、提供範囲は九州地方（一部の離島を除く）となります。地図はズームレベル9～14で表示されます。試作版の試験公開のため、一部の注記、記号等については未調整です。また、最新の地図情報とは異なる場合があります。<div class=\"gsi_layerinfo_copy\">(c)国土地理院</div>",
+  "area": {
+    "lat": 32.507498,
+    "lng": 130.601808,
+    "zoom": 14
+  },
+  "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+  "path": [
+    "令和8年(2026年)熊本地震"
+  ]
+}
