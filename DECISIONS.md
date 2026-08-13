@@ -606,3 +606,16 @@ Staccatoアーキテクチャの4者モデル(User/Staff/Cartographer/Library)�
 **検証**: ローカルで`ruby build_catalog.rb --root https://maps.gsi.go.jp/layers_txt/layers.txt --out docs`を実行し、`ruby validate_outputs.rb --docs docs --min-tiles 1000`で整合性を確認(`validate_outputs: OK (1872 sources)`)。生成された`docs/catalog.json`に対し、`dwg7/spiccato`の`searchCatalog`と同一のマッチングロジックをNode.jsで再現して「熊本地震」を検索したところ、**45件ヒット**(令和8年(2026年)分7件・平成28年(2016年)分多数を含む)。D16が報告した0件から改善したことを直接確認した。`catalog.json`のファイルサイズは234KB→563KB(約2.4倍)に増加したが、静的ホスティングされるJSONファイルであり、GENNAI_PROMPT.mdへの埋め込み(D12、`name`のみを使用、`path`は埋め込まない)には影響しない。
 
 **Consequences**: `docs/catalog`・`docs/catalog.json`の全エントリに`path`が追加される(次回のcron再生成、または今回の手動コミットで反映)。`dwg7/spiccato`側のD16(2026-08-07追記)が記録した「description追加」という対応方向は、この`path`追加によって実質的に達成された(方向は違ったが、目的は同じ検索ギャップの解消)。オープンウェブスタイルの残課題(D16が指摘したLLM側のキーワード抽出精度)はこの変更の対象外で、引き続き別途の判断が必要。
+
+## D33: `dwg7/spiccato` Issue #3・#5の指摘を反映する — `#q=`のlabel構文・リンク優先の徹底
+
+**Status**: Accepted
+
+**Context**: `dwg7/spiccato`側のセッションで、[Issue #3](https://github.com/dwg7/spiccato/issues/3)「Copilotでのテスト」のコメント(「STAFF_PROMPT.mdはGENNAI_PROMPT.mdと比べてリンクを出さないことがある」)と[Issue #5](https://github.com/dwg7/spiccato/issues/5)「UX所見・改善項目」(Map Intentテキスト提示を当面封印しリンクを優先すべき、Cartographerパネルに識別子でなく名前を表示したい)への対応があった(dwg7/spiccato DECISIONS.md D19参照)。`dwg7/spiccato`側で`#q=`のワイヤーフォーマットを拡張し、`req`/`opt`の各エントリが`source_id|label`(パイプ区切り)を取れるようにした(`src/shorthand.ts`)。STAFF_PROMPT.md側にも対応する内容を反映する。
+
+**Decision**: 「## spiccato 向けURLの構築 (#q=、推奨)」節を以下の点で更新した:
+
+1. **label構文の追加**: `req`/`opt`の説明に、`source_id`単体または`source_id|label`(パイプ区切り)という構文を追記した。labelを添えるとCartographer画面のパネルに識別子でなく分かりやすい名前が表示される旨、および**labelに半角カンマを含めてはいけない**(構造区切り文字と衝突し、後半が別の実在しないレイヤーとして扱われてしまう)という注意を追加した。例も`req=20260729kumamoto_yatsushiro_0729do_sokuho|八代地区正射画像（速報）`のようにlabel付きに更新した。
+2. **リンク優先の徹底**: `#q=`で表現できない場合(複数カタログ・required_styles等)、コード実行環境があれば`#m=`の構築を試みる。それでも構築できない場合に限り、理由を一言添えてMap Intentのテキストを提示してよい、という段階的フォールバックを明記した。あわせて「リンクを提示できる場合、Map IntentのYAMLテキストは併記しない — リンクだけを提示する」ことを明記した(GENNAI_PROMPT.mdは既にこの方針、dwg7/spiccato D19参照)。
+
+**Consequences**: `STAFF_PROMPT.md`の該当節を変更。GENNAI_PROMPT.mdとの内容対応(D15・D29の方針)を継続している。

@@ -185,21 +185,21 @@ optional_styles:
 
 - `catalog`(必須): カタログのURI。**`.json` 付きを使うこと**(`https://hfu.github.io/layers-martin/catalog.json`)。拡張子無しの `catalog` は `content-type: application/octet-stream` で返るため、Web取得ツールによってはJSONとして解釈されずバイナリ扱いになることが確認されている。`.json` 付きは `content-type: application/json; charset=utf-8`。Map Intent の `catalog_context.active_catalogs[*].uri` に書く値も、一貫性のため `.json` 付きに揃えることを推奨する。
 - `type`(任意): カタログの `catalog_type`。`layers-martin` は既定値 `layers_txt` なので省略可。`stars-optgeo` を使う場合は `type=martin` を必ず付ける。
-- `req`(`opt` と合わせて1つ以上必須): 必須レイヤーの `source_id` をコンマ区切りで。
-- `opt`(任意): 任意レイヤーの `source_id` をコンマ区切りで。
+- `req`(`opt` と合わせて1つ以上必須): 必須レイヤーをコンマ区切りで。各エントリは `source_id` 単体、または `source_id|label`(パイプ区切り)。label を添えると、Cartographer画面のパネルに識別子(例: `lcmfc2`)ではなく分かりやすい名前(例: 治水地形分類図)が表示される。**label に半角カンマ(`,`)を含めないこと**(含めると、カンマがエントリの区切りと誤認され、後半が別の実在しないレイヤーとして扱われてしまう — 半角カンマが必要な場合は読点「、」を使うか、そのエントリだけ label を省略する)。
+- `opt`(任意): 任意レイヤー。構文は `req` と同じ(`source_id` または `source_id|label`)。
 - `bbox`(任意): `西,南,東,北` の4つの数値をコンマ区切りで。
 - `name`(任意): 地域名。短い地名に留めること。日本語など非ASCII文字を含める場合、可能ならURLエンコードする。ただし確実にエンコードできる自信が無い場合は、日本語のままでもよい(Cartographer側はどちらの形でも読める)。
 - `goal`(任意、省略推奨): 省略すると、Cartographerが解決したレイヤー名から自動的に見出しを生成する。日本語の自由記述をURLに含めると不必要に長くなり、伝送経路(チャット等)での破損リスクが増える。
 
-例(令和8年熊本地震・八代地区正射画像速報):
+例(令和8年熊本地震・八代地区正射画像速報、label付き):
 
 ```
-https://dwg7.github.io/spiccato/#q=catalog=https://hfu.github.io/layers-martin/catalog.json&req=20260729kumamoto_yatsushiro_0729do_sokuho&bbox=130.45,32.35,130.75,32.65&name=熊本県八代市周辺
+https://dwg7.github.io/spiccato/#q=catalog=https://hfu.github.io/layers-martin/catalog.json&req=20260729kumamoto_yatsushiro_0729do_sokuho|八代地区正射画像（速報）&bbox=130.45,32.35,130.75,32.65&name=熊本県八代市周辺
 ```
 
-このフォーマットがカバーしないもの(複数カタログ、`required_styles`/`optional_styles`、`sharing_policy` の明示的な上書き等)が必要な場合は、下記 `#m=` 形式を使う。
+このフォーマットがカバーしないもの(複数カタログ、`required_styles`/`optional_styles`、`sharing_policy` の明示的な上書き等)が必要な場合は、下記 `#m=` 形式を使う(コード実行環境があれば構築を試みる)。**それでもリンクを構築できない場合に限り**、理由を一言添えたうえで Map Intent のテキストを提示してよい(GENNAI_PROMPT.mdはインターネット接続が無い前提のため、この段階を踏まずYAML提示に直行してよい)。
 
-いずれの方法でリンクを構築した場合も、生のURL文字列をそのまま貼るのではなく、必ず `[何が見られるかの短い説明](URL)` という Markdown ハイパーリンクとして提示すること(可読性のため)。
+いずれの方法でリンクを構築した場合も、生のURL文字列をそのまま貼るのではなく、必ず `[何が見られるかの短い説明](URL)` という Markdown ハイパーリンクとして提示すること(可読性のため)。**リンクを提示できる場合、Map IntentのYAMLテキストは併記しない — リンクだけを提示する**。Map Intentを内部的に組み立てたこと自体は、利用者に見せる情報ではない(「応答は利用者(顧客)向けであること」節を参照)。
 
 ## spiccato 向けURLの構築 (#m=、コード実行環境が必要)
 
