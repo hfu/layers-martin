@@ -4,11 +4,11 @@
     "visited_urls": 186,
     "fetched_files": 186,
     "groups_seen": 890,
-    "layers_seen": 13979,
+    "layers_seen": 13980,
     "tiles_included": 1873,
-    "layers_excluded": 12106,
+    "layers_excluded": 12107,
     "excluded_by_reason": {
-      "unsupported_extension": 1349,
+      "unsupported_extension": 1350,
       "sar_observation_snapshot": 10548,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 32151
+      "bytes": 33545
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -1000,6 +1000,18 @@
       "id": "20260729kumamoto_syamenhoukai_taiseki_kumamoto4",
       "title": "斜面崩壊・堆積分布データ（熊本４地区）",
       "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamoto4/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
+      "path": [
+        "令和8年(2026年)熊本地震",
+        "斜面崩壊・堆積分布データ"
+      ]
+    },
+    {
+      "id": "20260729kumamoto_syamenhoukai_taiseki_kumamotokeno",
+      "title": "斜面崩壊・堆積分布データ（熊本県央地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20260729kumamoto_syamenhoukai_taiseki_kumamotokeno/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
