@@ -25,6 +25,8 @@
   },
   "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
   "path": [
+    "近年の災害",
+    "台風・豪雨等",
     "令和6年9月20日からの大雨",
     "正射画像（速報）"
   ]

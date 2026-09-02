@@ -1,14 +1,14 @@
 {
   "summary": {
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-    "visited_urls": 186,
-    "fetched_files": 186,
-    "groups_seen": 892,
-    "layers_seen": 13986,
-    "tiles_included": 1873,
-    "layers_excluded": 12113,
+    "visited_urls": 185,
+    "fetched_files": 185,
+    "groups_seen": 895,
+    "layers_seen": 13988,
+    "tiles_included": 1874,
+    "layers_excluded": 12114,
     "excluded_by_reason": {
-      "unsupported_extension": 1353,
+      "unsupported_extension": 1354,
       "sar_observation_snapshot": 10551,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -22,7 +22,15 @@
   "fetched_files": [
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-      "bytes": 430
+      "bytes": 330
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260902rain.txt",
+      "bytes": 241
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20260902rain.txt",
+      "bytes": 2489
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260729kumamoto.txt",
@@ -35,34 +43,6 @@
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
       "bytes": 35744
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20250815rain.txt",
-      "bytes": 240
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "bytes": 9580
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20240923rain.txt",
-      "bytes": 232
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "bytes": 8770
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20240102noto.txt",
-      "bytes": 235
-    },
-    {
-      "url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "bytes": 52569
-    },
-    {
-      "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "bytes": 86262
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers1.txt",
@@ -103,6 +83,10 @@
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240417bungo.txt",
       "bytes": 2935
+    },
+    {
+      "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "bytes": 86262
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20230505noto.txt",
@@ -530,7 +514,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
-      "bytes": 202387
+      "bytes": 202605
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20251210aomori.txt",
@@ -543,6 +527,10 @@
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20240419bungosuido.txt",
       "bytes": 4543
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "bytes": 52569
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20230506noto.txt",
@@ -603,6 +591,14 @@
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20110311touhokuoki.txt",
       "bytes": 81603
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "bytes": 9580
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "bytes": 8770
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20240726rain.txt",
@@ -766,6 +762,19 @@
     }
   ],
   "excluded": [
+    {
+      "id": "20260902rain_himi_0901suichoku_sokuho",
+      "title": "氷見地区（9/1撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260902rain_himi_0901suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260902rain.txt",
+      "path": [
+        "令和8年(2026年)8月27日からの大雨",
+        "垂直写真（速報）",
+        "氷見地区"
+      ]
+    },
     {
       "id": "20260729kumamoto_yatsushiro_0729suichoku_sokuho",
       "title": "八代地区（7/29撮影）",
@@ -1200,1137 +1209,6 @@
         "令和8年(2026年)熊本地震",
         "SAR解析結果(ALOS-2/ALOS-4)",
         "干渉画像"
-      ]
-    },
-    {
-      "id": "20250815rain_amakusa_0815suichoku_sokuho",
-      "title": "天草上島地区（8/15撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_amakusa_0815suichoku_sokuho/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "垂直写真（速報）"
-      ]
-    },
-    {
-      "id": "20250815rain_yatushironishi_0816suichoku_sokuho",
-      "title": "八代西地区（8/16撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushironishi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "垂直写真（速報）"
-      ]
-    },
-    {
-      "id": "20250815rain_yatushirohigashi_0816suichoku_sokuho",
-      "title": "八代東地区（8/16撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushirohigashi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "垂直写真（速報）"
-      ]
-    },
-    {
-      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa",
-      "title": "斜面崩壊・土石流・堆積分布図データ（天草上島地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "斜面崩壊・土石流・堆積分布図データ"
-      ]
-    },
-    {
-      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi",
-      "title": "斜面崩壊・土石流・堆積分布図データ（八代東地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "斜面崩壊・土石流・堆積分布図データ"
-      ]
-    },
-    {
-      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi",
-      "title": "斜面崩壊・土石流・堆積分布図データ（八代西地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
-      "path": [
-        "令和7年(2025年)8月6日からの大雨",
-        "斜面崩壊・土石流・堆積分布図データ"
-      ]
-    },
-    {
-      "id": "20240923rain_wajima_0923suichoku_sokuho",
-      "title": "輪島地区（9/23撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0923suichoku_sokuho/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "垂直写真（速報）"
-      ]
-    },
-    {
-      "id": "20240923rain_wajima_0924suichoku_sokuho",
-      "title": "輪島地区（9/24撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0924suichoku_sokuho/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "垂直写真（速報）"
-      ]
-    },
-    {
-      "id": "20240923rain_wajima_0923naname",
-      "title": "輪島地区（9/23撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0923naname/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "斜め写真"
-      ]
-    },
-    {
-      "id": "20240923rain_wajima_0924naname",
-      "title": "輪島地区（9/24撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0924naname/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "斜め写真"
-      ]
-    },
-    {
-      "id": "20240923rain_syamenhoukai_dosekiryu_taiseki_all",
-      "title": "斜面崩壊・土石流・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_syamenhoukai_dosekiryu_taiseki_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "斜面崩壊・土石流・堆積分布データ",
-        "斜面崩壊・土石流・堆積分布データ"
-      ]
-    },
-    {
-      "id": "20240923rain_cloud_poly",
-      "title": "雲による未判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "斜面崩壊・土石流・堆積分布データ",
-        "斜面崩壊・土石流・堆積分布データ"
-      ]
-    },
-    {
-      "id": "20240923rain_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240923rain_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
-      "path": [
-        "令和6年9月20日からの大雨",
-        "斜面崩壊・土石流・堆積分布データ",
-        "斜面崩壊・土石流・堆積分布データ"
-      ]
-    },
-    {
-      "id": "20240102noto_suzu_0102suichoku",
-      "title": "珠洲地区（1/2撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "珠洲地区"
-      ]
-    },
-    {
-      "id": "20240102noto_suzu_0105suichoku",
-      "title": "珠洲地区（1/5撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0105suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "珠洲地区"
-      ]
-    },
-    {
-      "id": "20240102noto_suzu_0114suichoku",
-      "title": "珠洲地区（1/14撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0114suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "珠洲地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimahigashi_0102suichoku",
-      "title": "輪島東地区（1/2撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimahigashi_0102suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島東地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimahigashi_0114suichoku",
-      "title": "輪島東地区（1/14撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimahigashi_0114suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島東地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanaka_0102suichoku",
-      "title": "輪島中地区（1/2撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0102suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島中地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanaka_0105suichoku",
-      "title": "輪島中地区（1/5撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0105suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島中地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanaka_0111suichoku",
-      "title": "輪島中地区（1/11撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0111suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島中地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanishii_0105suichoku",
-      "title": "輪島西地区（1/5撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0105suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島西地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanishii_0111suichoku",
-      "title": "輪島西地区（1/11撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0111suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島西地区"
-      ]
-    },
-    {
-      "id": "20240102noto_wazimanishii_0117suichoku",
-      "title": "輪島西地区（1/17撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0117suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "輪島西地区"
-      ]
-    },
-    {
-      "id": "20240102noto_anamizu_0105suichoku",
-      "title": "穴水地区（1/5撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0105suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "穴水地区"
-      ]
-    },
-    {
-      "id": "20240102noto_anamizu_0111suichoku",
-      "title": "穴水地区（1/11撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0111suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "穴水地区"
-      ]
-    },
-    {
-      "id": "20240102noto_anamizu_0114suichoku",
-      "title": "穴水地区（1/14撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0114suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "穴水地区"
-      ]
-    },
-    {
-      "id": "20240102noto_anamizu_0117suichoku",
-      "title": "穴水地区（1/17撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0117suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "穴水地区"
-      ]
-    },
-    {
-      "id": "20240102noto_nanao_0105suichoku",
-      "title": "七尾地区（1/5撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_nanao_0105suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "七尾地区"
-      ]
-    },
-    {
-      "id": "20240102noto_nanao_0117suichoku",
-      "title": "七尾地区（1/17撮影）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_nanao_0117suichoku/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "垂直写真",
-        "七尾地区"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_cloud_poly",
-      "title": "雲による未読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_hokai_all",
-      "title": "斜面崩壊・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_hokai_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240115noto_wazimanaka_cloud_poly",
-      "title": "雲による未読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島中地区）"
-      ]
-    },
-    {
-      "id": "20240115noto_wazimanaka_hokai_all",
-      "title": "斜面崩壊・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_hokai_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島中地区）"
-      ]
-    },
-    {
-      "id": "20240115noto_wazimanaka_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島中地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_cloud_poly",
-      "title": "雲による未読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_hokai_all",
-      "title": "斜面崩壊・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_hokai_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_anamizu_hokai_all",
-      "title": "斜面崩壊・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_hokai_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（穴水地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_anamizu_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（穴水地区）"
-      ]
-    },
-    {
-      "id": "20240109noto_nanao_hokai_all",
-      "title": "斜面崩壊・堆積範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_hokai_all/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（七尾地区）"
-      ]
-    },
-    {
-      "id": "20240109noto_nanao_handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ",
-        "斜面崩壊・堆積分布データ（七尾地区）"
-      ]
-    },
-    {
-      "id": "20240102noto_hokai_bunzu",
-      "title": "斜面崩壊・堆積分布図（分図の図郭表示）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_hokai_bunzu/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "斜面崩壊・堆積分布データ"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_0109cloud_poly",
-      "title": "雲による未読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_0109rev",
-      "title": "津波浸水域（珠洲、輪島東地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_suzu_wazimahigashi_0109handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（珠洲地区、輪島東地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_0112cloud_poly",
-      "title": "雲による未読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112cloud_poly/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_0112rev",
-      "title": "津波浸水域（輪島西地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112rev/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240112noto_wazimanishi_0112handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（輪島西地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_anamizu_0110rev",
-      "title": "津波浸水域（穴水地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110rev/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（穴水地区）"
-      ]
-    },
-    {
-      "id": "20240106noto_anamizu_0110handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（穴水地区）"
-      ]
-    },
-    {
-      "id": "20240109noto_naano_0110rev",
-      "title": "津波浸水域（七尾地区）",
-      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110rev/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（七尾地区）"
-      ]
-    },
-    {
-      "id": "20240109noto_nanao_0110handoku_area",
-      "title": "判読範囲",
-      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110handoku_area/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "津波浸水域データ",
-        "津波浸水域データ（七尾地区）"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_merge_wtmean_qu",
-      "title": "能登半島全域<br>準上下成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_merge_wtmean_qu/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_merge_wtmean_qe",
-      "title": "能登半島全域<br>準東西成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_merge_wtmean_qe/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qu",
-      "title": "2023年12月6日-2024年1月3日<br>準上下成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qu/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qe",
-      "title": "2023年12月6日-2024年1月3日<br>準東西成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qe/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qu",
-      "title": "2023年11月3日-2024年1月9日<br>準上下成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qu/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qe",
-      "title": "2023年11月3日-2024年1月9日<br>準東西成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qe/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qu",
-      "title": "2023年6月6日 - 2024年1月1日<br>準上下成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qu/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qe",
-      "title": "2023年6月6日 - 2024年1月1日<br>準東西成分",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qe/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "2.5次元解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20220606_20240115_pixeloffset_rgo64_masked_filt",
-      "title": "2022年6月6日 - 2024年1月15日<br>衛星視線方向の変動量（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220606_20240115_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231231_20240114_pixeloffset_rgo64_masked_filt",
-      "title": "2023年12月31日 - 2024年1月14日<br>衛星視線方向の変動量（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231231_20240114_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231103_20240112_pixeloffset_rgo64_masked_filt",
-      "title": "2023年11月3日 - 2024年1月12日<br>衛星視線方向の変動量（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231103_20240112_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20211019_20240109_pixeloffset_rgo64_masked_filt",
-      "title": "2021年10月19日 - 2024年1月9日<br>衛星視線方向の変動量（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20211019_20240109_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20230612_20240108obd_pixeloffset_rgo64_masked_filt",
-      "title": "2023年6月12日 - 2024年1月8日<br>衛星視線方向の変動量（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230612_20240108obd_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231206_20240103obd_pixeloffset_rgo32_masked_filt",
-      "title": "2023年12月6日 - 2024年1月3日<br>衛星視線方向の変動量（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231206_20240103obd_pixeloffset_rgo32_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20230606_20240102obd_pixeloffset_rgo32_masked_filt",
-      "title": "2023年6月6日 - 2024年1月2日<br>衛星視線方向の変動量（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230606_20240102obd_pixeloffset_rgo32_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_offset_tracking_rgo32_masked_filt",
-      "title": "2022年9月26日 - 2024年1月1日<br>衛星視線方向の変動量（東側から観測）",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_offset_tracking_rgo32_masked_filt/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "ピクセルオフセット解析結果"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20220606_20240115_u07l",
-      "title": "2022年6月6日 - 2024年1月15日<br>干渉画像（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220606_20240115_u07l/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231231_20240114_u08r",
-      "title": "2023年12月31日 - 2024年1月14日<br>干渉画像（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231231_20240114_u08r/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231103_20240112_u07r",
-      "title": "2023年11月3日 - 2024年1月12日<br>干渉画像（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231103_20240112_u07r/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20211019_20240109_u10r_wrklk",
-      "title": "2021年10月19日 - 2024年1月9日<br>干渉画像（東側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20211019_20240109_u10r_wrklk/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20230612_20240108obd_u13r",
-      "title": "2023年6月12日 - 2024年1月8日<br>干渉画像（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230612_20240108obd_u13r/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20231206_20240103obd_u09r_f730",
-      "title": "2023年12月6日 - 2024年1月3日<br>干渉画像（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231206_20240103obd_u09r_f730/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20230606_20240102obd_u08l_f2830",
-      "title": "2023年6月6日 - 2024年1月2日<br>干渉画像（西側から観測）",
-      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230606_20240102obd_u08l_f2830/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "urgent_earthquake_20240101noto_20220926_20240101_u06l_f750-770",
-      "title": "2022年9月26日 - 2024年1月1日<br>干渉画像（東側から観測）",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220926_20240101_u06l_f750-770/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "干渉画像"
-      ]
-    },
-    {
-      "id": "20230612_20240108_AR_RGB_tile",
-      "title": "2023年6月12日 - 2024年1月8日<br>RGB画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20230612_20240108_AR_RGB_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20240108_AR_pwr_tile",
-      "title": "2024年1月8日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20240108_AR_pwr_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20230612_AR_pwr_tile",
-      "title": "2023年6月12日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20230612_AR_pwr_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "noto_pow_rgb_20230606-20240102_ver2",
-      "title": "2023年6月6日 - 2024年1月2日<br>RGB画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/RGBver2_tiles/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "noto_pow_20240102_ver2",
-      "title": "2024年1月2日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/after_pwr_tiles/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "noto_pow_20230606_ver2",
-      "title": "2023年6月6日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/before_pwr_tiles/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20220926_20240101_AL_RGB_tile",
-      "title": "2022年9月26日 - 2024年1月1日<br>RGB画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20220926_20240101_AL_RGB_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20240101_AL_pwr_tile",
-      "title": "2024年1月1日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20240101_AL_pwr_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20220926_AL_pwr_tile",
-      "title": "2022年9月26日 強度画像",
-      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20220926_AL_pwr_tile/{z}/{x}/{y}.png",
-      "reason": "sar_observation_snapshot",
-      "extension": ".png",
-      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震",
-        "SAR解析結果(ALOS-2)",
-        "強度画像・RGB画像"
-      ]
-    },
-    {
-      "id": "20240102noto_population",
-      "title": "能登半島250mメッシュあたり人口分布（総務省統計局）",
-      "url": "https://maps.gsi.go.jp/xyz/20240102noto_population/{z}/{x}/{y}.geojson",
-      "reason": "unsupported_extension",
-      "extension": ".geojson",
-      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
-      "path": [
-        "令和6年(2024年)能登半島地震"
       ]
     },
     {
@@ -3673,6 +2551,534 @@
         "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
         "地震",
         "令和6年豊後水道の地震"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_merge_wtmean_qu",
+      "title": "能登半島全域<br>準上下成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_merge_wtmean_qu/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_merge_wtmean_qe",
+      "title": "能登半島全域<br>準東西成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_merge_wtmean_qe/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qu",
+      "title": "2023年12月6日-2024年1月3日<br>準上下成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qu/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qe",
+      "title": "2023年12月6日-2024年1月3日<br>準東西成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220606_20240115_p127ar_20231206_20240103_qe/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qu",
+      "title": "2023年11月3日-2024年1月9日<br>準上下成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qu/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qe",
+      "title": "2023年11月3日-2024年1月9日<br>準東西成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p126ar_20231103_20240112_p019dr_20211019_20240109_qe/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qu",
+      "title": "2023年6月6日 - 2024年1月1日<br>準上下成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qu/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qe",
+      "title": "2023年6月6日 - 2024年1月1日<br>準東西成分",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_p121al_20220926_20240101_p021dl_20230606_20240102_qe/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "2.5次元解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20220606_20240115_pixeloffset_rgo64_masked_filt",
+      "title": "2022年6月6日 - 2024年1月15日<br>衛星視線方向の変動量（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220606_20240115_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231231_20240114_pixeloffset_rgo64_masked_filt",
+      "title": "2023年12月31日 - 2024年1月14日<br>衛星視線方向の変動量（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231231_20240114_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231103_20240112_pixeloffset_rgo64_masked_filt",
+      "title": "2023年11月3日 - 2024年1月12日<br>衛星視線方向の変動量（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231103_20240112_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20211019_20240109_pixeloffset_rgo64_masked_filt",
+      "title": "2021年10月19日 - 2024年1月9日<br>衛星視線方向の変動量（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20211019_20240109_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20230612_20240108obd_pixeloffset_rgo64_masked_filt",
+      "title": "2023年6月12日 - 2024年1月8日<br>衛星視線方向の変動量（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230612_20240108obd_pixeloffset_rgo64_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231206_20240103obd_pixeloffset_rgo32_masked_filt",
+      "title": "2023年12月6日 - 2024年1月3日<br>衛星視線方向の変動量（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231206_20240103obd_pixeloffset_rgo32_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20230606_20240102obd_pixeloffset_rgo32_masked_filt",
+      "title": "2023年6月6日 - 2024年1月2日<br>衛星視線方向の変動量（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230606_20240102obd_pixeloffset_rgo32_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_offset_tracking_rgo32_masked_filt",
+      "title": "2022年9月26日 - 2024年1月1日<br>衛星視線方向の変動量（東側から観測）",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_offset_tracking_rgo32_masked_filt/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "ピクセルオフセット解析結果"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20220606_20240115_u07l",
+      "title": "2022年6月6日 - 2024年1月15日<br>干渉画像（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220606_20240115_u07l/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231231_20240114_u08r",
+      "title": "2023年12月31日 - 2024年1月14日<br>干渉画像（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231231_20240114_u08r/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231103_20240112_u07r",
+      "title": "2023年11月3日 - 2024年1月12日<br>干渉画像（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231103_20240112_u07r/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20211019_20240109_u10r_wrklk",
+      "title": "2021年10月19日 - 2024年1月9日<br>干渉画像（東側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20211019_20240109_u10r_wrklk/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20230612_20240108obd_u13r",
+      "title": "2023年6月12日 - 2024年1月8日<br>干渉画像（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230612_20240108obd_u13r/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20231206_20240103obd_u09r_f730",
+      "title": "2023年12月6日 - 2024年1月3日<br>干渉画像（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20231206_20240103obd_u09r_f730/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20230606_20240102obd_u08l_f2830",
+      "title": "2023年6月6日 - 2024年1月2日<br>干渉画像（西側から観測）",
+      "url": "https://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20230606_20240102obd_u08l_f2830/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "urgent_earthquake_20240101noto_20220926_20240101_u06l_f750-770",
+      "title": "2022年9月26日 - 2024年1月1日<br>干渉画像（東側から観測）",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20240101noto_20220926_20240101_u06l_f750-770/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "干渉画像"
+      ]
+    },
+    {
+      "id": "20230612_20240108_AR_RGB_tile",
+      "title": "2023年6月12日 - 2024年1月8日<br>RGB画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20230612_20240108_AR_RGB_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "20240108_AR_pwr_tile",
+      "title": "2024年1月8日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20240108_AR_pwr_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "20230612_AR_pwr_tile",
+      "title": "2023年6月12日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20230612_AR_pwr_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "noto_pow_rgb_20230606-20240102_ver2",
+      "title": "2023年6月6日 - 2024年1月2日<br>RGB画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/RGBver2_tiles/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "noto_pow_20240102_ver2",
+      "title": "2024年1月2日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/after_pwr_tiles/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "noto_pow_20230606_ver2",
+      "title": "2023年6月6日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/before_pwr_tiles/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "20220926_20240101_AL_RGB_tile",
+      "title": "2022年9月26日 - 2024年1月1日<br>RGB画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20220926_20240101_AL_RGB_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "20240101_AL_pwr_tile",
+      "title": "2024年1月1日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20240101_AL_pwr_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
+      ]
+    },
+    {
+      "id": "20220926_AL_pwr_tile",
+      "title": "2022年9月26日 強度画像",
+      "url": "https://insarmap.gsi.go.jp/xyz/noto_pwr/20220926_AL_pwr_tile/{z}/{x}/{y}.png",
+      "reason": "sar_observation_snapshot",
+      "extension": ".png",
+      "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20240101noto.txt",
+      "path": [
+        "基準点・地磁気・地殻変動",
+        "干渉SAR",
+        "だいち2号（ALOS-2）/ だいち4号（ALOS-4）",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "強度画像・RGB画像"
       ]
     },
     {
@@ -155413,6 +154819,633 @@
       ]
     },
     {
+      "id": "20240102noto_suzu_0102suichoku",
+      "title": "珠洲地区（1/2撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "珠洲地区"
+      ]
+    },
+    {
+      "id": "20240102noto_suzu_0105suichoku",
+      "title": "珠洲地区（1/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0105suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "珠洲地区"
+      ]
+    },
+    {
+      "id": "20240102noto_suzu_0114suichoku",
+      "title": "珠洲地区（1/14撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_suzu_0114suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "珠洲地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimahigashi_0102suichoku",
+      "title": "輪島東地区（1/2撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimahigashi_0102suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島東地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimahigashi_0114suichoku",
+      "title": "輪島東地区（1/14撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimahigashi_0114suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島東地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanaka_0102suichoku",
+      "title": "輪島中地区（1/2撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0102suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島中地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanaka_0105suichoku",
+      "title": "輪島中地区（1/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0105suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島中地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanaka_0111suichoku",
+      "title": "輪島中地区（1/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanaka_0111suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島中地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanishii_0105suichoku",
+      "title": "輪島西地区（1/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0105suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島西地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanishii_0111suichoku",
+      "title": "輪島西地区（1/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0111suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島西地区"
+      ]
+    },
+    {
+      "id": "20240102noto_wazimanishii_0117suichoku",
+      "title": "輪島西地区（1/17撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_wajimanishi_0117suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "輪島西地区"
+      ]
+    },
+    {
+      "id": "20240102noto_anamizu_0105suichoku",
+      "title": "穴水地区（1/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0105suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "穴水地区"
+      ]
+    },
+    {
+      "id": "20240102noto_anamizu_0111suichoku",
+      "title": "穴水地区（1/11撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0111suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "穴水地区"
+      ]
+    },
+    {
+      "id": "20240102noto_anamizu_0114suichoku",
+      "title": "穴水地区（1/14撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0114suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "穴水地区"
+      ]
+    },
+    {
+      "id": "20240102noto_anamizu_0117suichoku",
+      "title": "穴水地区（1/17撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0117suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "穴水地区"
+      ]
+    },
+    {
+      "id": "20240102noto_nanao_0105suichoku",
+      "title": "七尾地区（1/5撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_nanao_0105suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "七尾地区"
+      ]
+    },
+    {
+      "id": "20240102noto_nanao_0117suichoku",
+      "title": "七尾地区（1/17撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_nanao_0117suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "垂直写真",
+        "七尾地区"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_cloud_poly",
+      "title": "雲による未読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_hokai_all",
+      "title": "斜面崩壊・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_hokai_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240115noto_wazimanaka_cloud_poly",
+      "title": "雲による未読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島中地区）"
+      ]
+    },
+    {
+      "id": "20240115noto_wazimanaka_hokai_all",
+      "title": "斜面崩壊・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_hokai_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島中地区）"
+      ]
+    },
+    {
+      "id": "20240115noto_wazimanaka_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240115noto_wazimanaka_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島中地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_cloud_poly",
+      "title": "雲による未読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_hokai_all",
+      "title": "斜面崩壊・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_hokai_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_anamizu_hokai_all",
+      "title": "斜面崩壊・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_hokai_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（穴水地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_anamizu_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（穴水地区）"
+      ]
+    },
+    {
+      "id": "20240109noto_nanao_hokai_all",
+      "title": "斜面崩壊・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_hokai_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（七尾地区）"
+      ]
+    },
+    {
+      "id": "20240109noto_nanao_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ",
+        "斜面崩壊・堆積分布データ（七尾地区）"
+      ]
+    },
+    {
+      "id": "20240102noto_hokai_bunzu",
+      "title": "斜面崩壊・堆積分布図（分図の図郭表示）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_hokai_bunzu/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "斜面崩壊・堆積分布データ"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_0109cloud_poly",
+      "title": "雲による未読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_0109rev",
+      "title": "津波浸水域（珠洲、輪島東地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109rev/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_suzu_wazimahigashi_0109handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_suzu_wazimahigashi_0109handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（珠洲地区、輪島東地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_0112cloud_poly",
+      "title": "雲による未読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_0112rev",
+      "title": "津波浸水域（輪島西地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112rev/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240112noto_wazimanishi_0112handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240112noto_wazimanishi_0112handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（輪島西地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_anamizu_0110rev",
+      "title": "津波浸水域（穴水地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110rev/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（穴水地区）"
+      ]
+    },
+    {
+      "id": "20240106noto_anamizu_0110handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240106noto_anamizu_0110handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（穴水地区）"
+      ]
+    },
+    {
+      "id": "20240109noto_naano_0110rev",
+      "title": "津波浸水域（七尾地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110rev/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（七尾地区）"
+      ]
+    },
+    {
+      "id": "20240109noto_nanao_0110handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240109noto_nanao_0110handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震",
+        "津波浸水域データ",
+        "津波浸水域データ（七尾地区）"
+      ]
+    },
+    {
+      "id": "20240102noto_population",
+      "title": "能登半島250mメッシュあたり人口分布（総務省統計局）",
+      "url": "https://maps.gsi.go.jp/xyz/20240102noto_population/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240102noto.txt",
+      "path": [
+        "近年の災害",
+        "地震",
+        "令和6年(2024年)能登半島地震"
+      ]
+    },
+    {
       "id": "20220317fukushimakenoki_0317naname",
       "title": "宮城福島沿岸地区(3/17撮影)",
       "url": "https://maps.gsi.go.jp/xyz/20220317fukushimakenoki_0317naname/{z}/{x}/{y}.geojson",
@@ -159915,6 +159948,191 @@
         "近年の災害",
         "地震",
         "平成16年新潟県中越地震"
+      ]
+    },
+    {
+      "id": "20250815rain_amakusa_0815suichoku_sokuho",
+      "title": "天草上島地区（8/15撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_amakusa_0815suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "垂直写真（速報）"
+      ]
+    },
+    {
+      "id": "20250815rain_yatushironishi_0816suichoku_sokuho",
+      "title": "八代西地区（8/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushironishi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "垂直写真（速報）"
+      ]
+    },
+    {
+      "id": "20250815rain_yatushirohigashi_0816suichoku_sokuho",
+      "title": "八代東地区（8/16撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_yatushirohigashi_0816suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "垂直写真（速報）"
+      ]
+    },
+    {
+      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa",
+      "title": "斜面崩壊・土石流・堆積分布図データ（天草上島地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_amakusa/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "斜面崩壊・土石流・堆積分布図データ"
+      ]
+    },
+    {
+      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi",
+      "title": "斜面崩壊・土石流・堆積分布図データ（八代東地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatsushirohigashi/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "斜面崩壊・土石流・堆積分布図データ"
+      ]
+    },
+    {
+      "id": "20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi",
+      "title": "斜面崩壊・土石流・堆積分布図データ（八代西地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20250815rain_syamenhoukai_dosekiryu_taiseki_yatushironishi/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20250815rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和7年(2025年)8月6日からの大雨",
+        "斜面崩壊・土石流・堆積分布図データ"
+      ]
+    },
+    {
+      "id": "20240923rain_wajima_0923suichoku_sokuho",
+      "title": "輪島地区（9/23撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0923suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "垂直写真（速報）"
+      ]
+    },
+    {
+      "id": "20240923rain_wajima_0924suichoku_sokuho",
+      "title": "輪島地区（9/24撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0924suichoku_sokuho/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "垂直写真（速報）"
+      ]
+    },
+    {
+      "id": "20240923rain_wajima_0923naname",
+      "title": "輪島地区（9/23撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0923naname/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "斜め写真"
+      ]
+    },
+    {
+      "id": "20240923rain_wajima_0924naname",
+      "title": "輪島地区（9/24撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_wajima_0924naname/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "斜め写真"
+      ]
+    },
+    {
+      "id": "20240923rain_syamenhoukai_dosekiryu_taiseki_all",
+      "title": "斜面崩壊・土石流・堆積範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_syamenhoukai_dosekiryu_taiseki_all/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "斜面崩壊・土石流・堆積分布データ",
+        "斜面崩壊・土石流・堆積分布データ"
+      ]
+    },
+    {
+      "id": "20240923rain_cloud_poly",
+      "title": "雲による未判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_cloud_poly/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "斜面崩壊・土石流・堆積分布データ",
+        "斜面崩壊・土石流・堆積分布データ"
+      ]
+    },
+    {
+      "id": "20240923rain_handoku_area",
+      "title": "判読範囲",
+      "url": "https://maps.gsi.go.jp/xyz/20240923rain_handoku_area/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20240923rain.txt",
+      "path": [
+        "近年の災害",
+        "台風・豪雨等",
+        "令和6年9月20日からの大雨",
+        "斜面崩壊・土石流・堆積分布データ",
+        "斜面崩壊・土石流・堆積分布データ"
       ]
     },
     {
