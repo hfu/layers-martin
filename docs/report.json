@@ -3,12 +3,12 @@
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
     "visited_urls": 185,
     "fetched_files": 185,
-    "groups_seen": 895,
-    "layers_seen": 13988,
+    "groups_seen": 898,
+    "layers_seen": 13990,
     "tiles_included": 1874,
-    "layers_excluded": 12114,
+    "layers_excluded": 12116,
     "excluded_by_reason": {
-      "unsupported_extension": 1354,
+      "unsupported_extension": 1356,
       "sar_observation_snapshot": 10551,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260902rain.txt",
-      "bytes": 2489
+      "bytes": 5283
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260729kumamoto.txt",
@@ -773,6 +773,31 @@
         "令和8年(2026年)8月27日からの大雨",
         "垂直写真（速報）",
         "氷見地区"
+      ]
+    },
+    {
+      "id": "20260902rain_himi_0901suichoku",
+      "title": "氷見地区（9/1撮影）",
+      "url": "https://maps.gsi.go.jp/xyz/20260902rain_himi_0901suichoku/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260902rain.txt",
+      "path": [
+        "令和8年(2026年)8月27日からの大雨",
+        "垂直写真",
+        "氷見地区"
+      ]
+    },
+    {
+      "id": "20260902rain_syamenhoukai_dosekiryu_taiseki_himi",
+      "title": "斜面崩壊・土石流・堆積分布図データ（氷見地区）",
+      "url": "https://maps.gsi.go.jp/xyz/20260902rain_syamenhoukai_dosekiryu_taiseki_himi/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers_20260902rain.txt",
+      "path": [
+        "令和8年(2026年)8月27日からの大雨",
+        "斜面崩壊・土石流・堆積分布図データ"
       ]
     },
     {
