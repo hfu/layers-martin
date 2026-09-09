@@ -1068,9 +1068,9 @@
       ]
     },
     {
-      "id": "urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ew.mask",
-      "title": "3次元解析_東西成分<br>7観測(±120cm)",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ew.mask/{z}/{x}/{y}.png",
+      "id": "urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ew.mask",
+      "title": "3次元解析_東西成分<br>9観測(±120cm)",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ew.mask/{z}/{x}/{y}.png",
       "reason": "sar_observation_snapshot",
       "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -1081,9 +1081,9 @@
       ]
     },
     {
-      "id": "urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ns.mask",
-      "title": "3次元解析_南北成分<br>7観測(±120cm)",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ns.mask/{z}/{x}/{y}.png",
+      "id": "urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ns.mask",
+      "title": "3次元解析_南北成分<br>9観測(±120cm)",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ns.mask/{z}/{x}/{y}.png",
       "reason": "sar_observation_snapshot",
       "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
@@ -1094,9 +1094,9 @@
       ]
     },
     {
-      "id": "urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ud.mask",
-      "title": "3次元解析_上下成分<br>7観測(±80cm)",
-      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_7obs_clip.ud.mask/{z}/{x}/{y}.png",
+      "id": "urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ud.mask",
+      "title": "3次元解析_上下成分<br>9観測(±80cm)",
+      "url": "http://insarmap.gsi.go.jp/xyz/urgent_earthquake_20260728R8kumamoto_3d_9obs_clip.ud.mask/{z}/{x}/{y}.png",
       "reason": "sar_observation_snapshot",
       "extension": ".png",
       "source_url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
