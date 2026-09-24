@@ -1,11 +1,11 @@
 {
   "summary": {
     "input_root": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-    "visited_urls": 185,
-    "fetched_files": 185,
-    "groups_seen": 898,
-    "layers_seen": 13999,
-    "tiles_included": 1874,
+    "visited_urls": 187,
+    "fetched_files": 187,
+    "groups_seen": 901,
+    "layers_seen": 14001,
+    "tiles_included": 1876,
     "layers_excluded": 12125,
     "excluded_by_reason": {
       "unsupported_extension": 1358,
@@ -13,16 +13,24 @@
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
-    "warnings": 55,
+    "warnings": 57,
     "attribution_defaults": 1050,
-    "legend_image_urls_found": 967,
+    "legend_image_urls_found": 969,
     "legend_pdf_urls_found": 124,
     "failures": 0
   },
   "fetched_files": [
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers.txt",
-      "bytes": 330
+      "bytes": 385
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260924typhoon25.txt",
+      "bytes": 236
+    },
+    {
+      "url": "https://maps.gsi.go.jp/layers_txt/layers_20260924typhoon25.txt",
+      "bytes": 2943
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260902rain.txt",
@@ -514,7 +522,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers6.txt",
-      "bytes": 202605
+      "bytes": 202818
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20251210aomori.txt",
@@ -180376,6 +180384,18 @@
     }
   ],
   "warnings": [
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20260924typhoon25_kitainbanuma_0922dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0922dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20260924typhoon25_kitainbanuma_0924dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0924dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
     {
       "type": "legend_image_extracted_from_html",
       "id": "earthdegital",
