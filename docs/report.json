@@ -4,8 +4,8 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 901,
-    "layers_seen": 14001,
-    "tiles_included": 1876,
+    "layers_seen": 14002,
+    "tiles_included": 1877,
     "layers_excluded": 12125,
     "excluded_by_reason": {
       "unsupported_extension": 1358,
@@ -13,9 +13,9 @@
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
-    "warnings": 57,
+    "warnings": 58,
     "attribution_defaults": 1050,
-    "legend_image_urls_found": 969,
+    "legend_image_urls_found": 970,
     "legend_pdf_urls_found": 124,
     "failures": 0
   },
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260924typhoon25.txt",
-      "bytes": 2943
+      "bytes": 4340
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260902rain.txt",
@@ -180394,6 +180394,12 @@
       "type": "legend_image_extracted_from_html",
       "id": "20260924typhoon25_kitainbanuma_0924dansaizu",
       "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0924dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20260924typhoon25_kitainbanuma_0925dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0925dansaizu.png",
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     },
     {
