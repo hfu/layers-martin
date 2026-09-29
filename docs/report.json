@@ -4,11 +4,11 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 901,
-    "layers_seen": 14002,
+    "layers_seen": 14003,
     "tiles_included": 1877,
-    "layers_excluded": 12125,
+    "layers_excluded": 12126,
     "excluded_by_reason": {
-      "unsupported_extension": 1358,
+      "unsupported_extension": 1359,
       "sar_observation_snapshot": 10558,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -746,7 +746,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 335884
+      "bytes": 336288
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -180124,6 +180124,19 @@
         "地図の更新情報や提供地域",
         "点群データの更新情報",
         "点群データ（航空レーザ測量）の<br>刊行範囲と作業年度"
+      ]
+    },
+    {
+      "id": "3d_pcd_update_2026_09",
+      "title": "2026年9月刊行",
+      "url": "https://maps.gsi.go.jp/xyz/3d_pcd_update_2026_09/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "地図の更新情報や提供地域",
+        "点群データの更新情報"
       ]
     },
     {
