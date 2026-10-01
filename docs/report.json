@@ -4,8 +4,8 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 901,
-    "layers_seen": 14003,
-    "tiles_included": 1877,
+    "layers_seen": 14001,
+    "tiles_included": 1875,
     "layers_excluded": 12126,
     "excluded_by_reason": {
       "unsupported_extension": 1359,
@@ -46,7 +46,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260729kumamoto.txt",
-      "bytes": 34615
+      "bytes": 32213
     },
     {
       "url": "https://maps.gsi.go.jp/sar/layers_txt/layers_alos2_eq_20260728kumamoto.txt",
