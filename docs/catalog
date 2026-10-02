@@ -3692,6 +3692,14 @@
         "浸水推定図"
       ]
     },
+    "20260924typhoon25_kitainbanuma_1001dansaizu": {
+      "name": "北印旛沼(令和8年10月1日16時時点)",
+      "content_type": "image/png",
+      "path": [
+        "令和8年(2026年)台風第25号",
+        "浸水推定図"
+      ]
+    },
     "afm": {
       "name": "活断層図（都市圏活断層図）",
       "content_type": "image/png",

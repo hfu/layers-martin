@@ -4,18 +4,18 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 901,
-    "layers_seen": 14001,
-    "tiles_included": 1875,
-    "layers_excluded": 12126,
+    "layers_seen": 14003,
+    "tiles_included": 1876,
+    "layers_excluded": 12127,
     "excluded_by_reason": {
-      "unsupported_extension": 1359,
+      "unsupported_extension": 1360,
       "sar_observation_snapshot": 10558,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
     },
-    "warnings": 58,
+    "warnings": 59,
     "attribution_defaults": 1050,
-    "legend_image_urls_found": 970,
+    "legend_image_urls_found": 971,
     "legend_pdf_urls_found": 124,
     "failures": 0
   },
@@ -30,7 +30,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_20260924typhoon25.txt",
-      "bytes": 4340
+      "bytes": 5737
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_topic_20260902rain.txt",
@@ -746,7 +746,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 336288
+      "bytes": 336629
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -174310,6 +174310,20 @@
       ]
     },
     {
+      "id": "toz202609",
+      "title": "9月更新",
+      "url": "https://maps.gsi.go.jp/xyz/toz202609/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "地図の更新情報や提供地域",
+        "電子国土基本図の更新情報",
+        "2026年登山道更新情報"
+      ]
+    },
+    {
       "id": "toz202608",
       "title": "8月更新",
       "url": "https://maps.gsi.go.jp/xyz/toz202608/{z}/{x}/{y}.geojson",
@@ -180413,6 +180427,12 @@
       "type": "legend_image_extracted_from_html",
       "id": "20260924typhoon25_kitainbanuma_0925dansaizu",
       "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_0925dansaizu.png",
+      "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
+    },
+    {
+      "type": "legend_image_extracted_from_html",
+      "id": "20260924typhoon25_kitainbanuma_1001dansaizu",
+      "url": "https://maps.gsi.go.jp/legend/20260924typhoon25_kitainbanuma_1001dansaizu.png",
       "action": "no_legendUrl_image_available_scraped_first_img_tag_from_html"
     },
     {
