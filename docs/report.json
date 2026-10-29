@@ -4,11 +4,11 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 924,
-    "layers_seen": 14028,
-    "tiles_included": 1876,
-    "layers_excluded": 12152,
+    "layers_seen": 14030,
+    "tiles_included": 1877,
+    "layers_excluded": 12153,
     "excluded_by_reason": {
-      "unsupported_extension": 1360,
+      "unsupported_extension": 1361,
       "sar_observation_snapshot": 10583,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -62,7 +62,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
-      "bytes": 209685
+      "bytes": 210286
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_vdpf.txt",
@@ -746,7 +746,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 336629
+      "bytes": 337015
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -2395,6 +2395,18 @@
       "path": [
         "土地の成り立ち・土地利用",
         "火山基本図"
+      ]
+    },
+    {
+      "id": "vlcd_spec",
+      "title": "諸元情報",
+      "url": "https://maps.gsi.go.jp/xyz/vlcd_spec/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers3.txt",
+      "path": [
+        "土地の成り立ち・土地利用",
+        "火山土地条件図"
       ]
     },
     {
