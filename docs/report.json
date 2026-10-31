@@ -4,11 +4,11 @@
     "visited_urls": 187,
     "fetched_files": 187,
     "groups_seen": 924,
-    "layers_seen": 14030,
+    "layers_seen": 14031,
     "tiles_included": 1877,
-    "layers_excluded": 12153,
+    "layers_excluded": 12154,
     "excluded_by_reason": {
-      "unsupported_extension": 1361,
+      "unsupported_extension": 1362,
       "sar_observation_snapshot": 10583,
       "duplicate_url_reference": 192,
       "aircraft_sar_observation_snapshot": 17
@@ -746,7 +746,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
-      "bytes": 337015
+      "bytes": 337446
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_kasaneruhazardmap.txt",
@@ -174470,6 +174470,20 @@
         "その他",
         "他機関の情報",
         "みなとオアシス（港湾局)"
+      ]
+    },
+    {
+      "id": "jin202610",
+      "title": "10月更新",
+      "url": "https://maps.gsi.go.jp/xyz/jin202610/{z}/{x}/{y}.geojson",
+      "reason": "unsupported_extension",
+      "extension": ".geojson",
+      "source_url": "https://maps.gsi.go.jp/layers_txt/layers7.txt",
+      "path": [
+        "その他",
+        "地図の更新情報や提供地域",
+        "電子国土基本図の更新情報",
+        "2026年迅速更新情報"
       ]
     },
     {
