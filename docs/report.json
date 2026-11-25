@@ -66,7 +66,7 @@
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_vdpf.txt",
-      "bytes": 141364
+      "bytes": 129187
     },
     {
       "url": "https://maps.gsi.go.jp/layers_txt/layers_tochibunrui.txt",
@@ -2153,7 +2153,7 @@
     },
     {
       "id": "vdpf_itb",
-      "title": "伊豆東部火山群 (該当施設なし)",
+      "title": "伊豆東部火山群（該当施設なし）",
       "url": "https://maps.gsi.go.jp/xyz/vdpf_itb/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
@@ -2244,8 +2244,8 @@
     },
     {
       "id": "vdpf_iot",
-      "title": "硫黄島 (該当施設なし)",
-      "url": "https://maps.gsi.go.jp/xyz/vdpf_itb/{z}/{x}/{y}.geojson",
+      "title": "硫黄島",
+      "url": "https://maps.gsi.go.jp/xyz/vdpf_iot/{z}/{x}/{y}.geojson",
       "reason": "unsupported_extension",
       "extension": ".geojson",
       "source_url": "https://maps.gsi.go.jp/layers_txt/layers_vdpf.txt",
